@@ -7,23 +7,23 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('parcoursimi', '0002_auto_20180604_1417'),
+        ('parcours_imi', '0002_auto_20180604_1417'),
     ]
 
     operations = [
         migrations.AlterField(
             model_name='courses',
             name='master',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='courses', to='parcoursimi.Master'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='courses', to='parcours_imi.Master'),
         ),
         migrations.AlterField(
             model_name='userprofile',
             name='courses',
-            field=models.ManyToManyField(related_name='profiles', to='parcoursimi.Courses'),
+            field=models.ManyToManyField(related_name='profiles', to='parcours_imi.Courses'),
         ),
         migrations.AlterField(
             model_name='userprofile',
             name='option',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='profiles', to='parcoursimi.Option'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='profiles', to='parcours_imi.Option'),
         ),
     ]

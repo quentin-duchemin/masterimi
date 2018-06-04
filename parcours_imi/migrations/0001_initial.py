@@ -3,7 +3,7 @@
 from django.conf import settings
 from django.db import migrations, models
 import django.db.models.deletion
-import parcoursimi.models
+import parcours_imi.models
 
 
 class Migration(migrations.Migration):
@@ -53,15 +53,15 @@ class Migration(migrations.Migration):
             name='UserProfile',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('courses', models.ManyToManyField(to='parcoursimi.Courses')),
-                ('master', models.ForeignKey(default=parcoursimi.models.UserProfile.default_master, on_delete=django.db.models.deletion.SET_DEFAULT, to='parcoursimi.Master')),
-                ('option', models.ForeignKey(default=parcoursimi.models.UserProfile.default_option, on_delete=django.db.models.deletion.SET_DEFAULT, to='parcoursimi.Option')),
+                ('courses', models.ManyToManyField(to='parcours_imi.Courses')),
+                ('master', models.ForeignKey(default=parcours_imi.models.UserProfile.default_master, on_delete=django.db.models.deletion.SET_DEFAULT, to='parcours_imi.Master')),
+                ('option', models.ForeignKey(default=parcours_imi.models.UserProfile.default_option, on_delete=django.db.models.deletion.SET_DEFAULT, to='parcours_imi.Option')),
                 ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),
         migrations.AddField(
             model_name='courses',
             name='master',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='parcoursimi.Master'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='parcours_imi.Master'),
         ),
     ]
