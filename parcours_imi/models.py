@@ -1,5 +1,5 @@
-from django.db import models
 from django.contrib.auth.models import User
+from django.db import models
 
 
 class Master(models.Model):
@@ -19,7 +19,7 @@ class Course(models.Model):
         ('Th', 'Jeudi'),
         ('Fr', 'Vendredi'),
     )
-    master = models.ForeignKey(Master, related_name = 'courses', on_delete=models.CASCADE)
+    master = models.ForeignKey(Master, related_name='courses', on_delete=models.CASCADE)
     # l'attribut obligatoire vaut 1 si le cours en question est obligatoire pour le master associé
     obligatoire = models.BooleanField(default=0)
     title = models.CharField(max_length=100)
@@ -33,6 +33,7 @@ class Course(models.Model):
     def __str__(self):
         return self.title
 
+
 class Option(models.Model):
     name = models.CharField(max_length=300)
     nb_cours = models.PositiveSmallIntegerField(default=0)
@@ -43,6 +44,7 @@ class Option(models.Model):
     def __str__(self):
         return self.name
 
+
 class UserProfile(models.Model):
     def default_option():
         return Option.objects.all()[0]
@@ -50,10 +52,10 @@ class UserProfile(models.Model):
     def default_master():
         return Master.objects.all()[0]
 
-    option = models.ForeignKey(Option, related_name = 'profiles',on_delete=models.CASCADE)
-    master = models.ForeignKey(Master,related_name = 'profiles', on_delete=models.CASCADE)
+    option = models.ForeignKey(Option, related_name='profiles', on_delete=models.CASCADE)
+    master = models.ForeignKey(Master, related_name='profiles', on_delete=models.CASCADE)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    courses = models.ManyToManyField(Course, related_name = 'profiles')
+    courses = models.ManyToManyField(Course, related_name='profiles')
 
     def __unicode__(self):
         return self.user.username

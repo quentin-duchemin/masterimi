@@ -1,6 +1,5 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from rest_framework.schemas import get_schema_view
 
 from parcours_imi import views
 
