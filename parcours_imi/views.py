@@ -18,7 +18,7 @@ class MasterViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = MasterSerializer
 
 
-class UserParcoursViewSet(viewsets.ReadOnlyModelViewSet):
+class UserParcoursViewSet(viewsets.ModelViewSet):
     serializer_class = UserParcoursSerializer
     queryset = UserParcours.objects.all()
 

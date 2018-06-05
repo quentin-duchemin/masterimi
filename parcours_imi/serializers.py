@@ -19,10 +19,8 @@ class CourseSerializer(serializers.ModelSerializer):
 
 
 class UserParcoursSerializer(serializers.ModelSerializer):
-    master = MasterSerializer(read_only=True)
-
-    courses = CourseSerializer(many=True, read_only=True)
-    coursesOption2 = CourseSerializer(many=True, read_only=True)
+    courses = serializers.PrimaryKeyRelatedField(many=True, queryset=Course.objects.all(), allow_null=True)
+    coursesOption2 = serializers.PrimaryKeyRelatedField(many=True, queryset=Course.objects.all(), allow_null=True)
 
     class Meta:
         model = UserParcours
