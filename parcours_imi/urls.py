@@ -4,9 +4,10 @@ from rest_framework.authtoken import views as authtoken_views
 
 from parcours_imi import views
 
-router = DefaultRouter()
+router = DefaultRouter(trailing_slash=False)
 router.register(r'courses', views.CourseViewSet)
 router.register(r'masters', views.MasterViewSet)
+router.register(r'users', views.UserViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
