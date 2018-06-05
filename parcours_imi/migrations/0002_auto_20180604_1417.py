@@ -19,6 +19,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='userprofile',
             name='option',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='parcours_imi.Option'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='parcours_imi.models.Formula'),
         ),
     ]

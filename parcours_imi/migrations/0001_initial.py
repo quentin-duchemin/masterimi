@@ -53,9 +53,8 @@ class Migration(migrations.Migration):
             name='UserProfile',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('courses', models.ManyToManyField(to='parcours_imi.Courses')),
-                ('master', models.ForeignKey(default=parcours_imi.models.UserProfile.default_master, on_delete=django.db.models.deletion.SET_DEFAULT, to='parcours_imi.Master')),
-                ('option', models.ForeignKey(default=parcours_imi.models.UserProfile.default_option, on_delete=django.db.models.deletion.SET_DEFAULT, to='parcours_imi.Option')),
+                ('courses', models.ManyToManyField(to='parcours_imi.Course')),
+                ('master', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='parcours_imi.Master')),
                 ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),

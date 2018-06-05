@@ -1,7 +1,18 @@
 from django.contrib import admin
 
-from parcours_imi.models import Course, Master
+from parcours_imi.models import Course, Master, UserParcours
 
-# Register your models here.
-admin.site.register(Course)
-admin.site.register(Master)
+
+@admin.register(Course)
+class CourseAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Master)
+class MasterAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(UserParcours)
+class UserParcoursAdmin(admin.ModelAdmin):
+    pass

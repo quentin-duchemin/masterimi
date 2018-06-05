@@ -3,59 +3,47 @@ from django.db import models
 
 
 class Master(models.Model):
-    name = models.CharField(max_length=100)
-    website = models.URLField()
-    troisa_possible = models.BooleanField(default=1)
+    name = models.CharField(max_length=120, verbose_name='Nom')
+    short_name = models.CharField(max_length=6, verbose_name='Nom court')
+    website = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return self.name
 
 
 class Course(models.Model):
-    OPTIONS = (
-        ('Mo', 'Lundi'),
-        ('Tu', 'Mardi'),
-        ('We', 'Mercredi'),
-        ('Th', 'Jeudi'),
-        ('Fr', 'Vendredi'),
-    )
-    master = models.ForeignKey(Master, related_name='courses', on_delete=models.CASCADE)
-    # l'attribut obligatoire vaut 1 si le cours en question est obligatoire pour le master associé
-    obligatoire = models.BooleanField(default=0)
-    title = models.CharField(max_length=100)
-    lat = models.FloatField()
-    long = models.FloatField()
-    ects = models.FloatField()
-    semester = models.PositiveSmallIntegerField()
-    days = models.CharField(max_length=2, choices=OPTIONS)
-    duration = models.PositiveSmallIntegerField()
+    name = models.CharField(max_length=120, verbose_name='Nom')
+    master = models.ForeignKey(Master, on_delete=models.CASCADE, null=True)
+    ECTS = models.FloatField(verbose_name='ECTS')
+    semester = models.PositiveSmallIntegerField(verbose_name='Semestre')
+    location = models.CharField(max_length=120, blank=True, null=True)
 
-    def __str__(self):
-        return self.title
-
-
-class Option(models.Model):
-    name = models.CharField(max_length=300)
-    nb_cours = models.PositiveSmallIntegerField(default=0)
-    nb_ects_cours = models.FloatField(default=0)
-    nb_projet = models.PositiveSmallIntegerField(default=0)
-    nb_ects_projet = models.FloatField(default=0)
+    class Meta:
+        verbose_name = 'Cours'
+        verbose_name_plural = 'Cours'
 
     def __str__(self):
         return self.name
 
 
-class UserProfile(models.Model):
-    def default_option():
-        return Option.objects.all()[0]
+FORMULAS = [
+    ('3A-ecole', '3A École'),
+    ('3A-M2-PFE', '3A M2 Imbriqués - Option 1'),
+    ('3A-M2-ECTS', '3A M2 Imbriqués - Option 2'),
+]
 
-    def default_master():
-        return Master.objects.all()[0]
 
-    option = models.ForeignKey(Option, related_name='profiles', on_delete=models.CASCADE)
-    master = models.ForeignKey(Master, related_name='profiles', on_delete=models.CASCADE)
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    courses = models.ManyToManyField(Course, related_name='profiles')
+class UserParcours(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='parcours')
 
-    def __unicode__(self):
+    master = models.ForeignKey(Master, on_delete=models.PROTECT)
+    formula = models.CharField(max_length=120, choices=FORMULAS)
+    courses = models.ManyToManyField(Course, related_name='courses')
+    coursesOption2 = models.ManyToManyField(Course, related_name='coursesOption2')
+
+    class Meta:
+        verbose_name = 'Parcours étudiant'
+        verbose_name_plural = 'Parcours étudiants'
+
+    def __str__(self):
         return self.user.username

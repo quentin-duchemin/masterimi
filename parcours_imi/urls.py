@@ -7,6 +7,7 @@ from parcours_imi import views
 router = DefaultRouter(trailing_slash=False)
 router.register(r'courses', views.CourseViewSet)
 router.register(r'masters', views.MasterViewSet)
+router.register(r'parcours', views.UserParcoursViewSet)
 router.register(r'users', views.UserViewSet)
 
 urlpatterns = [
