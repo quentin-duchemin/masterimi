@@ -33,7 +33,9 @@ SECRET_KEY = env('SECRET_KEY', default='-fuknloe3!gj$p=fia@y=-byvr4=v0tr905(0gvk
 DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
     'localhost',
+    '3a-dev.enpc.fr',
     'back',
 ]
 
@@ -46,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_cas_ng',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
@@ -151,6 +154,8 @@ CORS_ORIGIN_WHITELIST = [
 ]
 CORS_URLS_REGEX = r'^/api/.*$'
 
+# Routing
+
 APPEND_SLASH = False
 
 # Uploads
@@ -163,6 +168,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 CELERY_BROKER_URL = env('CELERY_BROKER_URL', default='amqp://localhost')
 
 # Logging
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -222,3 +228,12 @@ EMAIL_HOST = 'smtp.mailtrap.io'
 EMAIL_HOST_USER = '589cfa9e74991c'
 EMAIL_HOST_PASSWORD = '441cc35b9c2091'
 EMAIL_PORT = '2525'
+
+# CAS
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'django_cas_ng.backends.CASBackend',
+]
+
+CAS_SERVER_URL = 'https://cas.enpc.fr/cas/'

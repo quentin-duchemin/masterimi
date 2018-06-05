@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 amqp==2.3.2
 billiard==3.5.0.4
 celery==4.2.1
@@ -29,3 +30,16 @@ uritemplate==3.0.0
 urllib3==1.23
 uWSGI==2.0.17.1
 vine==1.1.4
+=======
+django
+djangorestframework
+markdown
+django-filter
+pygments
+coreapi
+django-cors-headers
+psycopg2-binary
+django-environ
+uwsgi
+django-cas-ng
+>>>>>>> WIP
