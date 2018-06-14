@@ -1,0 +1,35 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form mat-form-field {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5em;
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+section:last-child {
+  margin-bottom: inherit;
+}
+
+mat-header-cell {
+  font-weight: bold;
+}
+
+.col-ects {
+  text-align: center;
+}
+
+td.mat-cell {
+  padding-right: 8px;
+  padding-left: 8px;
+}

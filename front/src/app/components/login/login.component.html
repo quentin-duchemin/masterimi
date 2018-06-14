@@ -1,0 +1,43 @@
+<div class="login-form-wrapper">
+  <div class="login-form">
+    <h1>
+      Validation 3A
+    </h1>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <h3>
+            Login
+          </h3>
+        </mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <form class="example-form" fxLayout="row wrap" (submit)="login()">
+          <mat-form-field fxFlex="100%">
+            <input matInput placeholder="Username" [(ngModel)]="username" name="username" required
+                   autocomplete="username"
+            >
+          </mat-form-field>
+
+          <mat-form-field fxFlex="100%">
+            <input matInput placeholder="Password" [(ngModel)]="password" name="password" required
+                   type="password" autocomplete="current-password"
+            >
+          </mat-form-field>
+
+          <button type="submit" hidden>
+            <!-- Hack for submit on enter -->
+          </button>
+        </form>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="login()">
+          Login
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<div class="container">
+  <table mat-table #table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>
+        Nom
+      </th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.name }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="ECTS">
+      <th mat-header-cell *matHeaderCellDef class="col-ECTS">
+        ECTS
+      </th>
+      <td mat-cell *matCellDef="let element" class="col-ECTS">
+        {{ element.ECTS }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="master">
+      <th mat-header-cell *matHeaderCellDef class="col-master">
+        Type
+      </th>
+      <td mat-cell *matCellDef="let element" class="col-master">
+        {{ element.master ? element.master.short_name : 'Cours IMI' }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="location">
+      <th mat-header-cell *matHeaderCellDef class="col-location">
+        Lieu
+      </th>
+      <td mat-cell *matCellDef="let element" class="col-location">
+        {{ element.shortLocation || element.location }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef class="col-actions">
+      </th>
+      <td mat-cell *matCellDef="let element" class="col-actions">
+        <button mat-icon-button color="primary" (click)="remove(element)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+<div fxLayout="row">
+  <p [class]="getECTSSumClass()">
+    {{ formatECTSSum() }}
+  </p>
+  <span fxFlex></span>
+  <button mat-raised-button color="primary"
+          *ngIf="!isDisabled"
+          (click)="openCourseSelectionDialog()"
+  >
+    <mat-icon>add</mat-icon>
+    Ajouter des cours
+  </button>
+</div>

@@ -1,0 +1,14 @@
+.filter {
+  min-height: 64px;
+  padding: 8px 24px 0;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.list-wrapper {
+  max-height: 50vh;
+  overflow-y: auto;
+}

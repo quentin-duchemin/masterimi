@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5em;
+}
+
+mat-header-cell {
+  font-weight: bold;
+}
+
+.col-ECTS {
+  text-align: center;
+  width: 4em;
+}
+
+.col-master, .col-location {
+  text-align: center;
+  width: 100px;
+}
+
+.col-actions {
+  width: 50px;
+}
+
+td.mat-cell {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.ECTS-wrapper {
+  font-weight: bold;
+}
+
+.ECTS-error {
+  color: red;
+}

@@ -1,0 +1,34 @@
+<h1 mat-dialog-title>
+  Ajouter des cours
+</h1>
+
+<div mat-dialog-content>
+  <div class="filter">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtre">
+    </mat-form-field>
+  </div>
+
+  <div class="list-wrapper">
+    <mat-selection-list #courses>
+      <h3 mat-subheader>Cours MVA</h3>
+      <mat-list-option *ngFor="let course of dataSource.filteredData" [value]="course">
+        <h3 matLine>
+          {{ course.name }}
+        </h3>
+        <p matLine>
+          {{ course.ECTS }} ECTS / Lieu : {{ course.location }}
+        </p>
+      </mat-list-option>
+    </mat-selection-list>
+  </div>
+</div>
+
+<div mat-dialog-actions fxLayout="row" fxLayoutAlign="end">
+  <button mat-button mat-dialog-close>
+    Annuler
+  </button>
+  <button mat-raised-button color="primary" (click)="handleSubmit()">
+    Ajouter les cours sélectionnés
+  </button>
+</div>

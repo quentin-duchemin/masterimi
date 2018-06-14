@@ -1,0 +1,95 @@
+<h1>
+  Ma 3A
+</h1>
+
+<!--<p>-->
+  <!--Rappel : Il existe plusieurs formules :-->
+<!--</p>-->
+<!--<ul>-->
+  <!--<li>-->
+    <!--3A École : 5 à 6 modules du M2 sans validation du master recherche + PFE-->
+  <!--</li>-->
+  <!--<li>-->
+    <!--3A M2 Imbriqués : Validation du M2 et du diplôme des Ponts-->
+    <!--<ul>-->
+      <!--<li>-->
+        <!--Option 1 :  le PFE d'ingénieur et le stage du M2 ne sont pas fusionnés. Vous devrez donc effectuer votre PFE à la suite du stage de M2 (plus 6 mois après le M2)-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--Option 2 : Effectuer 15 Ects supplémentaires dans le cadre de votre 3A :-->
+        <!--<ul>-->
+          <!--<li>-->
+            <!--3 cours supplémentaires à 5 Ects : parmi les cours du M2 (en dehors de ceux validant le M2) ou d'un autre de nos M2 (IMI) ou des cours de 3A IMI, par exemple les cours Mathematics for business and startup (9 Ects), Data Driven Robust Optimization (5 Ects) et Algorithmes de Monte-Carlo par chaînes de Markov et méthodes particulaires (6 Ects)-->
+          <!--</li>-->
+          <!--<li>-->
+            <!--2 cours supplémentaires à 5 Ects + 1 projet (validation par le département)-->
+          <!--</li>-->
+        <!--</ul>-->
+      <!--</li>-->
+    <!--</ul>-->
+<!--</ul>-->
+
+<mat-card>
+  <mat-card-title>
+    Formulaire de validation des choix d'options de 3A
+  </mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="form">
+      <section>
+        <mat-form-field>
+          <mat-select formControlName="master" placeholder="Master" required>
+            <mat-option *ngFor="let master of masters"
+                        [value]="master.id">
+              {{ master.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-select formControlName="formula" placeholder="Formule 3A" required>
+            <mat-option *ngFor="let formula of formulas"
+                        [value]="formula.id">
+              {{ formula.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </section>
+
+      <section>
+        <h3>
+          Choix des cours pour la validation de la 3A
+        </h3>
+
+        <app-course-selection-input
+          mode="3A"
+          formControlName="courses"
+          [availableCourses]="availableCourses"
+        >
+        </app-course-selection-input>
+      </section>
+
+      <section *ngIf="form.get('formula').value === '3A-M2-ECTS'">
+        <h3>
+          Choix des cours supplémaires pour la validation de la 3A M2 Imbriqués - Option 2
+        </h3>
+
+        <app-course-selection-input
+          mode="option2"
+          formControlName="coursesOption2"
+          [availableCourses]="availableCourses"
+        >
+        </app-course-selection-input>
+      </section>
+    </form>
+  </mat-card-content>
+  <mat-card-actions fxLayout="row" *ngIf="!disabled">
+    <button mat-raised-button color="primary" fxFlex (click)="save()">
+      <mat-icon>save</mat-icon>
+      Sauvegarder
+    </button>
+    <button mat-raised-button color="accent" fxFlex (click)="submit()">
+      <mat-icon>send</mat-icon>
+      Envoyer
+    </button>
+  </mat-card-actions>
+</mat-card>
