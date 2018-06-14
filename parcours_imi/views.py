@@ -58,7 +58,12 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
         user = self.get_object()
 
         if request.method.upper() == 'GET':
-            serializer = UserParcoursSerializer(instance=user.parcours)
+            try:
+                serialization_data = dict(instance=user.parcours)
+            except User.parcours.RelatedObjectDoesNotExist:
+                serialization_data = dict()
+
+            serializer = UserParcoursSerializer(**serialization_data)
 
             return Response(serializer.data)
 
