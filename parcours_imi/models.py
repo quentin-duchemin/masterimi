@@ -17,6 +17,7 @@ class Course(models.Model):
     ECTS = models.FloatField(verbose_name='ECTS')
     semester = models.PositiveSmallIntegerField(verbose_name='Semestre')
     location = models.CharField(max_length=120, blank=True, null=True)
+    time = models.CharField(max_length=120, blank=True, null=True)
 
     class Meta:
         verbose_name = 'Cours'

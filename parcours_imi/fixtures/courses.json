@@ -21,7 +21,7 @@
       "location": "ENPC"
     }
   },
-    {
+  {
     "model": "parcours_imi.Course",
     "fields": {
       "name": "Algo de Monte-Carlo par chaînes de Markov et méthodes particulaires",
@@ -31,224 +31,225 @@
       "time": null,
       "location": "Jussieu"
     }
-    },{
-      "model": "parcours_imi.Course",
-      "fields": {
-        "name": "Graphs in Machine Learning",
-        "master": "MVA",
-        "ECTS": 5,
-        "semester": 5.1,
-        "time": "Mon/10:30/12:30",
-        "location": "ENS Cachan"
-      }
-    },
-    {
-      "model": "parcours_imi.Course",
-      "fields": {
-        "name": "Convex optimization and applications in machine learning",
-        "master": "MVA",
-        "ECTS": 5,
-        "semester": 5.1,
-        "time": "Mon/13:30/16:30",
-        "location": "ENS Ulm"
-      }
-    },
-    {
-      "model": "parcours_imi.Course",
-      "fields": {
-        "name": "Sparsity and compressed sensing",
-        "master": "MVA",
-        "ECTS": 5,
-        "semester": 5.1,
-        "time": "Mon/10:00/12:30",
-        "location": "ENS Ulm"
-      }
-    },
-    {
-      "model": "parcours_imi.Course",
-      "fields": {
-        "name": "Discrete Inference and Learning",
-        "master": "MVA",
-        "ECTS": 5,
-        "semester": 5.1,
-        "time": "Mon/13:45/16:45",
-        "location": "CentraleSupelec"
-      }
-    },
-    {
-      "model": "parcours_imi.Course",
-      "fields": {
-        "name": "Topological data analysis for imaging and machine learning",
-        "master": "MVA",
-        "ECTS": 5,
-        "semester": 5.1,
-        "time": "Tue/11:00/13:00",
-        "location": "ENS Cachan"
-      }
-    },
-    {
-      "model": "parcours_imi.Course",
-      "fields": {
-        "name": "Advanced Learning for Text and Graph Data (ALTeGraD)",
-        "master": "MVA",
-        "ECTS": 5,
-        "semester": 5.1,
-        "time": "Tue/11:00/15:00",
-        "location": "ENS Cachan"
-      }
-    },
-    {
-      "model": "parcours_imi.Course",
-      "fields": {
-        "name": "Reinforcement Learning",
-        "master": "MVA",
-        "ECTS": 5,
-        "semester": 5.1,
-        "time": "Tue/11:00/13:00",
-        "location": "ENS Cachan"
-      }
-    },
-    {
-      "model": "parcours_imi.Course",
-      "fields": {
-        "name": "Introduction to Statistical Learning",
-        "master": "MVA",
-        "ECTS": 5,
-        "semester": 5.1,
-        "time": "Tue/08:45/10:45",
-        "location": "ENS Cachan"
-      }
-    },
-    {
-      "model": "parcours_imi.Course",
-      "fields": {
-        "name": "3D Computer Vision",
-        "master": "MVA",
-        "ECTS": 5,
-        "semester": 5.1,
-        "time": "Tue/12:45/15:45",
-        "location": "Telecom"
-      }
-    },
-    {
-      "model": "parcours_imi.Course",
-      "fields": {
-        "name": "Object Recognition and Computer Vision",
-        "master": "MVA",
-        "ECTS": 5,
-        "semester": 5.1,
-        "time": "Tue/16:15/19:15",
-        "location": "ENS Ulm"
-      }
-    },
-    {
-      "model": "parcours_imi.Course",
-      "fields": {
-        "name": "Lecture Group: foundations and theory of mathematics for learning & vision",
-        "master": "MVA",
-        "ECTS": 5,
-        "semester": 5.1,
-        "time": "Tue/16:00/18:00",
-        "location": "ENS Cachan"
-      }
-    },
-    {
-      "model": "parcours_imi.Course",
-      "fields": {
-        "name": "Probabilistic Graphical Models",
-        "master": "MVA",
-        "ECTS": 5,
-        "semester": 5.1,
-        "time": "Wed/09:00/12:00",
-        "location": "ENS Cachan"
-      }
-    },
-    {
-      "model": "parcours_imi.Course",
-      "fields": {
-        "name": "Optimization and features of optimal solutions. Applications to imaging",
-        "master": "MVA",
-        "ECTS": 5,
-        "semester": 5.1,
-        "time": "Wed/13:30/16:30",
-        "location": "Telecom"
-      }
-    },
-    {
-      "model": "parcours_imi.Course",
-      "fields": {
-        "name": "Computational Statistics",
-        "master": "MVA",
-        "ECTS": 5,
-        "semester": 5.1,
-        "time": "Fri/09:00/13:00",
-        "location": "ENS Cachan"
-      }
-    },
-    {
-      "model": "parcours_imi.Course",
-      "fields": {
-        "name": "Introduction to Medical Image analysis",
-        "master": "MVA",
-        "ECTS": 5,
-        "semester": 5.1,
-        "time": "Wed/13:30/17:00",
-        "location": "ENS Cachan"
-      }
-    },
-    {
-      "model": "parcours_imi.Course",
-      "fields": {
-        "name": "Introduction à l'imagerie numérique",
-        "master": "MVA",
-        "ECTS": 5,
-        "semester": 5.1,
-        "time": "Thu/09:00/12:15",
-        "location": "Telecom"
-      }
-    },
-    {
-      "model": "parcours_imi.Course",
-      "fields": {
-        "name": "Sub-pixel Image Processing",
-        "master": "MVA",
-        "ECTS": 5,
-        "semester": 5.1,
-        "time": "Thu/13:30/18:15",
-        "location": "ENS Cachan"
-      }
-    },
-    {
-      "model": "parcours_imi.Course",
-      "fields": {
-        "name": "Méthodes mathématiques pour les neurosciences",
-        "master": "MVA",
-        "ECTS": 5,
-        "semester": 5.1,
-        "time": "Thu/13:30/18:45",
-        "location": "Jussieu"
-      }
-    },
-    {
-      "model": "parcours_imi.Course",
-      "fields": {
-        "name": "Unsupervised learning: From big data to low-dimensional representations",
-        "master": "MVA",
-        "ECTS": 5,
-        "semester": 5.1,
-        "time": "Fri/09:00/12:00",
-        "location": "ENS Cachan"
-      }
-    },
-    {
-      "model": "parcours_imi.Course",
-      "fields": {
-        "name": "The partial differential equations of image processing",
-        "master": "MVA",
-        "ECTS": 5,
-        "semester": 5.1,
-        "time": "Fri/14:00/17:00",
-        "location": "ENS Cachan"
-      }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Graphs in Machine Learning",
+      "master": 1,
+      "ECTS": 5,
+      "semester": 5.1,
+      "time": "Mon/10:30/12:30",
+      "location": "ENS Cachan"
     }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Convex optimization and applications in machine learning",
+      "master": 1,
+      "ECTS": 5,
+      "semester": 5.1,
+      "time": "Mon/13:30/16:30",
+      "location": "ENS Ulm"
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Sparsity and compressed sensing",
+      "master": 1,
+      "ECTS": 5,
+      "semester": 5.1,
+      "time": "Mon/10:00/12:30",
+      "location": "ENS Ulm"
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Discrete Inference and Learning",
+      "master": 1,
+      "ECTS": 5,
+      "semester": 5.1,
+      "time": "Mon/13:45/16:45",
+      "location": "CentraleSupelec"
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Topological data analysis for imaging and machine learning",
+      "master": 1,
+      "ECTS": 5,
+      "semester": 5.1,
+      "time": "Tue/11:00/13:00",
+      "location": "ENS Cachan"
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Advanced Learning for Text and Graph Data (ALTeGraD)",
+      "master": 1,
+      "ECTS": 5,
+      "semester": 5.1,
+      "time": "Tue/11:00/15:00",
+      "location": "ENS Cachan"
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Reinforcement Learning",
+      "master": 1,
+      "ECTS": 5,
+      "semester": 5.1,
+      "time": "Tue/11:00/13:00",
+      "location": "ENS Cachan"
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Introduction to Statistical Learning",
+      "master": 1,
+      "ECTS": 5,
+      "semester": 5.1,
+      "time": "Tue/08:45/10:45",
+      "location": "ENS Cachan"
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "3D Computer Vision",
+      "master": 1,
+      "ECTS": 5,
+      "semester": 5.1,
+      "time": "Tue/12:45/15:45",
+      "location": "Telecom"
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Object Recognition and Computer Vision",
+      "master": 1,
+      "ECTS": 5,
+      "semester": 5.1,
+      "time": "Tue/16:15/19:15",
+      "location": "ENS Ulm"
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Lecture Group: foundations and theory of mathematics for learning & vision",
+      "master": 1,
+      "ECTS": 5,
+      "semester": 5.1,
+      "time": "Tue/16:00/18:00",
+      "location": "ENS Cachan"
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Probabilistic Graphical Models",
+      "master": 1,
+      "ECTS": 5,
+      "semester": 5.1,
+      "time": "Wed/09:00/12:00",
+      "location": "ENS Cachan"
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Optimization and features of optimal solutions. Applications to imaging",
+      "master": 1,
+      "ECTS": 5,
+      "semester": 5.1,
+      "time": "Wed/13:30/16:30",
+      "location": "Telecom"
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Computational Statistics",
+      "master": 1,
+      "ECTS": 5,
+      "semester": 5.1,
+      "time": "Fri/09:00/13:00",
+      "location": "ENS Cachan"
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Introduction to Medical Image analysis",
+      "master": 1,
+      "ECTS": 5,
+      "semester": 5.1,
+      "time": "Wed/13:30/17:00",
+      "location": "ENS Cachan"
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Introduction à l'imagerie numérique",
+      "master": 1,
+      "ECTS": 5,
+      "semester": 5.1,
+      "time": "Thu/09:00/12:15",
+      "location": "Telecom"
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Sub-pixel Image Processing",
+      "master": 1,
+      "ECTS": 5,
+      "semester": 5.1,
+      "time": "Thu/13:30/18:15",
+      "location": "ENS Cachan"
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Méthodes mathématiques pour les neurosciences",
+      "master": 1,
+      "ECTS": 5,
+      "semester": 5.1,
+      "time": "Thu/13:30/18:45",
+      "location": "Jussieu"
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Unsupervised learning: From big data to low-dimensional representations",
+      "master": 1,
+      "ECTS": 5,
+      "semester": 5.1,
+      "time": "Fri/09:00/12:00",
+      "location": "ENS Cachan"
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "The partial differential equations of image processing",
+      "master": 1,
+      "ECTS": 5,
+      "semester": 5.1,
+      "time": "Fri/14:00/17:00",
+      "location": "ENS Cachan"
+    }
+  }
 ]
