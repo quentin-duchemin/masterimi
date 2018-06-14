@@ -1,6 +1,9 @@
 from django.contrib.auth.models import User
-from rest_framework import viewsets
+from rest_framework import mixins, viewsets, permissions
+from rest_framework.decorators import action
 from rest_framework.exceptions import NotAuthenticated
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
 
 from parcours_imi.models import Course, Master, UserParcours
 from parcours_imi.serializers import (
@@ -8,24 +11,37 @@ from parcours_imi.serializers import (
 )
 
 
-class CourseViewSet(viewsets.ReadOnlyModelViewSet):
+class IsOwner(permissions.BasePermission):
+    """
+    Object-level permission to only allow owners of an object to access it.
+    """
+
+    def has_object_permission(self, request, view, obj):
+        if isinstance(obj, User):
+            return obj == request.user
+
+        if isinstance(obj, UserParcours):
+            return obj.user == request.user
+
+        return False
+
+
+class CourseViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
+    permission_classes = (IsAuthenticated,)
 
 
-class MasterViewSet(viewsets.ReadOnlyModelViewSet):
+class MasterViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Master.objects.all()
     serializer_class = MasterSerializer
+    permission_classes = (IsAuthenticated,)
 
 
-class UserParcoursViewSet(viewsets.ModelViewSet):
-    serializer_class = UserParcoursSerializer
-    queryset = UserParcours.objects.all()
-
-
-class UserViewSet(viewsets.ReadOnlyModelViewSet):
+class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
     serializer_class = UserSerializer
     queryset = User.objects.all()
+    permission_classes = (IsAuthenticated, IsOwner)
 
     def get_object(self):
         pk = self.kwargs['pk']
@@ -36,3 +52,24 @@ class UserViewSet(viewsets.ReadOnlyModelViewSet):
             return self.request.user
         else:
             return super().get_object()
+
+    @action(methods=['GET', 'PUT'], detail=True)
+    def parcours(self, request, *args, **kwargs):
+        user = self.get_object()
+
+        if request.method.upper() == 'GET':
+            serializer = UserParcoursSerializer(instance=user.parcours)
+
+            return Response(serializer.data)
+
+        if request.method.upper() == 'PUT':
+            request.data['user'] = request.user.id
+            serializer = UserParcoursSerializer(instance=user.parcours, data=request.data, partial=False)
+            serializer.is_valid(raise_exception=True)
+            serializer.save()
+
+            return Response(serializer.data)
+
+        raise NotImplementedError
+
+

@@ -38,7 +38,7 @@ const routes = [
         path: 'parcours',
         children: [
           {
-            path: ':id',
+            path: '',
             resolve: {
               parcours: ParcoursResolver,
               departments: DepartmentsResolver,

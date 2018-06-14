@@ -62,6 +62,8 @@ export class ParcoursFormComponent implements OnInit {
   }
 
   submit() {
+    this.markAsTouched();
+
     const { master, formula, courses, coursesOption2 } = this.form.value;
     const parcours = {
       ...this.route.snapshot.data.parcours,
@@ -76,5 +78,9 @@ export class ParcoursFormComponent implements OnInit {
 
   coursesIdToCourses(coursesId) {
     return this.courses.filter((course) => coursesId.includes(course.id));
+  }
+
+  private markAsTouched() {
+    Object.values(this.form.controls).forEach(control => control.markAsTouched());
   }
 }

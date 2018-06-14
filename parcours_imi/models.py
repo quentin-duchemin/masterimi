@@ -39,8 +39,8 @@ class UserParcours(models.Model):
 
     master = models.ForeignKey(Master, on_delete=models.PROTECT)
     formula = models.CharField(max_length=120, choices=FORMULAS)
-    courses = models.ManyToManyField(Course, related_name='courses')
-    coursesOption2 = models.ManyToManyField(Course, related_name='coursesOption2')
+    courses = models.ManyToManyField(Course, related_name='courses', blank=True)
+    coursesOption2 = models.ManyToManyField(Course, related_name='coursesOption2', blank=True)
 
     class Meta:
         verbose_name = 'Parcours étudiant'

@@ -12,11 +12,11 @@ export class ParcoursService {
   ) {
   }
 
-  getOne(id: number): Observable<IParcours> {
-    return this.http.get<IParcours>(`/parcours/${id}`);
+  get(): Observable<IParcours> {
+    return this.http.get<IParcours>('/users/me/parcours');
   }
 
   update(parcours: IParcours) {
-    return this.http.put(`/parcours/${parcours.id}`, parcours);
+    return this.http.put('/users/me/parcours', parcours);
   }
 }
