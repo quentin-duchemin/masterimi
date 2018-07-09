@@ -4,11 +4,11 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from 'app/components/home/home.component';
 import { LayoutComponent } from 'app/components/layout/layout.component';
 import { LoginComponent } from 'app/components/login/login.component';
+import { ParcoursIntroComponent } from 'app/components/parcours-intro/parcours-intro.component';
 import { ParcoursFormComponent } from 'app/components/parcours-form/parcours-form.component';
 import { AuthGuard } from 'app/services/auth.guard';
 
 import { ParcoursResolver } from './parcours.resolver';
-import { CurrentUserResolver } from './current-user.resolver';
 import { FormulasResolver } from './formulas.resolver';
 import { DepartmentsResolver } from './departments.resolver';
 import { MastersResolver } from './masters.resolver';
@@ -26,9 +26,6 @@ const routes = [
     canActivate: [
       AuthGuard,
     ],
-    resolve: {
-      currentUser: CurrentUserResolver,
-    },
     children: [
       {
         path: '',
@@ -37,6 +34,10 @@ const routes = [
       {
         path: 'parcours',
         children: [
+          {
+            path: '',
+            component: ParcoursIntroComponent,
+          },
           {
             path: '',
             resolve: {
@@ -48,7 +49,7 @@ const routes = [
             },
             children: [
               {
-                path: '',
+                path: 'show',
                 component: ParcoursFormComponent,
                 data: {
                   view: 'show',
@@ -71,15 +72,19 @@ const routes = [
 
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ],
+  imports: [
+    RouterModule.forRoot(routes, {
+      paramsInheritanceStrategy: 'always',
+    })
+  ],
+  exports: [RouterModule],
   providers: [
     CoursesResolver,
-    CurrentUserResolver,
     DepartmentsResolver,
     FormulasResolver,
     MastersResolver,
     ParcoursResolver,
   ],
 })
-export class RoutingModule {}
+export class RoutingModule {
+}

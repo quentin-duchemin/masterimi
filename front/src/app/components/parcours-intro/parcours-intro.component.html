@@ -1,0 +1,44 @@
+<section *ngIf="hasNoParcours">
+  <h2>
+    Vous n'avez pas encore renseigné vos choix de cours de 3A
+  </h2>
+
+  <p>
+    Paragraphe d'explications
+  </p>
+
+  <button mat-raised-button color="primary" routerLink="/parcours/edit">
+    <mat-icon>save</mat-icon>
+    Renseigner mes choix de cours
+  </button>
+</section>
+
+<section *ngIf="hasPendingParcours">
+  <h2>
+    Vous n'avez pas encore envoyé vos choix de cours de 3A
+  </h2>
+
+  <p>
+    Paragraphe d'explications
+  </p>
+
+  <button mat-raised-button color="primary" routerLink="/parcours/edit">
+    <mat-icon>send</mat-icon>
+    Envoyer mes choix de cours
+  </button>
+</section>
+
+<section *ngIf="hasSubmittedParcours">
+  <h2>
+    Vous avez envoyé vos choix de cours de 3A
+  </h2>
+
+  <p>
+    Paragraphe d'explications
+  </p>
+
+  <button mat-raised-button color="primary" routerLink="/parcours/show">
+    <mat-icon>remove_red_eye</mat-icon>
+    Consulter mes choix de cours
+  </button>
+</section>

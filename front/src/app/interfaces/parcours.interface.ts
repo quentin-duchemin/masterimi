@@ -8,4 +8,6 @@ export interface IParcours {
   user?: number;
   courses: ICourse[];
   coursesOption2: ICourse[];
+  comment?: string;
+  submitted: boolean;
 }

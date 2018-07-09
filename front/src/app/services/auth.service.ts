@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { IUser } from '../interfaces/user.interface';
 import { UserService } from './user.service';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 const STORAGE_KEY = 'master_imi_token';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class AuthService {
-  private currentUser: IUser;
+  private currentUser = new BehaviorSubject<IUser>({} as IUser);
   private accessToken: string;
 
   constructor(
@@ -41,10 +41,16 @@ export class AuthService {
     this.accessToken = accessToken;
   }
 
+  reloadCurrentUser() {
+    this.userService.getCurrentUser().subscribe((currentUser) => {
+      this.currentUser.next(currentUser);
+    });
+  }
+
   private cleanStorage(): void {
     localStorage.removeItem(STORAGE_KEY);
     this.accessToken = null;
-    this.currentUser = null;
+    this.currentUser.next({} as IUser);
   }
 
   isLoggedIn(): boolean {
@@ -53,5 +59,9 @@ export class AuthService {
 
   getAccessToken(): string {
     return this.accessToken;
+  }
+
+  getCurrentUser(): Observable<IUser> {
+    return this.currentUser.asObservable();
   }
 }

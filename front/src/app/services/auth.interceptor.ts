@@ -1,5 +1,5 @@
 import { Injectable, Injector } from '@angular/core';
-import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
+import { HttpErrorResponse, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { AuthService } from './auth.service';
 import { environment } from 'environments/environment';
@@ -40,6 +40,8 @@ export class AuthInterceptor implements HttpInterceptor {
             return of('Unauthorized');
           }
         }
+
+        return of(err);
       }),
     );
   }

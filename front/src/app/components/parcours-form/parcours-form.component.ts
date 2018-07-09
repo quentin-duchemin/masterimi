@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IFormula } from 'app/interfaces/formula.interface';
@@ -7,6 +7,7 @@ import { IMaster } from 'app/interfaces/master.interface';
 import { ICourse } from 'app/interfaces/course.interface';
 import { IParcours } from 'app/interfaces/parcours.interface';
 import { ParcoursService } from 'app/services/parcours.service';
+import { AuthService } from 'app/services/auth.service';
 
 
 @Component({
@@ -23,9 +24,11 @@ export class ParcoursFormComponent implements OnInit {
   courses: ICourse[];
 
   constructor(
-    private route: ActivatedRoute,
-    private dialog: MatDialog,
-    private fb: FormBuilder,
+    private readonly route: ActivatedRoute,
+    private readonly router: Router,
+    private readonly dialog: MatDialog,
+    private readonly fb: FormBuilder,
+    private readonly authService: AuthService,
     private readonly parcoursService: ParcoursService,
   ) {
   }
@@ -44,6 +47,7 @@ export class ParcoursFormComponent implements OnInit {
       formula: [parcours.formula, Validators.required],
       courses: [this.coursesIdToCourses(parcours.courses)],
       coursesOption2: [this.coursesIdToCourses(parcours.coursesOption2)],
+      comment: [parcours.comment],
     });
 
     if (this.disabled) {
@@ -61,19 +65,32 @@ export class ParcoursFormComponent implements OnInit {
     });
   }
 
+  save() {
+    this.performUpdate(false);
+  }
+
   submit() {
+    this.performUpdate(true);
+  }
+
+  private performUpdate(isSubmitted) {
     this.markAsTouched();
 
-    const { master, formula, courses, coursesOption2 } = this.form.value;
+    const { master, formula, courses, coursesOption2, comment } = this.form.value;
     const parcours = {
       ...this.route.snapshot.data.parcours,
       master,
       formula,
       courses: courses.map((course) => course.id),
       coursesOption2: coursesOption2.map((course) => course.id),
+      comment,
+      submitted: isSubmitted,
     } as IParcours;
 
-    this.parcoursService.update(parcours).subscribe(() => alert('wesh'));
+    this.parcoursService.update(parcours).subscribe(() => {
+      this.authService.reloadCurrentUser();
+      this.router.navigateByUrl('/parcours');
+    });
   }
 
   coursesIdToCourses(coursesId) {

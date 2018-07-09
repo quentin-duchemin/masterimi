@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
-import {IUser} from '../../interfaces/user.interface';
-import {ActivatedRoute} from '@angular/router';
+import { AuthService } from 'app/services/auth.service';
+import { IUser } from 'app/interfaces/user.interface';
 
 @Component({
   selector: 'app-layout',
@@ -14,12 +13,16 @@ export class LayoutComponent implements OnInit {
   sideNavOpened = true;
 
   constructor(
-      private readonly route: ActivatedRoute,
-      private readonly authService: AuthService,
-  ) { }
+    private readonly authService: AuthService,
+  ) {
+  }
 
   ngOnInit() {
-    this.currentUser = this.route.snapshot.data.currentUser;
+    this.authService.reloadCurrentUser();
+
+    this.authService.getCurrentUser().subscribe((currentUser) => {
+      this.currentUser = currentUser;
+    });
   }
 
   logout() {

@@ -80,6 +80,15 @@
         >
         </app-course-selection-input>
       </section>
+
+      <section>
+        <mat-form-field>
+          <textarea matInput matTextareaAutosize matAutosizeMinRows="3"
+                    formControlName="comment" placeholder="Commentaires éventuels..."
+          >
+          </textarea>
+        </mat-form-field>
+      </section>
     </form>
   </mat-card-content>
   <mat-card-actions fxLayout="row" *ngIf="!disabled">

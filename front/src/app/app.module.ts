@@ -20,6 +20,7 @@ import { CourseSelectionDialogComponent } from './components/parcours-form/cours
 import { CourseSelectionInputComponent } from './components/parcours-form/course-selection-input.component';
 import { CourseService } from 'app/services/course.service';
 import { MasterService } from 'app/services/master.service';
+import { ParcoursIntroComponent } from './components/parcours-intro/parcours-intro.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MasterService } from 'app/services/master.service';
     CourseSelectionDialogComponent,
     CourseSelectionInputComponent,
     LoginComponent,
+    ParcoursIntroComponent,
   ],
   entryComponents: [
     CourseSelectionDialogComponent,
