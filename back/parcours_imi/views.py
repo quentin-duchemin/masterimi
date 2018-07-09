@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from rest_framework import mixins, viewsets, permissions
 from rest_framework.decorators import action
-from rest_framework.exceptions import NotAuthenticated
+from rest_framework.exceptions import NotAuthenticated, PermissionDenied
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
@@ -68,8 +68,16 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
             return Response(serializer.data)
 
         if request.method.upper() == 'PUT':
+            try:
+                parcours = user.parcours
+            except User.parcours.RelatedObjectDoesNotExist:
+                parcours = None
+
+            if parcours and parcours.submitted:
+                raise PermissionDenied()
+
             request.data['user'] = request.user.id
-            serializer = UserParcoursSerializer(instance=user.parcours, data=request.data, partial=False)
+            serializer = UserParcoursSerializer(instance=parcours, data=request.data, partial=False)
             serializer.is_valid(raise_exception=True)
             serializer.save()
 

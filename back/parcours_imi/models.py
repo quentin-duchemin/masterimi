@@ -42,6 +42,10 @@ class UserParcours(models.Model):
     courses = models.ManyToManyField(Course, related_name='courses', blank=True)
     coursesOption2 = models.ManyToManyField(Course, related_name='coursesOption2', blank=True)
 
+    comment = models.TextField(verbose_name='Commentaire', blank=True)
+
+    submitted = models.BooleanField(verbose_name='Validé par l\'étudiant', default=False)
+
     class Meta:
         verbose_name = 'Parcours étudiant'
         verbose_name_plural = 'Parcours étudiants'

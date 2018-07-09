@@ -28,7 +28,7 @@ class UserParcoursSerializer(serializers.ModelSerializer):
 
 
 class UserSerializer(serializers.ModelSerializer):
-    parcours = serializers.PrimaryKeyRelatedField(read_only=True)
+    parcours = UserParcoursSerializer(read_only=True)
 
     class Meta:
         model = User
