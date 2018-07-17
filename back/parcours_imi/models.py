@@ -1,6 +1,8 @@
 from django.contrib.auth.models import User
 from django.db import models
 
+from messaging.models import Conversation
+
 
 class Master(models.Model):
     name = models.CharField(max_length=120, verbose_name='Nom')
@@ -45,6 +47,8 @@ class UserParcours(models.Model):
     comment = models.TextField(verbose_name='Commentaire', blank=True)
 
     submitted = models.BooleanField(verbose_name='Validé par l\'étudiant', default=False)
+
+    conversation = models.ForeignKey(Conversation, on_delete=models.PROTECT, null=True)
 
     class Meta:
         verbose_name = 'Parcours étudiant'

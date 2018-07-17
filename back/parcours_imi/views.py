@@ -1,41 +1,25 @@
 from django.contrib.auth.models import User
-from rest_framework import mixins, viewsets, permissions
+from rest_framework import mixins, viewsets
 from rest_framework.decorators import action
 from rest_framework.exceptions import NotAuthenticated, PermissionDenied
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
-from parcours_imi.models import Course, Master, UserParcours
+from parcours_imi.models import Course, Master
+from master_imi.permissions import IsOwner
 from parcours_imi.serializers import (
     CourseSerializer, MasterSerializer, UserParcoursSerializer, UserSerializer,
 )
 
 
-class IsOwner(permissions.BasePermission):
-    """
-    Object-level permission to only allow owners of an object to access it.
-    """
-
-    def has_object_permission(self, request, view, obj):
-        if isinstance(obj, User):
-            return obj == request.user
-
-        if isinstance(obj, UserParcours):
-            return obj.user == request.user
-
-        return False
-
-
 class CourseViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
-    permission_classes = (IsAuthenticated,)
 
 
 class MasterViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Master.objects.all()
     serializer_class = MasterSerializer
-    permission_classes = (IsAuthenticated,)
 
 
 class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
