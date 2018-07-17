@@ -3,16 +3,16 @@
     "model": "parcours_imi.Master",
     "pk": 1,
     "fields": {
-      "name": "Mathématiques Vision Apprentissage (MVA)"
-      "short_name": "MVA",
+      "name": "Mathématiques Vision Apprentissage (MVA)",
+      "short_name": "MVA"
     }
   },
   {
     "model": "parcours_imi.Master",
     "pk": 2,
     "fields": {
-      "name": "Probabilités et modèles aléatoires (PMA)"
-      "short_name": "PMA",
+      "name": "Probabilités et modèles aléatoires (PMA)",
+      "short_name": "PMA"
     }
   }
 ]

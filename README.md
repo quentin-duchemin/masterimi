@@ -1,15 +1,27 @@
 # Présentation
 API REST Django consistuant le Back de l'outil demandé par le département IMI pour aider les élèves à construire correctement leur 3A.
 
-## Installation
+## Production
 ```bash
-virtualenv venv/
-pip install -r requirements.txt
+docker-compose build
+docker-compose up -d
+docker-compose exec back /venv/bin/python manage.py loaddata /app/parcours_imi/fixtures/masters.json
+docker-compose exec back /venv/bin/python manage.py loaddata /app/parcours_imi/fixtures/courses.json
+docker-compose exec back /venv/bin/python manage.py createsuperuser
 ```
 
-## Lancement
+## Development
 ```bash
+cd back/
+virtualenv venv/
+pip install -r requirements.txt
+cp master_imi/.env.dist master_imi/.env
 python manage.py runserver
+
+# In another shell
+cd front/
+npm install
+npm start
 ```
 
 Aller sur http://localhost:8000/api/   pour accéder à la racine de l'API.
@@ -19,7 +31,7 @@ Aller sur http://localhost:8000/api/   pour accéder à la racine de l'API.
 Jusqu'ici, j'ai pu créer les Serializers associés aux modèles permettant un passage des donn�es stockées en mémoire à leur traduction au format JSON et inversement. J'ai créé les vues associées.
 
 - J'ai essayé de traduire correctement dans les serializers les relations entre modèles. C'est ce qui m'a posé un peu de souci avec également la création
-et modification du profil utilisateur (d'ailleurs peux-tu me donner ton avis sur cette partie du code ? car je ne suis pas s�r d'avoir eu la bonne vision.)
+et modification du profil utilisateur (d'ailleurs peux-tu me donner ton avis sur cette partie du code ? car je ne suis pas sur d'avoir eu la bonne vision.)
 
 Après ta validation du code actuel et correction des erreurs/manques qui tu me signaleras, je pense procéder à la gestion de permissions/autorisation sur l'accès
 aux différentes vues (j'ai vu comment faire et ça n'a pas l'air difficile).
