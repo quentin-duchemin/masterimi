@@ -17,7 +17,6 @@ services:
     volumes:
       - back-uploads:/app/uploads
     environment:
-      DEBUG: 0
       DATABASE_URL: postgres://my3A:my3A@db/my3A
       CELERY_BROKER_URL: amqp://celery_broker
       DJANGO_MANAGEPY_MIGRATE: 1
