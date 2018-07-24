@@ -23,7 +23,7 @@ class UserParcoursSerializer(serializers.ModelSerializer):
     courses = serializers.PrimaryKeyRelatedField(many=True, queryset=Course.objects.all())
     coursesOption2 = serializers.PrimaryKeyRelatedField(many=True, queryset=Course.objects.all())
 
-    conversation = serializers.PrimaryKeyRelatedField(queryset=Conversation.objects.all())
+    # conversation = serializers.PrimaryKeyRelatedField(queryset=Conversation.objects.all())
 
     class Meta:
         model = UserParcours

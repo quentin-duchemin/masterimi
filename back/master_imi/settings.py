@@ -151,6 +151,15 @@ CORS_URLS_REGEX = r'^/api/.*$'
 
 APPEND_SLASH = False
 
+# Uploads
+
+MEDIA_URL = '/uploads/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+
+# Celery
+
+CELERY_BROKER_URL = env('CELERY_BROKER_URL', 'amqp://localhost')
+
 # Logging
 LOGGING = {
     'version': 1,

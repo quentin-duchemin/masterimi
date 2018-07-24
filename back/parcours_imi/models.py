@@ -48,7 +48,7 @@ class UserParcours(models.Model):
 
     submitted = models.BooleanField(verbose_name='Validé par l\'étudiant', default=False)
 
-    conversation = models.ForeignKey(Conversation, on_delete=models.PROTECT, null=True)
+    # conversation = models.ForeignKey(Conversation, on_delete=models.PROTECT, null=True)
 
     class Meta:
         verbose_name = 'Parcours étudiant'

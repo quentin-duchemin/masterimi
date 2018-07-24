@@ -11,6 +11,24 @@ services:
       POSTGRES_USER: my3A
       POSTGRES_PASSWORD: my3A
 
+  celery_broker:
+    image: rabbitmq:3.7
+    restart: always
+    volumes:
+      - celery_broker-data:/var/lib/rabbitmq
+
+  back_worker:
+    build:
+      context: back
+    restart: always
+    command: ['/venv/bin/celery', '-A', 'master_imi', 'worker', '-l', 'info']
+    environment:
+      DATABASE_URL: postgres://my3A:my3A@db/my3A
+      CELERY_BROKER_URL: amqp://celery_broker
+    depends_on:
+      - celery_broker
+      - db
+
   back:
     build:
       context: back
@@ -23,6 +41,7 @@ services:
       DJANGO_MANAGEPY_COLLECTSTATIC: 1
     depends_on:
       - db
+      - celery_broker
 
   front:
     build:
@@ -34,4 +53,5 @@ services:
 
 volumes:
   db-data:
+  celery_broker-data:
   back-uploads:
