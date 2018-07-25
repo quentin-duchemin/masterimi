@@ -11,8 +11,3 @@ class CourseAdmin(admin.ModelAdmin):
 @admin.register(Master)
 class MasterAdmin(admin.ModelAdmin):
     pass
-
-
-@admin.register(UserParcours)
-class UserParcoursAdmin(admin.ModelAdmin):
-    pass

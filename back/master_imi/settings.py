@@ -158,7 +158,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 
 # Celery
 
-CELERY_BROKER_URL = env('CELERY_BROKER_URL', 'amqp://localhost')
+CELERY_BROKER_URL = env('CELERY_BROKER_URL', default='amqp://localhost')
 
 # Logging
 LOGGING = {

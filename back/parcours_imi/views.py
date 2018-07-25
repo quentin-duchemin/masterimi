@@ -5,11 +5,12 @@ from rest_framework.exceptions import NotAuthenticated, PermissionDenied
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
-from parcours_imi.models import Course, Master
 from master_imi.permissions import IsOwner
+from parcours_imi.models import Course, Master
 from parcours_imi.serializers import (
     CourseSerializer, MasterSerializer, UserParcoursSerializer, UserSerializer,
 )
+from parcours_imi.tasks import send_validation_email
 
 
 class CourseViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
@@ -64,6 +65,10 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
             serializer = UserParcoursSerializer(instance=parcours, data=request.data, partial=False)
             serializer.is_valid(raise_exception=True)
             serializer.save()
+
+            print(serializer.data)
+
+            send_validation_email(serializer.data['id'])
 
             return Response(serializer.data)
 
