@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { IParcours } from 'app/interfaces/parcours.interface';
-import { AuthService } from 'app/services/auth.service';
+import { IParcours } from '../../interfaces/parcours.interface';
+import { AuthService } from '../../services/auth.service';
 
 
 @Component({
@@ -20,18 +20,23 @@ export class ParcoursIntroComponent implements OnInit {
   ngOnInit() {
     this.authService.getCurrentUser().subscribe((currentUser) => {
       this.parcours = currentUser.parcours;
+      console.log(this.parcours);
     });
   }
 
-  get hasNoParcours() {
-    return !this.parcours;
+  get hasOption() {
+    return !!this.parcours.option;
   }
 
-  get hasPendingParcours() {
-    return !!this.parcours && !this.parcours.submitted;
+  get hasNoCourses() {
+    return !this.parcours.courseChoice;
   }
 
-  get hasSubmittedParcours() {
-    return !!this.parcours && this.parcours.submitted;
+  get hasPendingCourses() {
+    return !!this.parcours.courseChoice && !this.parcours.courseChoice.submitted;
+  }
+
+  get hasSubmittedCourses() {
+    return !!this.parcours.courseChoice && this.parcours.courseChoice.submitted;
   }
 }

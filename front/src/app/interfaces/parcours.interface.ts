@@ -1,13 +1,17 @@
-import { IMaster } from 'app/interfaces/master.interface';
-import { ICourse } from 'app/interfaces/course.interface';
+import { IMaster } from './master.interface';
+import { ICourse } from './course.interface';
 
 export interface IParcours {
-  id?: number;
+  id: number;
   master: IMaster;
-  formula: string;
+  option: string;
   user?: number;
-  courses: ICourse[];
-  coursesOption2: ICourse[];
+  courseChoice: ICourseChoice;
+}
+
+export interface ICourseChoice {
+  mainCourses: ICourse[];
+  option2Courses: ICourse[];
   comment?: string;
   submitted: boolean;
 }

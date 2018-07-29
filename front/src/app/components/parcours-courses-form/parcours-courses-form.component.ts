@@ -2,26 +2,26 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { IFormula } from 'app/interfaces/formula.interface';
-import { IMaster } from 'app/interfaces/master.interface';
-import { ICourse } from 'app/interfaces/course.interface';
-import { IParcours } from 'app/interfaces/parcours.interface';
-import { ParcoursService } from 'app/services/parcours.service';
-import { AuthService } from 'app/services/auth.service';
+import { IFormula } from '../../interfaces/formula.interface';
+import { IMaster } from '../../interfaces/master.interface';
+import { ICourse } from '../../interfaces/course.interface';
+import { IParcours, ICourseChoice } from '../../interfaces/parcours.interface';
+import { ParcoursService } from '../../services/parcours.service';
+import { AuthService } from '../../services/auth.service';
 
 
 @Component({
   selector: 'app-master-form',
-  templateUrl: './parcours-form.component.html',
-  styleUrls: ['./parcours-form.component.css'],
+  templateUrl: './parcours-courses-form.component.html',
+  styleUrls: ['./parcours-courses-form.component.css'],
 })
-export class ParcoursFormComponent implements OnInit {
+export class ParcoursCoursesFormComponent implements OnInit {
   form: FormGroup;
   disabled = false;
 
-  masters: IMaster[];
-  formulas: IFormula[];
   courses: ICourse[];
+
+  parcours: IParcours;
 
   constructor(
     private readonly route: ActivatedRoute,
@@ -36,18 +36,19 @@ export class ParcoursFormComponent implements OnInit {
   ngOnInit() {
     this.disabled = this.route.snapshot.data.view === 'show';
 
-    this.masters = this.route.snapshot.data.masters;
-    this.formulas = this.route.snapshot.data.formulas;
     this.courses = this.route.snapshot.data.courses;
 
-    const parcours: IParcours = this.route.snapshot.data.parcours;
+    this.parcours = this.route.snapshot.data.parcours;
+
+    const courseChoice: ICourseChoice = this.route.snapshot.data.parcours.courseChoice || {
+      mainCourses: [],
+      option2Courses: [],
+    };
 
     this.form = this.fb.group({
-      master: [parcours.master, Validators.required],
-      formula: [parcours.formula, Validators.required],
-      courses: [this.coursesIdToCourses(parcours.courses)],
-      coursesOption2: [this.coursesIdToCourses(parcours.coursesOption2)],
-      comment: [parcours.comment],
+      mainCourses: [this.coursesIdToCourses(courseChoice.mainCourses)],
+      option2Courses: [this.coursesIdToCourses(courseChoice.option2Courses)],
+      comment: [courseChoice.comment],
     });
 
     if (this.disabled) {
@@ -57,8 +58,8 @@ export class ParcoursFormComponent implements OnInit {
 
   get availableCourses() {
     const selectedCourses = [
-      ...this.form.get('courses').value,
-      ...this.form.get('coursesOption2').value,
+      ...this.form.get('mainCourses').value,
+      ...this.form.get('option2Courses').value,
     ];
     return this.courses.filter((course) => {
       return selectedCourses.find((selectedCourse) => selectedCourse.id === course.id) === undefined;
@@ -76,18 +77,15 @@ export class ParcoursFormComponent implements OnInit {
   private performUpdate(isSubmitted) {
     this.markAsTouched();
 
-    const { master, formula, courses, coursesOption2, comment } = this.form.value;
-    const parcours = {
-      ...this.route.snapshot.data.parcours,
-      master,
-      formula,
-      courses: courses.map((course) => course.id),
-      coursesOption2: coursesOption2.map((course) => course.id),
+    const { mainCourses, option2Courses, comment } = this.form.value;
+    const courseChoice = {
+      mainCourses: mainCourses.map((course) => course.id),
+      option2Courses: option2Courses.map((course) => course.id),
       comment,
       submitted: isSubmitted,
-    } as IParcours;
+    } as ICourseChoice;
 
-    this.parcoursService.update(parcours).subscribe(() => {
+    this.parcoursService.updateCourseChoice(courseChoice).subscribe(() => {
       this.authService.reloadCurrentUser();
       this.router.navigateByUrl('/parcours');
     });

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { IParcours } from 'app/interfaces/parcours.interface';
+import { IParcours, ICourseChoice } from '../interfaces/parcours.interface';
 
 
 @Injectable({ providedIn: 'root' })
@@ -16,7 +16,13 @@ export class ParcoursService {
     return this.http.get<IParcours>('/users/me/parcours');
   }
 
-  update(parcours: IParcours) {
-    return this.http.put('/users/me/parcours', parcours);
+  updateOption(option: string) {
+    return this.http.patch('/users/me/parcours_option', {
+      option,
+    });
+  }
+
+  updateCourseChoice(courseChoice: ICourseChoice) {
+    return this.http.put('/users/me/parcours_courses', courseChoice);
   }
 }

@@ -1,44 +1,102 @@
-<section *ngIf="hasNoParcours">
-  <h2>
-    Vous n'avez pas encore renseigné vos choix de cours de 3A
-  </h2>
+<div *ngIf="!parcours">
+  <mat-spinner></mat-spinner>
+</div>
 
-  <p>
-    Paragraphe d'explications
-  </p>
+<div *ngIf="parcours">
+  <mat-vertical-stepper>
+    <ng-template matStepperIcon="edit">
+      <mat-icon>check</mat-icon>
+    </ng-template>
 
-  <button mat-raised-button color="primary" routerLink="/parcours/edit">
-    <mat-icon>save</mat-icon>
-    Renseigner mes choix de cours
-  </button>
-</section>
+    <!-- Step 1 -->
 
-<section *ngIf="hasPendingParcours">
-  <h2>
-    Vous n'avez pas encore envoyé vos choix de cours de 3A
-  </h2>
+    <mat-step label="Étape 1 : Choix du master" completed>
+        <h3>
+          Tu as choisi ton master
+        </h3>
 
-  <p>
-    Paragraphe d'explications
-  </p>
+        <p>
+          Ton master est : {{ parcours.master.name }}
+        </p>
+    </mat-step>
 
-  <button mat-raised-button color="primary" routerLink="/parcours/edit">
-    <mat-icon>send</mat-icon>
-    Envoyer mes choix de cours
-  </button>
-</section>
+    <!-- Step 2 -->
 
-<section *ngIf="hasSubmittedParcours">
-  <h2>
-    Vous avez envoyé vos choix de cours de 3A
-  </h2>
+    <mat-step label="Étape 2 : Choix de l'option" [completed]="hasOption">
+      <div *ngIf="!hasOption">
+        <h3>
+          Tu n'as pas encore choisi ton option
+        </h3>
 
-  <p>
-    Paragraphe d'explications
-  </p>
+        <p>
+          Paragraphe d'explications
+        </p>
 
-  <button mat-raised-button color="primary" routerLink="/parcours/show">
-    <mat-icon>remove_red_eye</mat-icon>
-    Consulter mes choix de cours
-  </button>
-</section>
+        <button mat-raised-button color="primary" routerLink="/parcours/edit">
+          <mat-icon>save</mat-icon>
+          Renseigner mes choix de cours
+        </button>
+      </div>
+
+      <div *ngIf="hasOption">
+        <h3>
+          Tu as choisi ton option
+        </h3>
+
+        <p>
+          Ton option est : {{ parcours.option }}
+        </p>
+      </div>
+    </mat-step>
+
+    <!-- Step 3 -->
+
+    <mat-step label="Étape 3 : Choix des cours" [completed]="hasSubmittedCourses">
+      <div *ngIf="hasNoCourses">
+        <h3>
+          Tu n'as pas encore renseigné tes choix de cours de 3A
+        </h3>
+
+        <p>
+          Paragraphe d'explications
+        </p>
+
+        <button mat-raised-button color="primary" routerLink="/parcours/edit">
+          <mat-icon>save</mat-icon>
+          Renseigner mes choix de cours
+        </button>
+      </div>
+
+      <div *ngIf="hasPendingCourses">
+        <h3>
+          Tu n'as pas encore envoyé tes choix de cours de 3A
+        </h3>
+
+        <p>
+          Paragraphe d'explications
+        </p>
+
+        <button mat-raised-button color="primary" routerLink="/parcours/edit">
+          <mat-icon>send</mat-icon>
+          Envoyer mes choix de cours
+        </button>
+      </div>
+
+      <div *ngIf="hasSubmittedCourses">
+        <h3>
+          Tu as bien envoyé tes choix de cours de 3A
+        </h3>
+
+        <p>
+          Paragraphe d'explications
+        </p>
+
+        <button mat-raised-button color="primary" routerLink="/parcours/show">
+          <mat-icon>remove_red_eye</mat-icon>
+          Consulter mes choix de cours
+        </button>
+      </div>
+    </mat-step>
+
+  </mat-vertical-stepper>
+</div>

@@ -15,11 +15,11 @@ import { AuthGuard } from './services/auth.guard';
 import { LoginComponent } from './components/login/login.component';
 import { AuthInterceptor } from './services/auth.interceptor';
 import { UserService } from './services/user.service';
-import { ParcoursFormComponent } from './components/parcours-form/parcours-form.component';
-import { CourseSelectionDialogComponent } from './components/parcours-form/course-selection-dialog.component';
-import { CourseSelectionInputComponent } from './components/parcours-form/course-selection-input.component';
-import { CourseService } from 'app/services/course.service';
-import { MasterService } from 'app/services/master.service';
+import { ParcoursCoursesFormComponent } from './components/parcours-courses-form/parcours-courses-form.component';
+import { CourseSelectionDialogComponent } from './components/parcours-courses-form/course-selection-dialog.component';
+import { CourseSelectionInputComponent } from './components/parcours-courses-form/course-selection-input.component';
+import { CourseService } from './services/course.service';
+import { MasterService } from './services/master.service';
 import { ParcoursIntroComponent } from './components/parcours-intro/parcours-intro.component';
 
 @NgModule({
@@ -27,7 +27,7 @@ import { ParcoursIntroComponent } from './components/parcours-intro/parcours-int
     AppComponent,
     HomeComponent,
     LayoutComponent,
-    ParcoursFormComponent,
+    ParcoursCoursesFormComponent,
     CourseSelectionDialogComponent,
     CourseSelectionInputComponent,
     LoginComponent,
