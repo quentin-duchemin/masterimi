@@ -17,7 +17,7 @@ class Course(models.Model):
     name = models.CharField(max_length=120, verbose_name='Nom')
     master = models.ForeignKey(Master, on_delete=models.CASCADE, null=True)
     ECTS = models.FloatField(verbose_name='ECTS')
-    semester = models.PositiveSmallIntegerField(verbose_name='Semestre')
+    semester = models.CharField(max_length=20, verbose_name='Semestre')
     location = models.CharField(max_length=120, blank=True, null=True)
     time = models.CharField(max_length=120, blank=True, null=True)
 

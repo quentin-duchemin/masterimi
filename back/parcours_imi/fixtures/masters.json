@@ -14,5 +14,21 @@
       "name": "Probabilités et modèles aléatoires (PMA)",
       "short_name": "PMA"
     }
+  },
+  {
+    "model": "parcours_imi.Master",
+    "pk": 3,
+    "fields": {
+      "name": "Mathématiques de la finance et des données (MFD)",
+      "short_name": "MFD"
+    }
+  },
+  {
+    "model": "parcours_imi.Master",
+    "pk": 5,
+    "fields": {
+      "name": "Master Parisien de Recherche Opérationnelle (MPRO)",
+      "short_name": "MPRO"
+    }
   }
 ]

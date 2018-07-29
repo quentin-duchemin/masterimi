@@ -1,0 +1,134 @@
+[
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Calcul stochastique",
+            "master": 3,
+            "ECTS": 6,
+            "semester": "5",
+            "time": null,
+            "location": "UMLV"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Arbitrage, volatilite et gestion de portefeuille",
+            "master": 3,
+            "ECTS": 6,
+            "semester": "5",
+            "time": null,
+            "location": "UMLV"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Methodes de Monte Carlo et Algorithmes stochastiques",
+            "master": 3,
+            "ECTS": 6,
+            "semester": "5",
+            "time": "Tue/08:30/11:30",
+            "location": "ENPC"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Modèles de taux d'interet",
+            "master": 3,
+            "ECTS": 6,
+            "semester": "5",
+            "time": "Fri/08:30/11:45",
+            "location": "ENPC"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Risque de credit/Risque de defaut",
+            "master": 3,
+            "ECTS": 6,
+            "semester": "5",
+            "time": "Fri/08:30/11:45",
+            "location": "ENPC"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Processus avec sauts et applications au marche de l'energie",
+            "master": 3,
+            "ECTS": 6,
+            "semester": "5",
+            "time": "Mon/14:30/17:30",
+            "location": "ENPC"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Apprentissage statistique et applications (Mega donnees",
+            "master": 3,
+            "ECTS": 6,
+            "semester": "5",
+            "time": "Mon/09:30/12:30",
+            "location": "ENPC"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Data Driven Robust Optimization",
+            "master": 3,
+            "ECTS": 6,
+            "semester": "5",
+            "time": "Tue/08:30/11:45",
+            "location": "ENPC"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Donnees haute frequence en finance",
+            "master": 3,
+            "ECTS": 6,
+            "semester": "5",
+            "time": "Thu/09:30/12:30",
+            "location": "UMLV"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Mesures de risques en finance",
+            "master": 3,
+            "ECTS": 6,
+            "semester": "5",
+            "time": "Wed/08:30/12:30",
+            "location": "Paris 6"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Methodes numeriques et produits structures en actuariat",
+            "master": 3,
+            "ECTS": 6,
+            "semester": "5",
+            "time": "Tue/14:00/17:00",
+            "location": "UMLV"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Introduction au calcul de Malliavin et applications numeriques en finance",
+            "master": 3,
+            "ECTS": 6,
+            "semester": "5",
+            "time": "Wed/14:00/17:00",
+            "location": "UMLV"
+        }
+    }
+]

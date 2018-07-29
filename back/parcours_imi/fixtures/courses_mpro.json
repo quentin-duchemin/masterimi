@@ -1,0 +1,200 @@
+[
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Metaheuristiques",
+            "master": 5,
+            "ECTS": 2,
+            "semester": "5",
+            "time": "Thu/09:00/12:30",
+            "location": "Cnam"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Programmation mathematique",
+            "master": 5,
+            "ECTS": 4,
+            "semester": "5",
+            "time": "Thu/14:00/17:30",
+            "location": "Cnam"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Optimisation dans les graphes",
+            "master": 5,
+            "ECTS": 4,
+            "semester": "5",
+            "time": "Wed/09:00/12:30",
+            "location": "Cnam"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Theorie de la complexite",
+            "master": 5,
+            "ECTS": 2,
+            "semester": "5",
+            "time": "Tue/09:00/12:30",
+            "location": "Cnam"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Optimisation stochastique",
+            "master": 5,
+            "ECTS": 2,
+            "semester": "5",
+            "time": "Mon/14:00/17:30",
+            "location": "Cnam"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Bases de l'ordonnancement",
+            "master": 5,
+            "ECTS": 3,
+            "semester": "5",
+            "time": "Mon/09:00/12:30",
+            "location": "Cnam"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Files d'attente",
+            "master": 5,
+            "ECTS": 3,
+            "semester": "5",
+            "time": "Mon/14:00/17:30",
+            "location": "Cnam"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Complexite et approximation",
+            "master": 5,
+            "ECTS": 3,
+            "semester": "5",
+            "time": "Fri/14:00/17:30",
+            "location": "Cnam"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Etude de cas de management de la RO",
+            "master": 5,
+            "ECTS": 4,
+            "semester": "5",
+            "time": null,
+            "location": "Cnam"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Initiation a la recherche",
+            "master": 5,
+            "ECTS": 4,
+            "semester": "5",
+            "time": null,
+            "location": "Cnam"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Recherche operationnelle et developpement durable",
+            "master": 5,
+            "ECTS": 3,
+            "semester": "5",
+            "time": "Wed/14:00/17:30",
+            "location": "Cnam"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Recherche operationnelle reseaux et transport",
+            "master": 5,
+            "ECTS": 3,
+            "semester": "5",
+            "time": "Tue/14:00/17:30",
+            "location": "Cnam"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Programmation mathematique avancee",
+            "master": 5,
+            "ECTS": 3,
+            "semester": "5",
+            "time": "Thu/09:00/12:30",
+            "location": "Cnam"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Modeles de localisation et applications",
+            "master": 5,
+            "ECTS": 3,
+            "semester": "5",
+            "time": "Thu/14:00/17:30",
+            "location": "Cnam"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Graphes",
+            "master": 5,
+            "ECTS": 3,
+            "semester": "5",
+            "time": "Mon/14:00/17:30",
+            "location": "Cnam"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Programmation par contraintes",
+            "master": 5,
+            "ECTS": 3,
+            "semester": "5",
+            "time": "Fri/09:00/12:30",
+            "location": "Cnam"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Recherche operationnelle et donnees massives",
+            "master": 5,
+            "ECTS": 3,
+            "semester": "5",
+            "time": "Wed/09:00/12:30",
+            "location": "ENSTA"
+        }
+    },
+    {
+        "model": "parcours_imi.Course",
+        "fields": {
+            "name": "Conferences industrielles",
+            "master": 5,
+            "ECTS": 2,
+            "semester": "5",
+            "time": null,
+            "location": "Cnam"
+        }
+    }
+]
