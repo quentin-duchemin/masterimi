@@ -11,7 +11,7 @@ from parcours_imi.serializers import (
     CourseSerializer, MasterSerializer,
     UserCourseChoiceSerializer, UserParcoursSerializer, UserSerializer,
 )
-from parcours_imi.tasks import send_validation_email
+from parcours_imi.tasks import send_option_validation_email, send_courses_validation_email
 
 
 class CourseViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
@@ -53,6 +53,25 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
         return Response(serializer.data)
 
     @action(methods=['PUT'], detail=True)
+    def parcours_option(self, request, *args, **kwargs):
+        user = self.get_object()
+
+        try:
+            parcours = user.parcours
+        except User.parcours.RelatedObjectDoesNotExist:
+            raise NotFound()
+
+        if parcours.option:
+            raise PermissionDenied()
+
+        parcours.option = '3A-M2-PFE'
+        parcours.save()
+
+        send_option_validation_email.delay(user.id)
+
+        return Response(parcours)
+
+    @action(methods=['PUT'], detail=True)
     def parcours_courses(self, request, *args, **kwargs):
         user = self.get_object()
 
@@ -66,9 +85,9 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
 
         serializer = UserCourseChoiceSerializer(instance=parcours.course_choice, data=request.data, partial=False)
         serializer.is_valid(raise_exception=True)
-        serializer.save()
+        course_choice = serializer.save(parcours=user.parcours)
 
-        send_validation_email.delay(serializer.data['id'])
+        send_courses_validation_email.delay(user.id)
 
         return Response(serializer.data)
 

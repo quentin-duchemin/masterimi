@@ -32,8 +32,8 @@ class Course(models.Model):
 
 
 class UserCourseChoice(models.Model):
-    main_courses = models.ManyToManyField(Course, related_name='courses', blank=True)
-    option2_courses = models.ManyToManyField(Course, related_name='coursesOption2', blank=True)
+    main_courses = models.ManyToManyField(Course, related_name='main_courses', blank=True)
+    option_courses = models.ManyToManyField(Course, related_name='option_courses', blank=True)
 
     comment = models.TextField(verbose_name='Commentaire', blank=True, null=True)
 
@@ -70,13 +70,3 @@ class UserParcours(models.Model):
 
     def __str__(self):
         return self.user.username
-
-
-@receiver(post_save, sender=User)
-def create_user_parcours(sender, instance, created, **kwargs):
-    if created:
-        UserParcours.objects.create(user=instance)
-
-@receiver(post_save, sender=User)
-def save_user_parcours(sender, instance, **kwargs):
-    instance.parcours.save()

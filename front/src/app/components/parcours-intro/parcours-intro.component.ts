@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 import { IParcours } from '../../interfaces/parcours.interface';
 import { AuthService } from '../../services/auth.service';
+import { ActivatedRoute } from '../../../../node_modules/@angular/router';
+import { IOption } from '../../interfaces/option.interface';
+import { ParcoursService } from '../../services/parcours.service';
 
 
 @Component({
@@ -10,14 +13,20 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./parcours-intro.component.css']
 })
 export class ParcoursIntroComponent implements OnInit {
+  options: IOption[];
+
   parcours: IParcours;
 
   constructor(
-    private authService: AuthService,
+    private readonly route: ActivatedRoute,
+    private readonly authService: AuthService,
+    private readonly parcoursService: ParcoursService,
   ) {
   }
 
   ngOnInit() {
+    this.options = this.route.snapshot.data.options;
+
     this.authService.getCurrentUser().subscribe((currentUser) => {
       this.parcours = currentUser.parcours;
       console.log(this.parcours);
@@ -26,6 +35,22 @@ export class ParcoursIntroComponent implements OnInit {
 
   get hasOption() {
     return !!this.parcours.option;
+  }
+
+  get displayOption() {
+    const option = this.options.find((option) => option.id === this.parcours.option);
+
+    if (!option) {
+      return this.parcours.option;
+    }
+
+    return option.name;
+  }
+
+  submitOption() {
+    this.parcoursService.updateOption('test').subscribe(() => {
+      this.authService.reloadCurrentUser();
+    });
   }
 
   get hasNoCourses() {

@@ -2,7 +2,7 @@ import { Component, forwardRef, Input, OnInit } from '@angular/core';
 import { MatDialog, MatTableDataSource } from '@angular/material';
 import { CourseSelectionDialogComponent } from './course-selection-dialog.component';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { ICourse } from 'app/interfaces/course.interface';
+import { ICourse } from '../../interfaces/course.interface';
 
 
 @Component({

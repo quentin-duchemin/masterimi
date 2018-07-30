@@ -11,7 +11,7 @@ export interface IParcours {
 
 export interface ICourseChoice {
   mainCourses: ICourse[];
-  option2Courses: ICourse[];
+  optionCourses: ICourse[];
   comment?: string;
   submitted: boolean;
 }

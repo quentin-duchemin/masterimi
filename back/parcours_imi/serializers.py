@@ -21,7 +21,7 @@ class CourseSerializer(serializers.ModelSerializer):
 
 class UserCourseChoiceSerializer(serializers.ModelSerializer):
     main_courses = serializers.PrimaryKeyRelatedField(many=True, queryset=Course.objects.all())
-    option2_courses = serializers.PrimaryKeyRelatedField(many=True, queryset=Course.objects.all())
+    option_courses = serializers.PrimaryKeyRelatedField(many=True, queryset=Course.objects.all())
 
     # conversation = serializers.PrimaryKeyRelatedField(queryset=Conversation.objects.all())
 

@@ -17,9 +17,7 @@ export class ParcoursService {
   }
 
   updateOption(option: string) {
-    return this.http.patch('/users/me/parcours_option', {
-      option,
-    });
+    return this.http.put('/users/me/parcours_option', option);
   }
 
   updateCourseChoice(courseChoice: ICourseChoice) {

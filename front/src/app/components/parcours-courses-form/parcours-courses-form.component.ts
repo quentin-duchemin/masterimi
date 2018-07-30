@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { IFormula } from '../../interfaces/formula.interface';
-import { IMaster } from '../../interfaces/master.interface';
 import { ICourse } from '../../interfaces/course.interface';
 import { IParcours, ICourseChoice } from '../../interfaces/parcours.interface';
 import { ParcoursService } from '../../services/parcours.service';
@@ -42,12 +40,12 @@ export class ParcoursCoursesFormComponent implements OnInit {
 
     const courseChoice: ICourseChoice = this.route.snapshot.data.parcours.courseChoice || {
       mainCourses: [],
-      option2Courses: [],
+      optionCourses: [],
     };
 
     this.form = this.fb.group({
       mainCourses: [this.coursesIdToCourses(courseChoice.mainCourses)],
-      option2Courses: [this.coursesIdToCourses(courseChoice.option2Courses)],
+      optionCourses: [this.coursesIdToCourses(courseChoice.optionCourses)],
       comment: [courseChoice.comment],
     });
 
@@ -59,7 +57,7 @@ export class ParcoursCoursesFormComponent implements OnInit {
   get availableCourses() {
     const selectedCourses = [
       ...this.form.get('mainCourses').value,
-      ...this.form.get('option2Courses').value,
+      ...this.form.get('optionCourses').value,
     ];
     return this.courses.filter((course) => {
       return selectedCourses.find((selectedCourse) => selectedCourse.id === course.id) === undefined;
@@ -77,10 +75,10 @@ export class ParcoursCoursesFormComponent implements OnInit {
   private performUpdate(isSubmitted) {
     this.markAsTouched();
 
-    const { mainCourses, option2Courses, comment } = this.form.value;
+    const { mainCourses, optionCourses, comment } = this.form.value;
     const courseChoice = {
       mainCourses: mainCourses.map((course) => course.id),
-      option2Courses: option2Courses.map((course) => course.id),
+      optionCourses: optionCourses.map((course) => course.id),
       comment,
       submitted: isSubmitted,
     } as ICourseChoice;

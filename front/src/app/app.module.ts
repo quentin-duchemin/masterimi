@@ -19,7 +19,6 @@ import { ParcoursCoursesFormComponent } from './components/parcours-courses-form
 import { CourseSelectionDialogComponent } from './components/parcours-courses-form/course-selection-dialog.component';
 import { CourseSelectionInputComponent } from './components/parcours-courses-form/course-selection-input.component';
 import { CourseService } from './services/course.service';
-import { MasterService } from './services/master.service';
 import { ParcoursIntroComponent } from './components/parcours-intro/parcours-intro.component';
 
 @NgModule({
@@ -51,7 +50,6 @@ import { ParcoursIntroComponent } from './components/parcours-intro/parcours-int
     AuthService,
     AuthGuard,
     CourseService,
-    MasterService,
     UserService,
   ],
   bootstrap: [AppComponent]

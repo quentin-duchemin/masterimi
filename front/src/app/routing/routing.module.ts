@@ -5,12 +5,11 @@ import { HomeComponent } from '../components/home/home.component';
 import { LayoutComponent } from '../components/layout/layout.component';
 import { LoginComponent } from '../components/login/login.component';
 import { ParcoursIntroComponent } from '../components/parcours-intro/parcours-intro.component';
-import { ParcoursCoursesFormComponent } from 'app/components/parcours-courses-form/parcours-courses-form.component';
+import { ParcoursCoursesFormComponent } from '../components/parcours-courses-form/parcours-courses-form.component';
 import { AuthGuard } from '../services/auth.guard';
 
 import { ParcoursResolver } from './parcours.resolver';
-import { FormulasResolver } from './formulas.resolver';
-import { MastersResolver } from './masters.resolver';
+import { OptionsResolver } from './options.resolver';
 import { CoursesResolver } from './courses.resolver';
 
 
@@ -36,13 +35,14 @@ const routes = [
           {
             path: '',
             component: ParcoursIntroComponent,
+            resolve: {
+              options: OptionsResolver,
+            },
           },
           {
             path: '',
             resolve: {
               parcours: ParcoursResolver,
-              masters: MastersResolver,
-              formulas: FormulasResolver,
               courses: CoursesResolver,
             },
             children: [
@@ -78,8 +78,7 @@ const routes = [
   exports: [RouterModule],
   providers: [
     CoursesResolver,
-    FormulasResolver,
-    MastersResolver,
+    OptionsResolver,
     ParcoursResolver,
   ],
 })

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'app/services/auth.service';
-import { IUser } from 'app/interfaces/user.interface';
+import { AuthService } from '../../services/auth.service';
+import { IUser } from '../../interfaces/user.interface';
 
 @Component({
   selector: 'app-layout',

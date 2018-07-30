@@ -32,9 +32,19 @@
           Paragraphe d'explications
         </p>
 
-        <button mat-raised-button color="primary" routerLink="/parcours/edit">
+        <form>
+          <mat-form-field>
+            <mat-select placeholder="Formule 3A" required>
+              <mat-option *ngFor="let option of options" [value]="option.id">
+                {{ option.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </form>
+
+        <button mat-raised-button color="warn" (click)="submitOption()">
           <mat-icon>save</mat-icon>
-          Renseigner mes choix de cours
+          Valider mon option (choix définitif)
         </button>
       </div>
 
@@ -44,7 +54,7 @@
         </h3>
 
         <p>
-          Ton option est : {{ parcours.option }}
+          Ton option est : {{ displayOption }}
         </p>
       </div>
     </mat-step>
