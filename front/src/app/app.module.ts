@@ -20,6 +20,8 @@ import { CourseSelectionDialogComponent } from './components/parcours-courses-fo
 import { CourseSelectionInputComponent } from './components/parcours-courses-form/course-selection-input.component';
 import { CourseService } from './services/course.service';
 import { ParcoursIntroComponent } from './components/parcours-intro/parcours-intro.component';
+import { DialogService } from './services/dialog/dialog.service';
+import { ConfirmDialogComponent } from './services/dialog/confirm/confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +33,11 @@ import { ParcoursIntroComponent } from './components/parcours-intro/parcours-int
     CourseSelectionInputComponent,
     LoginComponent,
     ParcoursIntroComponent,
+    ConfirmDialogComponent,
   ],
   entryComponents: [
     CourseSelectionDialogComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +55,7 @@ import { ParcoursIntroComponent } from './components/parcours-intro/parcours-int
     AuthGuard,
     CourseService,
     UserService,
+    DialogService,
   ],
   bootstrap: [AppComponent]
 })

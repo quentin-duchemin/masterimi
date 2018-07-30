@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 import { IParcours } from '../../interfaces/parcours.interface';
 import { AuthService } from '../../services/auth.service';
-import { ActivatedRoute } from '../../../../node_modules/@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { IOption } from '../../interfaces/option.interface';
 import { ParcoursService } from '../../services/parcours.service';
+import { DialogService } from '../../services/dialog/dialog.service';
 
 
 @Component({
@@ -20,6 +21,7 @@ export class ParcoursIntroComponent implements OnInit {
   constructor(
     private readonly route: ActivatedRoute,
     private readonly authService: AuthService,
+    private readonly dialogService: DialogService,
     private readonly parcoursService: ParcoursService,
   ) {
   }
@@ -48,9 +50,18 @@ export class ParcoursIntroComponent implements OnInit {
   }
 
   submitOption() {
-    this.parcoursService.updateOption('test').subscribe(() => {
-      this.authService.reloadCurrentUser();
-    });
+    const optionId = '3A-M2-PFE';
+    const optionName = this.options.find((option) => option.id === optionId).name;
+
+    this.dialogService.confirm('Confirmation', `Es-tu certain de vouloir choisir l\'option ${optionName} ?`).subscribe((confirmed) => {
+      if (!confirmed) {
+        return;
+      }
+
+      this.parcoursService.updateOption('test').subscribe(() => {
+        this.authService.reloadCurrentUser();
+      });
+    })
   }
 
   get hasNoCourses() {

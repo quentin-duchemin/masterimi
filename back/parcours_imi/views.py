@@ -61,6 +61,8 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
         except User.parcours.RelatedObjectDoesNotExist:
             raise NotFound()
 
+        print(request.data)
+
         if parcours.option:
             raise PermissionDenied()
 
@@ -69,7 +71,9 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
 
         send_option_validation_email.delay(user.id)
 
-        return Response(parcours)
+        serializer = UserParcoursSerializer(instance=parcours)
+
+        return Response(serializer.data)
 
     @action(methods=['PUT'], detail=True)
     def parcours_courses(self, request, *args, **kwargs):

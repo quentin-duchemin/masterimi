@@ -32,7 +32,7 @@
           Paragraphe d'explications
         </p>
 
-        <form>
+        <form (ngSubmit)="submitOption()">
           <mat-form-field>
             <mat-select placeholder="Formule 3A" required>
               <mat-option *ngFor="let option of options" [value]="option.id">
@@ -40,12 +40,12 @@
               </mat-option>
             </mat-select>
           </mat-form-field>
-        </form>
 
-        <button mat-raised-button color="warn" (click)="submitOption()">
-          <mat-icon>save</mat-icon>
-          Valider mon option (choix définitif)
-        </button>
+          <button mat-raised-button color="warn" type="submit">
+            <mat-icon>save</mat-icon>
+            Valider mon option (choix définitif)
+          </button>
+        </form>
       </div>
 
       <div *ngIf="hasOption">
