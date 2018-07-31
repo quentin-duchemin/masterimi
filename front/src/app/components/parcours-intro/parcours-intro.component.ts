@@ -17,6 +17,7 @@ export class ParcoursIntroComponent implements OnInit {
   options: IOption[];
 
   parcours: IParcours;
+  selectedOption: IOption;
 
   constructor(
     private readonly route: ActivatedRoute,
@@ -31,7 +32,6 @@ export class ParcoursIntroComponent implements OnInit {
 
     this.authService.getCurrentUser().subscribe((currentUser) => {
       this.parcours = currentUser.parcours;
-      console.log(this.parcours);
     });
   }
 
@@ -50,15 +50,19 @@ export class ParcoursIntroComponent implements OnInit {
   }
 
   submitOption() {
-    const optionId = '3A-M2-PFE';
-    const optionName = this.options.find((option) => option.id === optionId).name;
+    if (!this.selectedOption) {
+      return;
+    }
 
-    this.dialogService.confirm('Confirmation', `Es-tu certain de vouloir choisir l\'option ${optionName} ?`).subscribe((confirmed) => {
+    this.dialogService.confirm(
+      'Confirmation',
+      `Es-tu certain de vouloir choisir l\'option ${this.selectedOption.name} ?`,
+    ).subscribe((confirmed) => {
       if (!confirmed) {
         return;
       }
 
-      this.parcoursService.updateOption('test').subscribe(() => {
+      this.parcoursService.updateOption(this.selectedOption).subscribe(() => {
         this.authService.reloadCurrentUser();
       });
     })

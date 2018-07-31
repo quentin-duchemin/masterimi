@@ -1,12 +1,12 @@
 from django.contrib.auth.models import User
 from rest_framework import mixins, viewsets
 from rest_framework.decorators import action
-from rest_framework.exceptions import NotAuthenticated, PermissionDenied, NotFound
+from rest_framework.exceptions import NotAuthenticated, PermissionDenied, NotFound, ValidationError
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from master_imi.permissions import IsOwner
-from parcours_imi.models import Course, Master
+from parcours_imi.models import Course, Master, OPTIONS_KEYS
 from parcours_imi.serializers import (
     CourseSerializer, MasterSerializer,
     UserCourseChoiceSerializer, UserParcoursSerializer, UserSerializer,
@@ -61,12 +61,14 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
         except User.parcours.RelatedObjectDoesNotExist:
             raise NotFound()
 
-        print(request.data)
-
         if parcours.option:
             raise PermissionDenied()
 
-        parcours.option = '3A-M2-PFE'
+        option = request.data.get('option')
+        if option not in OPTIONS_KEYS:
+            raise ValidationError('Invalid option')
+
+        parcours.option = option
         parcours.save()
 
         send_option_validation_email.delay(user.id)

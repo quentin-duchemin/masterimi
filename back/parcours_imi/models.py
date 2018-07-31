@@ -46,6 +46,11 @@ OPTIONS = [
     ('3A-M2-ECTS', '3A M2 Imbriqués - Option 2'),
 ]
 
+OPTIONS_KEYS = [
+    key
+    for key, val in OPTIONS
+]
+
 
 class UserParcours(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='parcours')

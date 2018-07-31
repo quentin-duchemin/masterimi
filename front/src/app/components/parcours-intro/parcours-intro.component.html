@@ -3,7 +3,7 @@
 </div>
 
 <div *ngIf="parcours">
-  <mat-vertical-stepper>
+  <mat-vertical-stepper linear>
     <ng-template matStepperIcon="edit">
       <mat-icon>check</mat-icon>
     </ng-template>
@@ -32,20 +32,20 @@
           Paragraphe d'explications
         </p>
 
-        <form (ngSubmit)="submitOption()">
+        <form >
           <mat-form-field>
-            <mat-select placeholder="Formule 3A" required>
-              <mat-option *ngFor="let option of options" [value]="option.id">
+            <mat-select placeholder="Formule 3A" required name="selectedOption" [(ngModel)]="selectedOption">
+              <mat-option *ngFor="let option of options" [value]="option">
                 {{ option.name }}
               </mat-option>
             </mat-select>
           </mat-form-field>
-
-          <button mat-raised-button color="warn" type="submit">
-            <mat-icon>save</mat-icon>
-            Valider mon option (choix définitif)
-          </button>
         </form>
+
+        <button mat-raised-button color="warn" (click)="submitOption()">
+          <mat-icon>save</mat-icon>
+          Valider mon option (choix définitif)
+        </button>
       </div>
 
       <div *ngIf="hasOption">
