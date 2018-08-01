@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
-import { ParcoursService } from 'app/services/parcours.service';
-import { IParcours } from 'app/interfaces/parcours.interface';
+import { ParcoursService } from '../services/parcours.service';
+import { IParcours } from '../interfaces/parcours.interface';
 
 
 @Injectable()

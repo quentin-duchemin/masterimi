@@ -5,6 +5,10 @@ services:
     ports:
       - 5432:5432
 
+  celery_broker:
+    ports:
+      - 5672:5672
+
   back:
     environment:
       DEBUG: 1

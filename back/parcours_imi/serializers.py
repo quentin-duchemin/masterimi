@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from rest_framework import serializers
 
 from messaging.models import Conversation
-from parcours_imi.models import Course, Master, UserParcours
+from parcours_imi.models import Course, Master, UserParcours, UserCourseChoice
 
 
 class MasterSerializer(serializers.ModelSerializer):
@@ -19,9 +19,19 @@ class CourseSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class UserCourseChoiceSerializer(serializers.ModelSerializer):
+    main_courses = serializers.PrimaryKeyRelatedField(many=True, queryset=Course.objects.all())
+    option_courses = serializers.PrimaryKeyRelatedField(many=True, queryset=Course.objects.all())
+
+    # conversation = serializers.PrimaryKeyRelatedField(queryset=Conversation.objects.all())
+
+    class Meta:
+        model = UserCourseChoice
+        fields = '__all__'
+
 class UserParcoursSerializer(serializers.ModelSerializer):
-    courses = serializers.PrimaryKeyRelatedField(many=True, queryset=Course.objects.all())
-    coursesOption2 = serializers.PrimaryKeyRelatedField(many=True, queryset=Course.objects.all())
+    master = MasterSerializer(read_only=True)
+    course_choice = UserCourseChoiceSerializer()
 
     # conversation = serializers.PrimaryKeyRelatedField(queryset=Conversation.objects.all())
 

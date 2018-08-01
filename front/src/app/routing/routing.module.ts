@@ -1,18 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { HomeComponent } from 'app/components/home/home.component';
-import { LayoutComponent } from 'app/components/layout/layout.component';
-import { LoginComponent } from 'app/components/login/login.component';
-import { ParcoursIntroComponent } from 'app/components/parcours-intro/parcours-intro.component';
-import { ParcoursFormComponent } from 'app/components/parcours-form/parcours-form.component';
-import { AuthGuard } from 'app/services/auth.guard';
+import { HomeComponent } from '../components/home/home.component';
+import { LayoutComponent } from '../components/layout/layout.component';
+import { LoginComponent } from '../components/login/login.component';
+import { ParcoursIntroComponent } from '../components/parcours-intro/parcours-intro.component';
+import { ParcoursCoursesFormComponent } from '../components/parcours-courses-form/parcours-courses-form.component';
+import { AuthGuard } from '../services/auth.guard';
 
 import { ParcoursResolver } from './parcours.resolver';
-import { FormulasResolver } from './formulas.resolver';
-import { DepartmentsResolver } from './departments.resolver';
-import { MastersResolver } from './masters.resolver';
-import { CoursesResolver } from 'app/routing/courses.resolver';
+import { OptionsResolver } from './options.resolver';
+import { CoursesResolver } from './courses.resolver';
 
 
 const routes = [
@@ -37,27 +35,27 @@ const routes = [
           {
             path: '',
             component: ParcoursIntroComponent,
+            resolve: {
+              options: OptionsResolver,
+            },
           },
           {
             path: '',
             resolve: {
               parcours: ParcoursResolver,
-              departments: DepartmentsResolver,
-              masters: MastersResolver,
-              formulas: FormulasResolver,
               courses: CoursesResolver,
             },
             children: [
               {
                 path: 'show',
-                component: ParcoursFormComponent,
+                component: ParcoursCoursesFormComponent,
                 data: {
                   view: 'show',
                 },
               },
               {
                 path: 'edit',
-                component: ParcoursFormComponent,
+                component: ParcoursCoursesFormComponent,
                 data: {
                   view: 'edit',
                 },
@@ -80,9 +78,7 @@ const routes = [
   exports: [RouterModule],
   providers: [
     CoursesResolver,
-    DepartmentsResolver,
-    FormulasResolver,
-    MastersResolver,
+    OptionsResolver,
     ParcoursResolver,
   ],
 })

@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-import { IParcours } from 'app/interfaces/parcours.interface';
-import { AuthService } from 'app/services/auth.service';
+import { IParcours } from '../../interfaces/parcours.interface';
+import { AuthService } from '../../services/auth.service';
+import { ActivatedRoute } from '@angular/router';
+import { IOption } from '../../interfaces/option.interface';
+import { ParcoursService } from '../../services/parcours.service';
+import { DialogService } from '../../services/dialog/dialog.service';
 
 
 @Component({
@@ -10,28 +14,69 @@ import { AuthService } from 'app/services/auth.service';
   styleUrls: ['./parcours-intro.component.css']
 })
 export class ParcoursIntroComponent implements OnInit {
+  options: IOption[];
+
   parcours: IParcours;
+  selectedOption: IOption;
 
   constructor(
-    private authService: AuthService,
+    private readonly route: ActivatedRoute,
+    private readonly authService: AuthService,
+    private readonly dialogService: DialogService,
+    private readonly parcoursService: ParcoursService,
   ) {
   }
 
   ngOnInit() {
+    this.options = this.route.snapshot.data.options;
+
     this.authService.getCurrentUser().subscribe((currentUser) => {
       this.parcours = currentUser.parcours;
     });
   }
 
-  get hasNoParcours() {
-    return !this.parcours;
+  get hasOption() {
+    return !!this.parcours.option;
   }
 
-  get hasPendingParcours() {
-    return !!this.parcours && !this.parcours.submitted;
+  get displayOption() {
+    const option = this.options.find((option) => option.id === this.parcours.option);
+
+    if (!option) {
+      return this.parcours.option;
+    }
+
+    return option.name;
   }
 
-  get hasSubmittedParcours() {
-    return !!this.parcours && this.parcours.submitted;
+  submitOption() {
+    if (!this.selectedOption) {
+      return;
+    }
+
+    this.dialogService.confirm(
+      'Confirmation',
+      `Es-tu certain de vouloir choisir l\'option ${this.selectedOption.name} ?`,
+    ).subscribe((confirmed) => {
+      if (!confirmed) {
+        return;
+      }
+
+      this.parcoursService.updateOption(this.selectedOption).subscribe(() => {
+        this.authService.reloadCurrentUser();
+      });
+    })
+  }
+
+  get hasNoCourses() {
+    return !this.parcours.courseChoice;
+  }
+
+  get hasPendingCourses() {
+    return !!this.parcours.courseChoice && !this.parcours.courseChoice.submitted;
+  }
+
+  get hasSubmittedCourses() {
+    return !!this.parcours.courseChoice && this.parcours.courseChoice.submitted;
   }
 }

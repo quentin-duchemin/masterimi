@@ -1,5 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 from messaging.models import Conversation
 
@@ -29,10 +31,24 @@ class Course(models.Model):
         return self.name
 
 
-FORMULAS = [
+class UserCourseChoice(models.Model):
+    main_courses = models.ManyToManyField(Course, related_name='main_courses', blank=True)
+    option_courses = models.ManyToManyField(Course, related_name='option_courses', blank=True)
+
+    comment = models.TextField(verbose_name='Commentaire', blank=True, null=True)
+
+    submitted = models.BooleanField(verbose_name='Validé par l\'étudiant', default=False)
+
+
+OPTIONS = [
     ('3A-ecole', '3A École'),
     ('3A-M2-PFE', '3A M2 Imbriqués - Option 1'),
     ('3A-M2-ECTS', '3A M2 Imbriqués - Option 2'),
+]
+
+OPTIONS_KEYS = [
+    key
+    for key, val in OPTIONS
 ]
 
 
@@ -40,13 +56,16 @@ class UserParcours(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='parcours')
 
     master = models.ForeignKey(Master, on_delete=models.PROTECT)
-    formula = models.CharField(max_length=120, choices=FORMULAS)
-    courses = models.ManyToManyField(Course, related_name='courses', blank=True)
-    coursesOption2 = models.ManyToManyField(Course, related_name='coursesOption2', blank=True)
+    option = models.CharField(max_length=120, choices=OPTIONS, blank=True, null=True, default=None)
 
-    comment = models.TextField(verbose_name='Commentaire', blank=True)
-
-    submitted = models.BooleanField(verbose_name='Validé par l\'étudiant', default=False)
+    course_choice = models.OneToOneField(
+        UserCourseChoice,
+        on_delete=models.PROTECT,
+        blank=True,
+        null=True,
+        default=None,
+        related_name='course_choice',
+    )
 
     # conversation = models.ForeignKey(Conversation, on_delete=models.PROTECT, null=True)
 

@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
 import { Observable, of } from 'rxjs';
-import { IFormula } from 'app/interfaces/formula.interface';
+import { IOption } from '../interfaces/option.interface';
 
 
 @Injectable()
-export class FormulasResolver implements Resolve<IFormula[]> {
+export class OptionsResolver implements Resolve<IOption[]> {
   constructor(
   ) {}
 
   resolve(route: ActivatedRouteSnapshot,
-          state: RouterStateSnapshot): Observable<IFormula[]> {
+          state: RouterStateSnapshot): Observable<IOption[]> {
     return of([
       {
         id: '3A-ecole',

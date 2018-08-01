@@ -36,46 +36,26 @@
   <mat-card-content>
     <form [formGroup]="form">
       <section>
-        <mat-form-field>
-          <mat-select formControlName="master" placeholder="Master" required>
-            <mat-option *ngFor="let master of masters"
-                        [value]="master.id">
-              {{ master.name }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-
-        <mat-form-field>
-          <mat-select formControlName="formula" placeholder="Formule 3A" required>
-            <mat-option *ngFor="let formula of formulas"
-                        [value]="formula.id">
-              {{ formula.name }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </section>
-
-      <section>
         <h3>
           Choix des cours pour la validation de la 3A
         </h3>
 
         <app-course-selection-input
           mode="3A"
-          formControlName="courses"
+          formControlName="mainCourses"
           [availableCourses]="availableCourses"
         >
         </app-course-selection-input>
       </section>
 
-      <section *ngIf="form.get('formula').value === '3A-M2-ECTS'">
+      <section *ngIf="parcours.option === '3A-M2-ECTS'">
         <h3>
           Choix des cours supplémaires pour la validation de la 3A M2 Imbriqués - Option 2
         </h3>
 
         <app-course-selection-input
           mode="option2"
-          formControlName="coursesOption2"
+          formControlName="optionCourses"
           [availableCourses]="availableCourses"
         >
         </app-course-selection-input>

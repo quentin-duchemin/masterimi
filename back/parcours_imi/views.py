@@ -1,16 +1,17 @@
 from django.contrib.auth.models import User
 from rest_framework import mixins, viewsets
 from rest_framework.decorators import action
-from rest_framework.exceptions import NotAuthenticated, PermissionDenied
+from rest_framework.exceptions import NotAuthenticated, PermissionDenied, NotFound, ValidationError
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from master_imi.permissions import IsOwner
-from parcours_imi.models import Course, Master
+from parcours_imi.models import Course, Master, OPTIONS_KEYS
 from parcours_imi.serializers import (
-    CourseSerializer, MasterSerializer, UserParcoursSerializer, UserSerializer,
+    CourseSerializer, MasterSerializer,
+    UserCourseChoiceSerializer, UserParcoursSerializer, UserSerializer,
 )
-from parcours_imi.tasks import send_validation_email
+from parcours_imi.tasks import send_option_validation_email, send_courses_validation_email
 
 
 class CourseViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
@@ -38,40 +39,62 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
         else:
             return super().get_object()
 
-    @action(methods=['GET', 'PUT'], detail=True)
+    @action(methods=['GET'], detail=True)
     def parcours(self, request, *args, **kwargs):
         user = self.get_object()
 
-        if request.method.upper() == 'GET':
-            try:
-                serialization_data = dict(instance=user.parcours)
-            except User.parcours.RelatedObjectDoesNotExist:
-                serialization_data = dict()
+        try:
+            serialization_data = dict(instance=user.parcours)
+        except User.parcours.RelatedObjectDoesNotExist:
+            raise NotFound()
 
-            serializer = UserParcoursSerializer(**serialization_data)
+        serializer = UserParcoursSerializer(**serialization_data)
 
-            return Response(serializer.data)
+        return Response(serializer.data)
 
-        if request.method.upper() == 'PUT':
-            try:
-                parcours = user.parcours
-            except User.parcours.RelatedObjectDoesNotExist:
-                parcours = None
+    @action(methods=['PUT'], detail=True)
+    def parcours_option(self, request, *args, **kwargs):
+        user = self.get_object()
 
-            if parcours and parcours.submitted:
-                raise PermissionDenied()
+        try:
+            parcours = user.parcours
+        except User.parcours.RelatedObjectDoesNotExist:
+            raise NotFound()
 
-            request.data['user'] = request.user.id
-            serializer = UserParcoursSerializer(instance=parcours, data=request.data, partial=False)
-            serializer.is_valid(raise_exception=True)
-            serializer.save()
+        if parcours.option:
+            raise PermissionDenied()
 
-            print(serializer.data)
+        option = request.data.get('option')
+        if option not in OPTIONS_KEYS:
+            raise ValidationError('Invalid option')
 
-            send_validation_email(serializer.data['id'])
+        parcours.option = option
+        parcours.save()
 
-            return Response(serializer.data)
+        send_option_validation_email.delay(user.id)
 
-        raise NotImplementedError
+        serializer = UserParcoursSerializer(instance=parcours)
+
+        return Response(serializer.data)
+
+    @action(methods=['PUT'], detail=True)
+    def parcours_courses(self, request, *args, **kwargs):
+        user = self.get_object()
+
+        try:
+            parcours = user.parcours
+        except User.parcours.RelatedObjectDoesNotExist:
+            raise NotFound()
+
+        if parcours.course_choice and parcours.course_choice.submitted:
+            raise PermissionDenied()
+
+        serializer = UserCourseChoiceSerializer(instance=parcours.course_choice, data=request.data, partial=False)
+        serializer.is_valid(raise_exception=True)
+        course_choice = serializer.save(parcours=user.parcours)
+
+        send_courses_validation_email.delay(user.id)
+
+        return Response(serializer.data)
 
 
