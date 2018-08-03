@@ -3,12 +3,27 @@ version: '2'
 services:
   db:
     ports:
-      - 5432:5432
+      - "5432:5432"
 
   celery_broker:
     ports:
-      - 5672:5672
+      - "5672:5672"
 
   back:
     environment:
+      DJANGO_MANAGEPY_COLLECTSTATIC: 0
       DEBUG: 1
+    command: "/venv/bin/python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./back:/app/
+
+  front:
+    build:
+      dockerfile: Dockerfile-dev
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./front:/app/
+
