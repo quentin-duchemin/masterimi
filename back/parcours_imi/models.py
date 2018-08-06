@@ -64,7 +64,7 @@ class UserParcours(models.Model):
         blank=True,
         null=True,
         default=None,
-        related_name='course_choice',
+        related_name='parcours',
     )
 
     # conversation = models.ForeignKey(Conversation, on_delete=models.PROTECT, null=True)

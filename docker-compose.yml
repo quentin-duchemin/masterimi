@@ -12,7 +12,7 @@ services:
       POSTGRES_PASSWORD: my3A
 
   celery_broker:
-    image: rabbitmq:3.7
+    image: rabbitmq:3.7-management
     restart: always
     volumes:
       - celery_broker-data:/var/lib/rabbitmq
@@ -32,6 +32,7 @@ services:
   back:
     build:
       context: back
+    restart: always
     volumes:
       - back-uploads:/app/uploads
     environment:
@@ -46,6 +47,7 @@ services:
   front:
     build:
       context: front
+    restart: always
     ports:
       - "8080:80"
     depends_on:
