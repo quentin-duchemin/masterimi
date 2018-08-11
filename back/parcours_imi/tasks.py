@@ -23,13 +23,6 @@ def send_option_confirmation_email(user_parcours_id: int):
 
     logger.info(f'Sending option confirmation email for {user_parcours}')
 
-    # send_template_email(
-    #     f'[3A] Confirmation du choix de l\'option ({user.first_name} {user.last_name})',
-    #     user_parcours.user.email,
-    #     'email/option_confirmation.html',
-
-    # )
-
     send_templated_mail(
         template_name='option_confirmation',
         from_email=DEFAULT_FROM_EMAIL,

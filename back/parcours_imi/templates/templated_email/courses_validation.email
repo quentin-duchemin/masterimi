@@ -1,0 +1,44 @@
+{% block subject %}[3A] Confirmation du choix des cours ({{user.first_name}} {{user.last_name}}){% endblock %}
+
+{% block html %}
+  <p>Hi {{full_name}},</p>
+
+  <p>
+    Option choisie {{ user_parcours.option }}
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nom du cours</th>
+        <th>ECTS</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for course in user_parcours.course_choice.main_courses.all %}
+        <tr>
+          <td>{{ course.name }}</td>
+          <td>{{ course.ECTS }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+      {% endfor %}
+      {% for course in user_parcours.course_choice.option_courses.all %}
+        <tr>
+          <td>{{ course.name }}</td>
+          <td>{{ course.ECTS }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <p>
+    Commentaire : {{ user_parcours.course_choice.comment | default:'N/A' }}
+  </p>
+
+  <p>Thanks, you rock!</p>
+{% endblock %}
