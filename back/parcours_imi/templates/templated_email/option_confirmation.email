@@ -1,0 +1,11 @@
+{% block subject %}[3A] Confirmation du choix de l'option ({{user.first_name}} {{user.last_name}}){% endblock %}
+
+{% block html %}
+  <p>Hi {{full_name}},</p>
+
+  <p>
+    Option choisie {{ user_parcours.option }}
+  </p>
+
+  <p>Thanks, you rock!</p>
+{% endblock %}

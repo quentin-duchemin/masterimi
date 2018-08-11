@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',
     'parcours_imi.apps.ParcoursIMIConfig',
-    'messaging.apps.MessagingConfig',
 ]
 
 MIDDLEWARE = [
@@ -215,3 +214,11 @@ LOGGING = {
         }
     }
 }
+
+# Email
+
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = '589cfa9e74991c'
+EMAIL_HOST_PASSWORD = '441cc35b9c2091'
+EMAIL_PORT = '2525'

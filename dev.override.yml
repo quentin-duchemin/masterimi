@@ -8,11 +8,19 @@ services:
   celery_broker:
     ports:
       - "5672:5672"
+      - "15672:15672"
+
+  back_worker:
+    environment:
+      DEBUG: 1
+    command: ['/venv/bin/celery', '-A', 'master_imi', 'worker', '-l', 'debug']
+    volumes:
+      - ./back:/app/
 
   back:
     environment:
-      DJANGO_MANAGEPY_COLLECTSTATIC: 0
       DEBUG: 1
+      DJANGO_MANAGEPY_COLLECTSTATIC: 0
     command: "/venv/bin/python manage.py runserver 0.0.0.0:8000"
     ports:
       - "8000:8000"

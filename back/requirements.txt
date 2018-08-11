@@ -9,8 +9,11 @@ Django==2.1
 django-cors-headers==2.4.0
 django-environ==0.4.5
 django-filter==2.0.0
+django-render-block==0.5
+django-templated-email==2.2.0
 djangorestframework==3.8.2
 djangorestframework-camel-case==0.2.0
+html2text==2018.1.9
 idna==2.7
 itypes==1.1.0
 Jinja2==2.10
@@ -21,6 +24,7 @@ psycopg2-binary==2.7.5
 Pygments==2.2.0
 pytz==2018.5
 requests==2.19.1
+six==1.11.0
 uritemplate==3.0.0
 urllib3==1.23
 uWSGI==2.0.17.1
