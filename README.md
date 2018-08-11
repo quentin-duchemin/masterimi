@@ -20,6 +20,7 @@ cd front/
 npm install
 
 # Lancement via docker
+cd ../
 sudo docker-compose -f docker-compose.yml -f dev.override.yml up --build
 
 # Ajouter à /etc/hosts
