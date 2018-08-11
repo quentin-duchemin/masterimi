@@ -23,5 +23,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/login', authtoken_views.obtain_auth_token),
     path('api/', include('parcours_imi.urls')),
-    path('api/', include('messaging.urls')),
 ]

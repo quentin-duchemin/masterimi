@@ -5,8 +5,7 @@ import os
 from typing import Dict
 
 from celery import shared_task
-from django.core.mail import send_mail
-from django.template.loader import get_template
+from templated_email import send_templated_mail
 
 from parcours_imi.models import UserParcours
 
@@ -17,45 +16,43 @@ DEFAULT_FROM_EMAIL = '3a@enpc.fr'
 DEFAULT_ADMIN_EMAIL_ADDRESS = 'till034+3A@gmail.com'
 
 
-def send_template_email(
-    subject: str,
-    template_name: str,
-    template_context: Dict,
-    to_email: str,
-):
-    html_message = get_template(template_name).render(template_context)
-
-    send_mail(
-        subject,
-        html2text.html2text(html_message),
-        DEFAULT_FROM_EMAIL,
-        [to_email],
-        html_message=html_message,
-    )
-
-
 @shared_task
-def send_option_validation_email(user_parcours_id: int):
+def send_option_confirmation_email(user_parcours_id: int):
     user_parcours = UserParcours.objects.get(pk=user_parcours_id)
+    user = user_parcours.user
 
-    logger.debug(f"Sending option validation email for {user_parcours}")
+    logger.info(f'Sending option confirmation email for {user_parcours}')
 
-    send_template_email(
-        'Subject',
-        'email/option_validation.html',
-        {},
-        user_parcours.user.email,
+    # send_template_email(
+    #     f'[3A] Confirmation du choix de l\'option ({user.first_name} {user.last_name})',
+    #     user_parcours.user.email,
+    #     'email/option_confirmation.html',
+
+    # )
+
+    send_templated_mail(
+        template_name='option_confirmation',
+        from_email=DEFAULT_FROM_EMAIL,
+        recipient_list=[user.email, DEFAULT_ADMIN_EMAIL_ADDRESS],
+        context=dict(
+            user=user_parcours.user,
+            user_parcours=user_parcours,
+        ),
     )
 
 @shared_task
 def send_courses_validation_email(user_parcours_id: int):
     user_parcours = UserParcours.objects.get(pk=user_parcours_id)
+    user = user_parcours.user
 
-    logger.debug(f"Sending courses validation email for {user_parcours}")
+    logger.info(f'Sending courses validation email for {user_parcours}')
 
-    send_template_email(
-        'Subject',
-        'email/courses_validation.html',
-        {},
-        user_parcours.user.email,
+    send_templated_mail(
+        template_name='courses_validation',
+        from_email=DEFAULT_FROM_EMAIL,
+        recipient_list=[user.email, DEFAULT_ADMIN_EMAIL_ADDRESS],
+        context=dict(
+            user=user_parcours.user,
+            user_parcours=user_parcours,
+        ),
     )

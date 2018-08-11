@@ -3,8 +3,6 @@ from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-from messaging.models import Conversation
-
 
 class Master(models.Model):
     name = models.CharField(max_length=120, verbose_name='Nom')
@@ -66,8 +64,6 @@ class UserParcours(models.Model):
         default=None,
         related_name='parcours',
     )
-
-    # conversation = models.ForeignKey(Conversation, on_delete=models.PROTECT, null=True)
 
     class Meta:
         verbose_name = 'Parcours étudiant'

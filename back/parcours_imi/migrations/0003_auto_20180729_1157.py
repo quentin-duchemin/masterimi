@@ -6,14 +6,10 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('parcours_imi', '0002_userparcours_conversation'),
+        ('parcours_imi', '0001_initial'),
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='userparcours',
-            name='conversation',
-        ),
         migrations.AlterField(
             model_name='course',
             name='semester',

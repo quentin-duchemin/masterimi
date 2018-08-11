@@ -11,3 +11,4 @@ uwsgi
 celery
 djangorestframework-camel-case
 html2text
+django-templated-email

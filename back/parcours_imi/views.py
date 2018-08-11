@@ -12,7 +12,7 @@ from parcours_imi.serializers import (
     CourseSerializer, MasterSerializer,
     UserCourseChoiceSerializer, UserParcoursSerializer, UserSerializer,
 )
-from parcours_imi.tasks import send_option_validation_email, send_courses_validation_email
+from parcours_imi.tasks import send_option_confirmation_email, send_courses_validation_email
 
 
 class CourseViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
@@ -32,6 +32,7 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
 
     def get_object(self):
         pk = self.kwargs['pk']
+
         if pk == 'me':
             if self.request.auth is None:
                 raise NotAuthenticated()
@@ -72,7 +73,7 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
         parcours.option = option
         parcours.save()
 
-        send_option_validation_email.delay(user.id)
+        send_option_confirmation_email.delay(user.id)
 
         serializer = UserParcoursSerializer(instance=parcours)
 
