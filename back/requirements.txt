@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 amqp==2.3.2
 billiard==3.5.0.4
 celery==4.2.1
@@ -7,6 +6,7 @@ chardet==3.0.4
 coreapi==2.3.3
 coreschema==0.0.4
 Django==2.1
+django-cas-ng==3.5.9
 django-cors-headers==2.4.0
 django-environ==0.4.5
 django-filter==2.0.0
@@ -19,10 +19,12 @@ idna==2.7
 itypes==1.1.0
 Jinja2==2.10
 kombu==4.2.1
+lxml==4.2.4
 Markdown==2.6.11
 MarkupSafe==1.0
 psycopg2-binary==2.7.5
 Pygments==2.2.0
+python-cas==1.3.0
 pytz==2018.5
 requests==2.19.1
 six==1.11.0
@@ -30,16 +32,3 @@ uritemplate==3.0.0
 urllib3==1.23
 uWSGI==2.0.17.1
 vine==1.1.4
-=======
-django
-djangorestframework
-markdown
-django-filter
-pygments
-coreapi
-django-cors-headers
-psycopg2-binary
-django-environ
-uwsgi
-django-cas-ng
->>>>>>> WIP

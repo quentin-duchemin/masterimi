@@ -34,7 +34,7 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
         pk = self.kwargs['pk']
 
         if pk == 'me':
-            if self.request.auth is None:
+            if self.request.user is None:
                 raise NotAuthenticated()
 
             return self.request.user

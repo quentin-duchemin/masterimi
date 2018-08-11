@@ -15,19 +15,18 @@ docker-compose exec back /venv/bin/python manage.py createsuperuser
 
 ## Development
 ```bash
-cd back/
-virtualenv venv/
-pip install -r requirements.txt
-cp master_imi/.env.dist master_imi/.env
-python manage.py runserver
-
-# In another shell
+# Installation du front
 cd front/
 npm install
-npm start
+
+# Lancement via docker
+sudo docker-compose -f docker-compose.yml -f dev.override.yml up --build
+
+# Ajouter à /etc/hosts
+127.0.0.1 3a-dev.enpc.fr
 ```
 
-Aller sur http://localhost:8000/api/   pour accéder à la racine de l'API.
+Se rendre sur http://3a-dev.enpc.fr:4200/
 
 ## Commentaires sur le travail effectué
 - La structure de la base de donnée est régie par le fichier model.py qui crée les modèles.

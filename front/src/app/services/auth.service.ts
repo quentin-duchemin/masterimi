@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { IUser } from '../interfaces/user.interface';
 import { UserService } from './user.service';
+import { environment } from 'environments/environment';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
@@ -21,6 +22,23 @@ export class AuthService {
     this.loadToken(savedToken);
   }
 
+  casLogin() {
+    if (this.isLoggedIn()) {
+      return this.router.navigateByUrl('/');
+    }
+
+    this.userService.getCurrentUser().subscribe(
+      (currentUser) => {
+        this.loadToken('DUMMY_TOKEN');
+        this.currentUser.next(currentUser);
+        this.router.navigateByUrl('/');
+      },
+      (error) => {
+        window.location.href = environment.casUrl;
+      }
+    );
+  }
+
   login(username: string, password: string): Observable<string> {
     return this.userService.login(username, password).pipe(
       tap(accessToken => this.loadToken(accessToken)),
@@ -29,7 +47,7 @@ export class AuthService {
 
   logout() {
     this.cleanStorage();
-    this.router.navigate(['/login']);
+    this.router.navigateByUrl('/login');
   }
 
   private loadToken(accessToken: string): void {

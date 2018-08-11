@@ -1,6 +1,6 @@
 import { Injectable, Injector } from '@angular/core';
 import { HttpErrorResponse, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { AuthService } from './auth.service';
 import { environment } from 'environments/environment';
 import { catchError } from 'rxjs/operators';
@@ -37,11 +37,10 @@ export class AuthInterceptor implements HttpInterceptor {
         if (err instanceof HttpErrorResponse) {
           if (err.status === 401) {
             this.authService.logout();
-            return of('Unauthorized');
           }
         }
 
-        return of(err);
+        return throwError(err);
       }),
     );
   }
