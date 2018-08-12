@@ -7,6 +7,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from django.utils.text import capfirst
 
 from parcours_imi.models import Master, UserParcours
 
@@ -44,7 +45,17 @@ def user_parcours_import_view(request):
     else:
         form = UserParcoursImportForm()
 
-    return render(request, 'toto.html', dict(form=form))
+    opts = UserParcours._meta
+    context = {
+        # 'action_list': action_list,
+        'module_name': str(capfirst(opts.verbose_name_plural)),
+        # 'object': obj,
+        'opts': opts,
+        # 'preserved_filters': self.get_preserved_filters(request),
+        'form': form,
+    }
+
+    return render(request, 'admin/user_parcours_import.html', context)
 
 def user_parcours_import(students_to_import: Iterable[UserParcoursImportEntry]):
     masters_map = {

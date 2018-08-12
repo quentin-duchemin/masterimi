@@ -18,6 +18,8 @@ class UserParcoursAdmin(admin.ModelAdmin):
     readonly_fields = ["user"]
     exclude = ["course_choice"]
 
+    change_list_template = "admin/user_parcours_change_list.html"
+
     def has_add_permission(self, request):
         return False
 
