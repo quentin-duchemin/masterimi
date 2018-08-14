@@ -9,7 +9,6 @@ from parcours_imi.admin.user_parcours_import import UserParcoursImportEntry, use
 class UserParcoursImportViewTestCase(TestCase):
     fixtures = [
         'masters.json',
-
     ]
 
     def test_user_parcours_import_view(self):

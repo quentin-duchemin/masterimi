@@ -98,6 +98,3 @@ def user_parcours_import(students_to_import: Iterable[UserParcoursImportEntry]):
 
         user.parcours.save()
         user.save()
-
-
-
