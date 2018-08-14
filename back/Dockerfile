@@ -18,6 +18,7 @@ RUN set -ex \
             linux-headers \
             pcre-dev \
             postgresql-dev \
+            libxml2-dev libxslt-dev \
     && python -m venv /venv \
     && /venv/bin/pip install -U pip \
     && LIBRARY_PATH=/lib:/usr/lib /bin/sh -c "/venv/bin/pip install --no-cache-dir -r /requirements.txt" \

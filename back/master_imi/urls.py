@@ -17,10 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 
 from rest_framework.authtoken import views as authtoken_views
+import django_cas_ng.views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('cas/login', django_cas_ng.views.login, name='cas_ng_login'),
+    path('cas/logout', django_cas_ng.views.logout, name='cas_ng_logout'),
     path('api/login', authtoken_views.obtain_auth_token),
     path('api/', include('parcours_imi.urls')),
 ]
