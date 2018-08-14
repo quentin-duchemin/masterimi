@@ -12,7 +12,14 @@
 {% block content %}
 <div id="content-main">
 <div class="module">
-
+  <form action="{% url 'user_parcours_import' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <a href="{% url 'user_parcours_import' %}?download_example=1" target="_blank">Télécharger un exemple</a>
+    <br/>
+    {{ form }}
+    <br/>
+    <input type="submit" value="Submit">
+  </form>
 </div>
 </div>
 {% endblock %}

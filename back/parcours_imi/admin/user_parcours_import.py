@@ -4,9 +4,10 @@ import logging
 from csv import DictReader
 from typing import Iterable, NamedTuple
 from django import forms
+from django.contrib import messages
 from django.contrib.auth.models import User
-from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.http import HttpResponse
+from django.shortcuts import render, redirect
 from django.utils.text import capfirst
 
 from parcours_imi.models import Master, UserParcours
@@ -24,10 +25,24 @@ class UserParcoursImportEntry(NamedTuple):
 
 
 class UserParcoursImportForm(forms.Form):
-    pass
+    file = forms.FileField(label='Fichier CSV')
 
 
 def user_parcours_import_view(request):
+    if request.method == 'GET' and request.GET.get('download_example'):
+        file_response = HttpResponse(
+            content=(
+                'username,email,first_name,last_name,master\n'
+                'louis.trezzini,louis.trezzini@eleves.enpc.fr,Louis,Trezzini,MVA\n'
+                'clement.riu,clement.riu@eleves.enpc.fr,Clément,Riu,MVA\n'
+            ),
+        )
+
+        file_response['Content-Type'] = 'text/csv'
+        file_response['Content-Disposition'] = 'attachment; filename="example_import.csv"'
+
+        return file_response
+
     if request.method == 'POST':
         form = UserParcoursImportForm(request.POST, request.FILES)
 
@@ -41,17 +56,15 @@ def user_parcours_import_view(request):
 
             user_parcours_import(students_to_import)
 
-            return HttpResponseRedirect('/')
+            messages.success(request, 'Étudiants importés avec succès.')
+            return redirect('admin:index')
     else:
         form = UserParcoursImportForm()
 
     opts = UserParcours._meta
     context = {
-        # 'action_list': action_list,
         'module_name': str(capfirst(opts.verbose_name_plural)),
-        # 'object': obj,
         'opts': opts,
-        # 'preserved_filters': self.get_preserved_filters(request),
         'form': form,
     }
 
@@ -73,12 +86,14 @@ def user_parcours_import(students_to_import: Iterable[UserParcoursImportEntry]):
         user.first_name = student.first_name
         user.last_name = student.last_name
 
+        master = masters_map[student.master]
+
         try:
-            user.parcours.master = student.master
+            user.parcours.master = master
         except User.parcours.RelatedObjectDoesNotExist:
             user.parcours = UserParcours(
                 user=user,
-                master=masters_map[student.master],
+                master=master,
             )
 
         user.parcours.save()
