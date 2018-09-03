@@ -5,6 +5,8 @@ import { AuthService } from './auth.service';
 import { environment } from 'environments/environment';
 import { catchError } from 'rxjs/operators';
 
+import * as Cookies from 'js-cookie';
+
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
@@ -26,8 +28,9 @@ export class AuthInterceptor implements HttpInterceptor {
 
       const accessToken = this.authService.getAccessToken();
       if (accessToken) {
+        const csrfToken = Cookies.get('csrftoken');
         req = req.clone({
-          headers: req.headers.set('Authorization', `Token ${accessToken}`)
+          headers: req.headers.set('Authorization', `Token ${accessToken}`).set('X-CSRFToken', csrfToken)
         });
       }
     }
@@ -35,7 +38,7 @@ export class AuthInterceptor implements HttpInterceptor {
     return next.handle(req).pipe(
       catchError((err: any) => {
         if (err instanceof HttpErrorResponse) {
-          if (err.status === 401) {
+          if (err.status === 401 ||  err.status === 403) {
             this.authService.logout();
           }
         }

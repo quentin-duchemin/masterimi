@@ -28,11 +28,73 @@
           Tu n'as pas encore choisi ton option
         </h3>
 
-        <p>
-          Paragraphe d'explications
-        </p>
+        <article class="option-description">
+          <h4>
+            3A École
+          </h4>
 
-        <form >
+          <p>
+            Pas de double diplôme. L'élève doit valider 60 ECTS sur l'année :
+          </p>
+
+          <ul>
+            <li>
+              25.5 ECTS scientifique (parmi les cours d'un master recherches + les cours tels que Maths for Business, Data Driven Optimisation et Algorithme de Monte Carlo par chaine de Markov)
+            </li>
+            <li>
+              4.5 ECTS de langue (i.e. finir ses obligations de langue pour l'ENPC -> les masters en France n'impactent pas les obligations de langue)
+            </li>
+            <li>
+              30 ECTS de PFE
+            </li>
+          </ul>
+        </article>
+
+        <article class="option-description">
+          <h4>
+            3A M2 Imbriqués - Option 1
+          </h4>
+
+          <p>
+            Double diplôme, avec PFE en plus.
+          </p>
+
+          <ul>
+            <li>
+              L'élève doit valider les obligations de son master recherche normalement (par exemple 8 cours du MVA) (dont le stage de recherche à la fin)
+            </li>
+            <li>
+              4.5 ECTS de langue (i.e. finir ses obligations de langue pour l'ENPC -> les masters en France n'impactent pas les obligations de langue)
+            </li>
+            <li>
+              30 ECTS de PFE (ou début de thèse)
+            </li>
+          </ul>
+        </article>
+
+        <article class="option-description">
+          <h4>
+            3A M2 Imbriqués - Option 2
+          </h4>
+
+          <p>
+            Double diplôme, sans PFE, mais avec des ECTS en plus.
+          </p>
+
+          <ul>
+            <li>
+              L'élève doit valider les obligations de son master recherche normalement (par exemple 8 cours du MVA) (dont le stage de recherche à la fin)
+            </li>
+            <li>
+              4.5 ECTS de langue (i.e. finir ses obligations de langue pour l'ENPC -> les masters en France n'impactent pas les obligations de langue)
+            </li>
+            <li>
+                15 ECTS scientifique (parmi les cours d'un master recherches + les cours tels que Maths for Business, Data Driven Optimisation et Algorithme de Monte Carlo par chaine de Markov)
+            </li>
+          </ul>
+        </article>
+
+        <form>
           <mat-form-field>
             <mat-select placeholder="Formule 3A" required name="selectedOption" [(ngModel)]="selectedOption">
               <mat-option *ngFor="let option of options" [value]="option">

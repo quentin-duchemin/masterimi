@@ -5,7 +5,7 @@
             "name": "Metaheuristiques",
             "master": 5,
             "ECTS": 2,
-            "semester": "5",
+            "semester": "S5",
             "time": "Thu/09:00/12:30",
             "location": "Cnam"
         }
@@ -16,7 +16,7 @@
             "name": "Programmation mathematique",
             "master": 5,
             "ECTS": 4,
-            "semester": "5",
+            "semester": "S5",
             "time": "Thu/14:00/17:30",
             "location": "Cnam"
         }
@@ -27,7 +27,7 @@
             "name": "Optimisation dans les graphes",
             "master": 5,
             "ECTS": 4,
-            "semester": "5",
+            "semester": "S5",
             "time": "Wed/09:00/12:30",
             "location": "Cnam"
         }
@@ -38,7 +38,7 @@
             "name": "Theorie de la complexite",
             "master": 5,
             "ECTS": 2,
-            "semester": "5",
+            "semester": "S5",
             "time": "Tue/09:00/12:30",
             "location": "Cnam"
         }
@@ -49,7 +49,7 @@
             "name": "Optimisation stochastique",
             "master": 5,
             "ECTS": 2,
-            "semester": "5",
+            "semester": "S5",
             "time": "Mon/14:00/17:30",
             "location": "Cnam"
         }
@@ -60,7 +60,7 @@
             "name": "Bases de l'ordonnancement",
             "master": 5,
             "ECTS": 3,
-            "semester": "5",
+            "semester": "S5",
             "time": "Mon/09:00/12:30",
             "location": "Cnam"
         }
@@ -71,7 +71,7 @@
             "name": "Files d'attente",
             "master": 5,
             "ECTS": 3,
-            "semester": "5",
+            "semester": "S5",
             "time": "Mon/14:00/17:30",
             "location": "Cnam"
         }
@@ -82,7 +82,7 @@
             "name": "Complexite et approximation",
             "master": 5,
             "ECTS": 3,
-            "semester": "5",
+            "semester": "S5",
             "time": "Fri/14:00/17:30",
             "location": "Cnam"
         }
@@ -93,7 +93,7 @@
             "name": "Etude de cas de management de la RO",
             "master": 5,
             "ECTS": 4,
-            "semester": "5",
+            "semester": "S5",
             "time": null,
             "location": "Cnam"
         }
@@ -104,7 +104,7 @@
             "name": "Initiation a la recherche",
             "master": 5,
             "ECTS": 4,
-            "semester": "5",
+            "semester": "S5",
             "time": null,
             "location": "Cnam"
         }
@@ -115,7 +115,7 @@
             "name": "Recherche operationnelle et developpement durable",
             "master": 5,
             "ECTS": 3,
-            "semester": "5",
+            "semester": "S5",
             "time": "Wed/14:00/17:30",
             "location": "Cnam"
         }
@@ -126,7 +126,7 @@
             "name": "Recherche operationnelle reseaux et transport",
             "master": 5,
             "ECTS": 3,
-            "semester": "5",
+            "semester": "S5",
             "time": "Tue/14:00/17:30",
             "location": "Cnam"
         }
@@ -137,7 +137,7 @@
             "name": "Programmation mathematique avancee",
             "master": 5,
             "ECTS": 3,
-            "semester": "5",
+            "semester": "S5",
             "time": "Thu/09:00/12:30",
             "location": "Cnam"
         }
@@ -148,7 +148,7 @@
             "name": "Modeles de localisation et applications",
             "master": 5,
             "ECTS": 3,
-            "semester": "5",
+            "semester": "S5",
             "time": "Thu/14:00/17:30",
             "location": "Cnam"
         }
@@ -159,7 +159,7 @@
             "name": "Graphes",
             "master": 5,
             "ECTS": 3,
-            "semester": "5",
+            "semester": "S5",
             "time": "Mon/14:00/17:30",
             "location": "Cnam"
         }
@@ -170,7 +170,7 @@
             "name": "Programmation par contraintes",
             "master": 5,
             "ECTS": 3,
-            "semester": "5",
+            "semester": "S5",
             "time": "Fri/09:00/12:30",
             "location": "Cnam"
         }
@@ -181,7 +181,7 @@
             "name": "Recherche operationnelle et donnees massives",
             "master": 5,
             "ECTS": 3,
-            "semester": "5",
+            "semester": "S5",
             "time": "Wed/09:00/12:30",
             "location": "ENSTA"
         }
@@ -192,7 +192,7 @@
             "name": "Conferences industrielles",
             "master": 5,
             "ECTS": 2,
-            "semester": "5",
+            "semester": "S5",
             "time": null,
             "location": "Cnam"
         }

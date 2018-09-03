@@ -5,7 +5,7 @@
       "name": "Math4Business",
       "master": null,
       "ECTS": 9,
-      "semester": 5,
+      "semester": "S5",
       "time": null,
       "location": "Paris 14e, 9 rue Dareau"
     }
@@ -16,7 +16,7 @@
       "name": "Data Driven Optimization",
       "master": null,
       "ECTS": 5,
-      "semester": 5,
+      "semester": "S5",
       "time": null,
       "location": "ENPC"
     }
@@ -27,7 +27,7 @@
       "name": "Algo de Monte-Carlo par chaînes de Markov et méthodes particulaires",
       "master": null,
       "ECTS": 6,
-      "semester": 5,
+      "semester": "S5",
       "time": null,
       "location": "Jussieu"
     }
