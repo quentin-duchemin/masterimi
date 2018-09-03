@@ -45,7 +45,7 @@ services:
       - celery_broker
 
   front:
-    image: quay.io/louistrezzini/my3a-back:${TAG:-latest}
+    image: quay.io/louistrezzini/my3a-front:${TAG:-latest}
     restart: always
     ports:
       - "9572:80"
