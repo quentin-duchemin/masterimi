@@ -12,6 +12,7 @@ from parcours_imi.serializers import (
     CourseSerializer, MasterSerializer,
     UserCourseChoiceSerializer, UserParcoursSerializer, UserSerializer,
 )
+from parcours_imi.validators import AttributeConstraintsValidator
 from parcours_imi.tasks import send_option_confirmation_email, send_courses_validation_email
 
 
@@ -43,25 +44,15 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
 
     @action(methods=['GET'], detail=True)
     def parcours(self, request, *args, **kwargs):
-        user = self.get_object()
+        parcours = self._get_user_parcours()
 
-        try:
-            serialization_data = dict(instance=user.parcours)
-        except User.parcours.RelatedObjectDoesNotExist:
-            raise NotFound()
-
-        serializer = UserParcoursSerializer(**serialization_data)
+        serializer = UserParcoursSerializer(instance=parcours)
 
         return Response(serializer.data)
 
     @action(methods=['PUT'], detail=True)
     def parcours_option(self, request, *args, **kwargs):
-        user = self.get_object()
-
-        try:
-            parcours = user.parcours
-        except User.parcours.RelatedObjectDoesNotExist:
-            raise NotFound()
+        parcours = self._get_user_parcours()
 
         if parcours.option:
             raise PermissionDenied()
@@ -73,7 +64,7 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
         parcours.option = option
         parcours.save()
 
-        send_option_confirmation_email.delay(user.id)
+        send_option_confirmation_email.delay(parcours.user.id)
 
         serializer = UserParcoursSerializer(instance=parcours)
 
@@ -81,6 +72,43 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
 
     @action(methods=['PUT'], detail=True)
     def parcours_courses(self, request, *args, **kwargs):
+        parcours = self._get_user_parcours()
+
+        if parcours.course_choice and parcours.course_choice.submitted:
+            raise PermissionDenied()
+
+        serializer = self._get_parcours_courses_serializer(parcours, request.data)
+
+        if serializer.validated_data['submitted']:
+            parcours_validation_data = self._get_parcours_courses_rules_validation_data(parcours, serializer)
+
+            errors = [
+                item['message']
+                for item in parcours_validation_data
+                if not item['is_valid']
+            ]
+            if errors:
+                raise ValidationError(errors)
+
+        with transaction.atomic():
+            course_choice = serializer.save()
+            parcours.course_choice = course_choice
+            parcours.save()
+
+        send_courses_validation_email.delay(parcours.user.id)
+
+        return Response(serializer.data)
+
+    @action(methods=['PUT'], detail=True)
+    def parcours_courses_check(self, request, *args, **kwargs):
+        parcours = self._get_user_parcours()
+
+        serializer = self._get_parcours_courses_serializer(parcours, request.data)
+        parcours_validation_data = self._get_parcours_courses_rules_validation_data(parcours, serializer)
+
+        return Response(parcours_validation_data)
+
+    def _get_user_parcours(self):
         user = self.get_object()
 
         try:
@@ -88,19 +116,20 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
         except User.parcours.RelatedObjectDoesNotExist:
             raise NotFound()
 
-        if parcours.course_choice and parcours.course_choice.submitted:
-            raise PermissionDenied()
+        return parcours
 
-        serializer = UserCourseChoiceSerializer(instance=parcours.course_choice, data=request.data, partial=False)
+    def _get_parcours_courses_serializer(self, parcours, data):
+        serializer = UserCourseChoiceSerializer(instance=parcours.course_choice, data=data, partial=False)
         serializer.is_valid(raise_exception=True)
 
-        with transaction.atomic():
-            course_choice = serializer.save()
-            parcours.course_choice = course_choice
-            parcours.save()
+        return serializer
 
-        send_courses_validation_email.delay(user.id)
+    def _get_parcours_courses_rules_validation_data(self, parcours, serializer):
+        attribute_constraints_validator = AttributeConstraintsValidator(
+            constraints=parcours.master.attribute_constraints.all(),
+            attributes_getter=lambda course: course.attributes,
+        )
+        courses = serializer.validated_data['main_courses'] + serializer.validated_data['option_courses']
+        attribute_constraints_validation_data = attribute_constraints_validator.validate(courses)
 
-        return Response(serializer.data)
-
-
+        return attribute_constraints_validation_data

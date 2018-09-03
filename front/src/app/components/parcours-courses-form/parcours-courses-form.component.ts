@@ -6,6 +6,7 @@ import { ICourse } from '../../interfaces/course.interface';
 import { IParcours, ICourseChoice } from '../../interfaces/parcours.interface';
 import { ParcoursService } from '../../services/parcours.service';
 import { AuthService } from '../../services/auth.service';
+import { IValidationData } from '../../interfaces/validation-data.interface';
 
 
 @Component({
@@ -18,6 +19,7 @@ export class ParcoursCoursesFormComponent implements OnInit {
   disabled = false;
 
   courses: ICourse[];
+  checkParcoursRules: IValidationData[] = [];
 
   parcours: IParcours;
 
@@ -49,6 +51,9 @@ export class ParcoursCoursesFormComponent implements OnInit {
       comment: [courseChoice.comment],
     });
 
+    this.form.valueChanges.subscribe(this.checkParcours);
+    this.checkParcours(this.form.value);
+
     if (this.disabled) {
       this.form.disable();
     }
@@ -75,13 +80,7 @@ export class ParcoursCoursesFormComponent implements OnInit {
   private performUpdate(isSubmitted) {
     this.markAsTouched();
 
-    const { mainCourses, optionCourses, comment } = this.form.value;
-    const courseChoice = {
-      mainCourses: mainCourses.map((course) => course.id),
-      optionCourses: optionCourses.map((course) => course.id),
-      comment,
-      submitted: isSubmitted,
-    } as ICourseChoice;
+    const courseChoice = buildCourseChoice(this.form.value, isSubmitted);
 
     this.parcoursService.updateCourseChoice(courseChoice).subscribe(() => {
       this.authService.reloadCurrentUser();
@@ -96,4 +95,24 @@ export class ParcoursCoursesFormComponent implements OnInit {
   private markAsTouched() {
     Object.values(this.form.controls).forEach(control => control.markAsTouched());
   }
+
+  private checkParcours = (form) => {
+    const courseChoice = buildCourseChoice(form, false);
+
+    this.parcoursService.checkCourseChoice(courseChoice).subscribe((res) => {
+      this.checkParcoursRules = res;
+    });
+  }
+}
+
+function buildCourseChoice(formValue, isSubmitted: boolean): ICourseChoice {
+  const { mainCourses, optionCourses, comment } = formValue;
+  const courseChoice = {
+    mainCourses: mainCourses.map((course) => course.id),
+    optionCourses: optionCourses.map((course) => course.id),
+    comment,
+    submitted: isSubmitted,
+  } as ICourseChoice;
+
+  return courseChoice;
 }

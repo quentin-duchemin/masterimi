@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { IParcours, ICourseChoice } from '../interfaces/parcours.interface';
 import { IOption } from '../interfaces/option.interface';
+import { IValidationData } from '../interfaces/validation-data.interface';
 
 
 @Injectable({ providedIn: 'root' })
@@ -25,5 +26,9 @@ export class ParcoursService {
 
   updateCourseChoice(courseChoice: ICourseChoice) {
     return this.http.put('/users/me/parcours_courses', courseChoice);
+  }
+
+  checkCourseChoice(courseChoice: ICourseChoice): Observable<IValidationData[]> {
+    return this.http.put<IValidationData[]>('/users/me/parcours_courses_check', courseChoice);
   }
 }

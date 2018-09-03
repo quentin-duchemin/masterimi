@@ -33,3 +33,7 @@ td.mat-cell {
   padding-right: 8px;
   padding-left: 8px;
 }
+
+.invalid-rule {
+  color: red;
+}

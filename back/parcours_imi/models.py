@@ -77,7 +77,7 @@ class UserParcours(models.Model):
 
     course_choice = models.OneToOneField(
         UserCourseChoice,
-        on_delete=models.PROTECT,
+        on_delete=models.SET_NULL,
         blank=True,
         null=True,
         default=None,

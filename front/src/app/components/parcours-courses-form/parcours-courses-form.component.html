@@ -2,33 +2,6 @@
   Ma 3A
 </h1>
 
-<!--<p>-->
-  <!--Rappel : Il existe plusieurs formules :-->
-<!--</p>-->
-<!--<ul>-->
-  <!--<li>-->
-    <!--3A École : 5 à 6 modules du M2 sans validation du master recherche + PFE-->
-  <!--</li>-->
-  <!--<li>-->
-    <!--3A M2 Imbriqués : Validation du M2 et du diplôme des Ponts-->
-    <!--<ul>-->
-      <!--<li>-->
-        <!--Option 1 :  le PFE d'ingénieur et le stage du M2 ne sont pas fusionnés. Vous devrez donc effectuer votre PFE à la suite du stage de M2 (plus 6 mois après le M2)-->
-      <!--</li>-->
-      <!--<li>-->
-        <!--Option 2 : Effectuer 15 Ects supplémentaires dans le cadre de votre 3A :-->
-        <!--<ul>-->
-          <!--<li>-->
-            <!--3 cours supplémentaires à 5 Ects : parmi les cours du M2 (en dehors de ceux validant le M2) ou d'un autre de nos M2 (IMI) ou des cours de 3A IMI, par exemple les cours Mathematics for business and startup (9 Ects), Data Driven Robust Optimization (5 Ects) et Algorithmes de Monte-Carlo par chaînes de Markov et méthodes particulaires (6 Ects)-->
-          <!--</li>-->
-          <!--<li>-->
-            <!--2 cours supplémentaires à 5 Ects + 1 projet (validation par le département)-->
-          <!--</li>-->
-        <!--</ul>-->
-      <!--</li>-->
-    <!--</ul>-->
-<!--</ul>-->
-
 <mat-card>
   <mat-card-title>
     Formulaire de validation des choix d'options de 3A
@@ -50,7 +23,7 @@
 
       <section *ngIf="parcours.option === '3A-M2-ECTS'">
         <h3>
-          Choix des cours supplémaires pour la validation de la 3A M2 Imbriqués - Option 2
+          Choix des cours supplémentaires pour la validation de la 3A M2 Imbriqués - Option 2
         </h3>
 
         <app-course-selection-input
@@ -59,6 +32,16 @@
           [availableCourses]="availableCourses"
         >
         </app-course-selection-input>
+      </section>
+
+      <section>
+        <h3>
+          Règles de validation
+        </h3>
+
+        <p *ngFor="let rule of checkParcoursRules" [ngClass]="{'invalid-rule': !rule.isValid}">
+          <mat-icon>{{ rule.isValid ? 'check' : 'close' }}</mat-icon> {{ rule.message }}
+        </p>
       </section>
 
       <section>

@@ -100,7 +100,7 @@ export class CourseSelectionInputComponent implements OnInit, ControlValueAccess
   formatECTSSum(): string {
     switch (this.mode) {
       case '3A':
-        return `Total d'ECTS pour la 3A : ${this.computeECTSSum()} / 30`;
+        return `Total d'ECTS pour la 3A : ${this.computeECTSSum()}`;
       case 'option2':
         return `Total d'ECTS pour l'option 2 : ${this.computeECTSSum()} / 15`;
       default:
@@ -109,10 +109,6 @@ export class CourseSelectionInputComponent implements OnInit, ControlValueAccess
   }
 
   getECTSSumClass()  {
-    if (this.mode === '3A' && this.computeECTSSum() < 30) {
-      return 'ECTS-wrapper ECTS-error';
-    }
-
     if (this.mode === 'option2' && this.computeECTSSum() < 15) {
       return 'ECTS-wrapper ECTS-error';
     }
