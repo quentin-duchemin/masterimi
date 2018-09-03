@@ -5,9 +5,13 @@
       "name": "Graphs in Machine Learning",
       "master": 1,
       "ECTS": 5,
-      "semester": "S5P1",
+      "period": "T1",
       "time": "Mon/10:30/12:30",
-      "location": "ENS Cachan"
+      "location": "ENS Cachan",
+      "attributes": {
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
     }
   },
   {
@@ -16,7 +20,7 @@
       "name": "Convex optimization and applications in machine learning",
       "master": 1,
       "ECTS": 5,
-      "semester": "S5P1",
+      "period": "T1",
       "time": "Mon/13:30/16:30",
       "location": "ENS Ulm"
     }
@@ -27,7 +31,7 @@
       "name": "Sparsity and compressed sensing",
       "master": 1,
       "ECTS": 5,
-      "semester": "S5P1",
+      "period": "T1",
       "time": "Mon/10:00/12:30",
       "location": "ENS Ulm"
     }
@@ -38,7 +42,7 @@
       "name": "Discrete Inference and Learning",
       "master": 1,
       "ECTS": 5,
-      "semester": "S5P1",
+      "period": "T1",
       "time": "Mon/13:45/16:45",
       "location": "CentraleSupelec"
     }
@@ -49,7 +53,7 @@
       "name": "Topological data analysis for imaging and machine learning",
       "master": 1,
       "ECTS": 5,
-      "semester": "S5P1",
+      "period": "T1",
       "time": "Tue/11:00/13:00",
       "location": "ENS Cachan"
     }
@@ -60,7 +64,7 @@
       "name": "Advanced Learning for Text and Graph Data (ALTeGraD)",
       "master": 1,
       "ECTS": 5,
-      "semester": "S5P1",
+      "period": "T1",
       "time": "Tue/11:00/15:00",
       "location": "ENS Cachan"
     }
@@ -71,7 +75,7 @@
       "name": "Reinforcement Learning",
       "master": 1,
       "ECTS": 5,
-      "semester": "S5P1",
+      "period": "T1",
       "time": "Tue/11:00/13:00",
       "location": "ENS Cachan"
     }
@@ -82,7 +86,7 @@
       "name": "Introduction to Statistical Learning",
       "master": 1,
       "ECTS": 5,
-      "semester": "S5P1",
+      "period": "T1",
       "time": "Tue/08:45/10:45",
       "location": "ENS Cachan"
     }
@@ -93,7 +97,7 @@
       "name": "3D Computer Vision",
       "master": 1,
       "ECTS": 5,
-      "semester": "S5P1",
+      "period": "T1",
       "time": "Tue/12:45/15:45",
       "location": "Telecom"
     }
@@ -104,7 +108,7 @@
       "name": "Object Recognition and Computer Vision",
       "master": 1,
       "ECTS": 5,
-      "semester": "S5P1",
+      "period": "T1",
       "time": "Tue/16:15/19:15",
       "location": "ENS Ulm"
     }
@@ -115,7 +119,7 @@
       "name": "Lecture Group: foundations and theory of mathematics for learning & vision",
       "master": 1,
       "ECTS": 5,
-      "semester": "S5P1",
+      "period": "T1",
       "time": "Tue/16:00/18:00",
       "location": "ENS Cachan"
     }
@@ -126,7 +130,7 @@
       "name": "Probabilistic Graphical Models",
       "master": 1,
       "ECTS": 5,
-      "semester": "S5P1",
+      "period": "T1",
       "time": "Wed/09:00/12:00",
       "location": "ENS Cachan"
     }
@@ -137,7 +141,7 @@
       "name": "Optimization and features of optimal solutions. Applications to imaging",
       "master": 1,
       "ECTS": 5,
-      "semester": "S5P1",
+      "period": "T1",
       "time": "Wed/13:30/16:30",
       "location": "Telecom"
     }
@@ -148,7 +152,7 @@
       "name": "Computational Statistics",
       "master": 1,
       "ECTS": 5,
-      "semester": "S5P1",
+      "period": "T1",
       "time": "Fri/09:00/13:00",
       "location": "ENS Cachan"
     }
@@ -159,7 +163,7 @@
       "name": "Introduction to Medical Image analysis",
       "master": 1,
       "ECTS": 5,
-      "semester": "S5P1",
+      "period": "T1",
       "time": "Wed/13:30/17:00",
       "location": "ENS Cachan"
     }
@@ -170,7 +174,7 @@
       "name": "Introduction à l'imagerie numérique",
       "master": 1,
       "ECTS": 5,
-      "semester": "S5P1",
+      "period": "T1",
       "time": "Thu/09:00/12:15",
       "location": "Telecom"
     }
@@ -181,7 +185,7 @@
       "name": "Sub-pixel Image Processing",
       "master": 1,
       "ECTS": 5,
-      "semester": "S5P1",
+      "period": "T1",
       "time": "Thu/13:30/18:15",
       "location": "ENS Cachan"
     }
@@ -192,7 +196,7 @@
       "name": "Méthodes mathématiques pour les neurosciences",
       "master": 1,
       "ECTS": 5,
-      "semester": "S5P1",
+      "period": "T1",
       "time": "Thu/13:30/18:45",
       "location": "Jussieu"
     }
@@ -203,7 +207,7 @@
       "name": "Unsupervised learning: From big data to low-dimensional representations",
       "master": 1,
       "ECTS": 5,
-      "semester": "S5P1",
+      "period": "T1",
       "time": "Fri/09:00/12:00",
       "location": "ENS Cachan"
     }
@@ -214,7 +218,7 @@
       "name": "The partial differential equations of image processing",
       "master": 1,
       "ECTS": 5,
-      "semester": "S5P1",
+      "period": "T1",
       "time": "Fri/14:00/17:00",
       "location": "ENS Cachan"
     }

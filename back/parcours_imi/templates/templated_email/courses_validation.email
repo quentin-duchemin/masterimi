@@ -461,20 +461,20 @@
         <tr style="border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;">
           <th style="padding: 0 15px 0 0;">Nom du cours</th>
           <th style="padding: 0 15px;">ECTS</th>
-          <th style="padding: 0 0 0 15px;">Semestre</th>
+          <th style="padding: 0 0 0 15px;">Période</th>
         </tr>
         {% for course in user_parcours.course_choice.main_courses.all %}
           <tr>
             <td style="padding: 0 15px 0 0;">{{ course.name }}</td>
             <td style="padding: 0 15px;">{{ course.ECTS }}</td>
-            <td style="padding: 0 0 0 15px;">{{ course.semester }}</td>
+            <td style="padding: 0 0 0 15px;">{{ course.period }}</td>
           </tr>
         {% endfor %}
         {% for course in user_parcours.course_choice.option_courses.all %}
           <tr>
             <td style="padding: 0 15px 0 0;">{{ course.name }}</td>
             <td style="padding: 0 15px;">{{ course.ECTS }}</td>
-            <td style="padding: 0 0 0 15px;">{{ course.semester }}</td>
+            <td style="padding: 0 0 0 15px;">{{ course.period }}</td>
           </tr>
         {% endfor %}
       </table>

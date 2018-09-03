@@ -2,6 +2,6 @@ export interface ICourse {
   id: number;
   name: string;
   ECTS: string;
-  semester: number;
+  period: string;
   location: string;
 }
