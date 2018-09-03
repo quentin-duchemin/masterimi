@@ -1,4 +1,4 @@
-version: '2'
+version: "2.3"
 
 services:
   db:
@@ -20,7 +20,7 @@ services:
   back_worker:
     image: quay.io/louistrezzini/my3a-back:${TAG:-latest}
     restart: always
-    command: ['/venv/bin/celery', '-A', 'master_imi', 'worker', '-l', 'info']
+    command: ["/venv/bin/celery", "-A", "master_imi", "worker", "-l", "info"]
     environment:
       DATABASE_URL: postgres://my3A:my3A@db/my3A
       CELERY_BROKER_URL: amqp://celery_broker
@@ -48,7 +48,7 @@ services:
     image: quay.io/louistrezzini/my3a-back:${TAG:-latest}
     restart: always
     ports:
-      - "8080:80"
+      - "9572:80"
     depends_on:
       - back
 

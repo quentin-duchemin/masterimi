@@ -1,4 +1,4 @@
-version: '2'
+version: "2.3"
 
 services:
   db:
@@ -15,7 +15,7 @@ services:
       context: back
     environment:
       DEBUG: 1
-    command: ['/venv/bin/celery', '-A', 'master_imi', 'worker', '-l', 'debug']
+    command: ["/venv/bin/celery", "-A", "master_imi", "worker", "-l", "debug"]
     volumes:
       - ./back:/app/
 
