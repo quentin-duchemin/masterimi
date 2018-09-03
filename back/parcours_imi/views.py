@@ -79,7 +79,9 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
 
         serializer = self._get_parcours_courses_serializer(parcours, request.data)
 
-        if serializer.validated_data['submitted']:
+        is_submitted = serializer.validated_data['submitted']
+
+        if is_submitted:
             parcours_validation_data = self._get_parcours_courses_rules_validation_data(parcours, serializer)
 
             errors = [
@@ -95,7 +97,8 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
             parcours.course_choice = course_choice
             parcours.save()
 
-        send_courses_validation_email.delay(parcours.user.id)
+        if is_submitted:
+            send_courses_validation_email.delay(parcours.user.id, parcours_validation_data)
 
         return Response(serializer.data)
 

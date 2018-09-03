@@ -34,7 +34,7 @@ def send_option_confirmation_email(user_parcours_id: int):
     )
 
 @shared_task
-def send_courses_validation_email(user_parcours_id: int):
+def send_courses_validation_email(user_parcours_id: int, parcours_validation_data):
     user_parcours = UserParcours.objects.get(pk=user_parcours_id)
     user = user_parcours.user
 
@@ -47,5 +47,6 @@ def send_courses_validation_email(user_parcours_id: int):
         context=dict(
             user=user_parcours.user,
             user_parcours=user_parcours,
+            parcours_validation_data=parcours_validation_data,
         ),
     )

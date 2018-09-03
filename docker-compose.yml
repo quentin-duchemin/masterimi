@@ -18,8 +18,7 @@ services:
       - celery_broker-data:/var/lib/rabbitmq
 
   back_worker:
-    build:
-      context: back
+    image: quay.io/louistrezzini/my3a-back:${TAG:-latest}
     restart: always
     command: ['/venv/bin/celery', '-A', 'master_imi', 'worker', '-l', 'info']
     environment:
@@ -30,6 +29,7 @@ services:
       - db
 
   back:
+    image: quay.io/louistrezzini/my3a-back:${TAG:-latest}
     build:
       context: back
     restart: always
@@ -45,8 +45,7 @@ services:
       - celery_broker
 
   front:
-    build:
-      context: front
+    image: quay.io/louistrezzini/my3a-back:${TAG:-latest}
     restart: always
     ports:
       - "8080:80"

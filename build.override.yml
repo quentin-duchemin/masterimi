@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  back:
+    build:
+      context: back
+
+  front:
+    build:
+      context: front
+

@@ -16,7 +16,7 @@
       <mj-column width="100%">
         <mj-text align="center" font-size="13px" color="#ABCDEA" font-family="Ubuntu, Helvetica, Arial, sans-serif" padding-left="25px" padding-right="25px" padding-bottom="10px" padding-top="10px">
           HELLO
-          <p style="font-size:16px; color:white">[[FirstName]]</p>
+          <p style="font-size:16px; color:white">{{ user.first_name}} {{ user.last_name }}</p>
         </mj-text>
       </mj-column>
     </mj-section>
@@ -30,11 +30,11 @@
     <mj-section background-color="#568feb" padding-bottom="15px" padding-top="15px">
       <mj-column>
         <mj-text mj-class="stat-title"><strong>Master choisi</strong></mj-text>
-        <mj-text mj-class="stat-content">[[OrderNumber]]</mj-text>
+        <mj-text mj-class="stat-content">{{ user_parcours.master.name }}</mj-text>
       </mj-column>
       <mj-column>
         <mj-text mj-class="stat-title"><strong>Option choisie</strong></mj-text>
-        <mj-text mj-class="stat-content">[[OrderDate]]</mj-text>
+        <mj-text mj-class="stat-content">{{ user_parcours.option }}</mj-text>
       </mj-column>
     </mj-section>
     <mj-section background-color="#356CC7" padding-bottom="20px" padding-top="20px">
@@ -44,32 +44,37 @@
           <tr style="border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;">
             <th style="padding: 0 15px 0 0;">Nom du cours</th>
             <th style="padding: 0 15px;">ECTS</th>
-            <th style="padding: 0 0 0 15px;">Inspired from</th>
+            <th style="padding: 0 0 0 15px;">Période</th>
           </tr>
           <tr>
-            <td style="padding: 0 15px 0 0;">1995</td>
-            <td style="padding: 0 15px;">PHP</td>
-            <td style="padding: 0 0 0 15px;">C, Shell Unix</td>
+            <td style="padding: 0 15px 0 0;">{{ course.name }}</td>
+            <td style="padding: 0 15px;">{{ course.ECTS }}</td>
+            <td style="padding: 0 0 0 15px;">{{ course.period }}</td>
           </tr>
         </mj-table>
       </mj-column>
     </mj-section>
     <mj-section background-color="#568feb" padding-bottom="15px" padding-top="15px">
       <mj-column>
-        <mj-text mj-class="stat-title"><strong>Total ECTS</strong></mj-text>
-        <mj-text mj-class="stat-content">[[OrderNumber]] / [[RequiredECTSMaster]]</mj-text>
-      </mj-column>
-      <mj-column>
-        <mj-text mj-class="stat-title"><strong>Total ECTS Option</strong></mj-text>
-        <mj-text mj-class="stat-content">[[OrderDate]] / [[RequiredECTSOption]]</mj-text>
+        <mj-text align="center" color="#FFF" font-size="15px" font-family="Ubuntu, Helvetica, Arial, sans-serif" padding-left="25px" padding-right="25px" padding-bottom="0px" padding-top="0px">
+          <strong>Règles de validation</strong>
+        </mj-text>
+        <mj-text color="#FFF" font-family="Ubuntu, Helvetica, Arial, sans-serif" padding-left="25px" padding-right="25px" padding-bottom="5px" padding-top="15px">
+          <ul>
+            <li>
+
+            </li>
+          </ul>
+        </mj-text>
       </mj-column>
     </mj-section>
     <mj-section background-color="#356CC7" padding-bottom="20px" padding-top="20px">
       <mj-column>
-        <mj-text align="center" color="#FFF" font-size="15px" font-family="Ubuntu, Helvetica, Arial, sans-serif" padding-left="25px" padding-right="25px" padding-bottom="0px" padding-top="0px"><strong>Commentaire</strong>
+        <mj-text align="center" color="#FFF" font-size="15px" font-family="Ubuntu, Helvetica, Arial, sans-serif" padding-left="25px" padding-right="25px" padding-bottom="0px" padding-top="0px">
+        <strong>Commentaire</strong>
         </mj-text>
-         <mj-text color="#FFF" font-family="Ubuntu, Helvetica, Arial, sans-serif" padding-left="25px" padding-right="25px" padding-bottom="5px" padding-top="15px">
-           N/A
+        <mj-text color="#FFF" font-family="Ubuntu, Helvetica, Arial, sans-serif" padding-left="25px" padding-right="25px" padding-bottom="5px" padding-top="15px">
+          {{ user_parcours.course_choice.comment | default:'N/A' }}
         </mj-text>
       </mj-column>
     </mj-section>
