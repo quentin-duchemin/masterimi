@@ -24,10 +24,10 @@ cd ../
 sudo docker-compose -f docker-compose.yml -f dev.override.yml up --build
 
 # Ajouter à /etc/hosts
-127.0.0.1 3a-dev.enpc.fr
+127.0.0.1 my3a-dev.enpc.fr
 ```
 
-Se rendre sur http://3a-dev.enpc.fr:4200/
+Se rendre sur http://my3a-dev.enpc.fr:4200/
 
 ## Commentaires sur le travail effectué
 - La structure de la base de donnée est régie par le fichier model.py qui crée les modèles.

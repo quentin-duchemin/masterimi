@@ -38,6 +38,7 @@ services:
     environment:
       DATABASE_URL: postgres://my3A:my3A@db/my3A
       CELERY_BROKER_URL: amqp://celery_broker
+      CAS_ROOT_PROXIED_AS: https://my3a.enpc.fr
       DJANGO_MANAGEPY_MIGRATE: 1
       DJANGO_MANAGEPY_COLLECTSTATIC: 1
     depends_on:

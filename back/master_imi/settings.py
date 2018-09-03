@@ -35,7 +35,9 @@ DEBUG = env('DEBUG')
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    '3a-dev.enpc.fr',
+    'my3a-dev.enpc.fr',
+    'my3a.enpc.fr',
+    'my3a.enpc.org',
     'back',
 ]
 
@@ -238,6 +240,7 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 CAS_SERVER_URL = 'https://cas.enpc.fr/cas/'
+CAS_ROOT_PROXIED_AS = env('CAS_ROOT_PROXIED_AS', default=None)
 
 CAS_LOGIN_MSG = None
 CAS_LOGGED_MSG = None
