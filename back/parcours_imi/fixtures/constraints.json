@@ -1,0 +1,57 @@
+[
+  {
+    "model": "parcours_imi.AttributeConstraint",
+    "pk": 1,
+    "fields": {
+      "name": "MVA Cours",
+      "description": "MVA : valider en tout 8 modules (minimum), les 8 meilleures notes seront conservées si vous en validez au-delà de 8",
+      "attribute": "mva_cours",
+      "min_value": 8,
+      "max_value": null
+    }
+  },
+  {
+    "model": "parcours_imi.AttributeConstraint",
+    "pk": 2,
+    "fields": {
+      "name": "MVA Cours du premier trimestre",
+      "description": "MVA : valider 4 modules au premier trimestre au minimum",
+      "attribute": "mva_trimestre_1",
+      "min_value": 4,
+      "max_value": null
+    }
+  },
+  {
+    "model": "parcours_imi.AttributeConstraint",
+    "pk": 3,
+    "fields": {
+      "name": "MVA Cours du second semetres",
+      "description": "MVA : valider 3 modules au deuxième trimestre au minimum",
+      "attribute": "mva_trimestre_2",
+      "min_value": 3,
+      "max_value": null
+    }
+  },
+  {
+    "model": "parcours_imi.AttributeConstraint",
+    "pk": 4,
+    "fields": {
+      "name": "MVA Cours data",
+      "description": "MVA : valider 2 cours dans le chapeau Données/Modélisation au minimum sur l'année",
+      "attribute": "mva_cours_data",
+      "min_value": 2,
+      "max_value": null
+    }
+  },
+  {
+    "model": "parcours_imi.AttributeConstraint",
+    "pk": 5,
+    "fields": {
+      "name": "MVA Cours apprentissage",
+      "description": "MVA : valider 2 cours dans le chapeau Apprentissage au minimum sur l'année.",
+      "attribute": "mva_cours_apprentissage",
+      "min_value": 2,
+      "max_value": null
+    }
+  }
+]

@@ -45,7 +45,10 @@ class Course(models.Model):
         verbose_name_plural = 'Cours'
 
     def __str__(self):
-        return self.name
+        if not self.master:
+            return self.name
+
+        return f"({self.master.short_name}) {self.name}"
 
 
 class UserCourseChoice(models.Model):

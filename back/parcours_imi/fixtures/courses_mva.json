@@ -9,6 +9,9 @@
       "time": "Mon/10:30/12:30",
       "location": "ENS Cachan",
       "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
         "mva_cours_data": false,
         "mva_cours_apprentissage": true
       }
@@ -22,7 +25,14 @@
       "ECTS": 5,
       "period": "T1",
       "time": "Mon/13:30/16:30",
-      "location": "ENS Ulm"
+      "location": "ENS Ulm",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
     }
   },
   {
@@ -33,7 +43,14 @@
       "ECTS": 5,
       "period": "T1",
       "time": "Mon/10:00/12:30",
-      "location": "ENS Ulm"
+      "location": "ENS Ulm",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
     }
   },
   {
@@ -44,7 +61,14 @@
       "ECTS": 5,
       "period": "T1",
       "time": "Mon/13:45/16:45",
-      "location": "CentraleSupelec"
+      "location": "CentraleSupelec",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
     }
   },
   {
@@ -55,7 +79,14 @@
       "ECTS": 5,
       "period": "T1",
       "time": "Tue/11:00/13:00",
-      "location": "ENS Cachan"
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
     }
   },
   {
@@ -66,7 +97,14 @@
       "ECTS": 5,
       "period": "T1",
       "time": "Tue/11:00/15:00",
-      "location": "ENS Cachan"
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
     }
   },
   {
@@ -77,7 +115,14 @@
       "ECTS": 5,
       "period": "T1",
       "time": "Tue/11:00/13:00",
-      "location": "ENS Cachan"
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
     }
   },
   {
@@ -88,7 +133,14 @@
       "ECTS": 5,
       "period": "T1",
       "time": "Tue/08:45/10:45",
-      "location": "ENS Cachan"
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
     }
   },
   {
@@ -99,7 +151,14 @@
       "ECTS": 5,
       "period": "T1",
       "time": "Tue/12:45/15:45",
-      "location": "Telecom"
+      "location": "Telecom",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
     }
   },
   {
@@ -110,18 +169,14 @@
       "ECTS": 5,
       "period": "T1",
       "time": "Tue/16:15/19:15",
-      "location": "ENS Ulm"
-    }
-  },
-  {
-    "model": "parcours_imi.Course",
-    "fields": {
-      "name": "Lecture Group: foundations and theory of mathematics for learning & vision",
-      "master": 1,
-      "ECTS": 5,
-      "period": "T1",
-      "time": "Tue/16:00/18:00",
-      "location": "ENS Cachan"
+      "location": "ENS Ulm",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
     }
   },
   {
@@ -132,7 +187,14 @@
       "ECTS": 5,
       "period": "T1",
       "time": "Wed/09:00/12:00",
-      "location": "ENS Cachan"
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
     }
   },
   {
@@ -143,7 +205,14 @@
       "ECTS": 5,
       "period": "T1",
       "time": "Wed/13:30/16:30",
-      "location": "Telecom"
+      "location": "Telecom",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
     }
   },
   {
@@ -154,7 +223,14 @@
       "ECTS": 5,
       "period": "T1",
       "time": "Fri/09:00/13:00",
-      "location": "ENS Cachan"
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
     }
   },
   {
@@ -165,7 +241,14 @@
       "ECTS": 5,
       "period": "T1",
       "time": "Wed/13:30/17:00",
-      "location": "ENS Cachan"
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
     }
   },
   {
@@ -176,7 +259,14 @@
       "ECTS": 5,
       "period": "T1",
       "time": "Thu/09:00/12:15",
-      "location": "Telecom"
+      "location": "Telecom",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
     }
   },
   {
@@ -187,7 +277,14 @@
       "ECTS": 5,
       "period": "T1",
       "time": "Thu/13:30/18:15",
-      "location": "ENS Cachan"
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
     }
   },
   {
@@ -198,7 +295,14 @@
       "ECTS": 5,
       "period": "T1",
       "time": "Thu/13:30/18:45",
-      "location": "Jussieu"
+      "location": "Jussieu",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
     }
   },
   {
@@ -209,7 +313,14 @@
       "ECTS": 5,
       "period": "T1",
       "time": "Fri/09:00/12:00",
-      "location": "ENS Cachan"
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
     }
   },
   {
@@ -220,7 +331,14 @@
       "ECTS": 5,
       "period": "T1",
       "time": "Fri/14:00/17:00",
-      "location": "ENS Cachan"
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
     }
   }
 ]

@@ -4,7 +4,8 @@
     "pk": 1,
     "fields": {
       "name": "Mathématiques Vision Apprentissage (MVA)",
-      "short_name": "MVA"
+      "short_name": "MVA",
+      "attribute_constraints": [1, 2, 3, 4, 5]
     }
   },
   {
