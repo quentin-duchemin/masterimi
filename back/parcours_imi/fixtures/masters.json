@@ -29,7 +29,8 @@
     "pk": 5,
     "fields": {
       "name": "Master Parisien de Recherche Opérationnelle (MPRO)",
-      "short_name": "MPRO"
+      "short_name": "MPRO",
+      "attribute_constraints": [6, 7, 8]
     }
   }
 ]

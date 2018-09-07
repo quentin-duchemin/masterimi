@@ -9,21 +9,21 @@
       "time": "Thu/09:00/12:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5
+        "mpro_cours_obligatoire": true
       }
     }
   },
   {
     "model": "parcours_imi.Course",
     "fields": {
-      "name": "Programmation mathematique",
+      "name": "Mathematical programming",
       "master": 5,
       "ECTS": 4,
       "period": "S5",
       "time": "Thu/14:00/17:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5
+        "mpro_cours_obligatoire": true
       }
     }
   },
@@ -37,7 +37,7 @@
       "time": "Wed/09:00/12:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5
+        "mpro_cours_obligatoire": true
       }
     }
   },
@@ -51,7 +51,7 @@
       "time": "Tue/09:00/12:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5
+        "mpro_cours_obligatoire": true
       }
     }
   },
@@ -65,7 +65,7 @@
       "time": "Mon/14:00/17:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5
+        "mpro_cours_obligatoire": true
       }
     }
   },
@@ -79,49 +79,52 @@
       "time": "Mon/09:00/12:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5
+        "imi_ects_option2": 5,
+        "mpro_cours_electif": true
       }
     }
   },
   {
     "model": "parcours_imi.Course",
     "fields": {
-      "name": "Files d'attente",
+      "name": "Queueing theory",
       "master": 5,
       "ECTS": 3,
       "period": "S5",
       "time": "Mon/14:00/17:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5
+        "imi_ects_option2": 5,
+        "mpro_cours_electif": true
       }
     }
   },
   {
     "model": "parcours_imi.Course",
     "fields": {
-      "name": "Complexite et approximation",
+      "name": "Complexité : Algorithmes approchés",
       "master": 5,
       "ECTS": 3,
       "period": "S5",
       "time": "Fri/14:00/17:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5
+        "imi_ects_option2": 5,
+        "mpro_cours_electif": true
       }
     }
   },
   {
     "model": "parcours_imi.Course",
     "fields": {
-      "name": "Etude de cas de management de la RO",
+      "name": "Case studies and OR management",
       "master": 5,
       "ECTS": 4,
       "period": "S5",
       "time": null,
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5
+        "mpro_cours_obligatoire": true
       }
     }
   },
@@ -135,119 +138,142 @@
       "time": null,
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5
+        "mpro_cours_obligatoire": true
       }
     }
   },
   {
     "model": "parcours_imi.Course",
     "fields": {
-      "name": "Recherche operationnelle et developpement durable",
+      "name": "Operations Research and Sustainable Development",
       "master": 5,
       "ECTS": 3,
       "period": "S5",
       "time": "Wed/14:00/17:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5
+        "imi_ects_option2": 5,
+        "mpro_cours_electif": true,
+        "mpro_cours_application": true
       }
     }
   },
   {
     "model": "parcours_imi.Course",
     "fields": {
-      "name": "Recherche operationnelle reseaux et transport",
+      "name": "RO pour les Réseaux et le Transport",
       "master": 5,
       "ECTS": 3,
       "period": "S5",
       "time": "Tue/14:00/17:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5
+        "imi_ects_option2": 5,
+        "mpro_cours_electif": true,
+        "mpro_cours_application": true
       }
     }
   },
   {
     "model": "parcours_imi.Course",
     "fields": {
-      "name": "Programmation mathematique avancee",
+      "name": "Advanced Mathematical Programming",
       "master": 5,
       "ECTS": 3,
       "period": "S5",
       "time": "Thu/09:00/12:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5
+        "imi_ects_option2": 5,
+        "mpro_cours_electif": true
       }
     }
   },
   {
     "model": "parcours_imi.Course",
     "fields": {
-      "name": "Modeles de localisation et applications",
+      "name": "Location Models and Applications",
       "master": 5,
       "ECTS": 3,
       "period": "S5",
       "time": "Thu/14:00/17:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5
+        "imi_ects_option2": 5,
+        "mpro_cours_electif": true
       }
     }
   },
   {
     "model": "parcours_imi.Course",
     "fields": {
-      "name": "Graphes",
+      "name": "Graphs",
       "master": 5,
       "ECTS": 3,
       "period": "S5",
       "time": "Mon/14:00/17:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5
+        "imi_ects_option2": 5,
+        "mpro_cours_electif": true
       }
     }
   },
   {
     "model": "parcours_imi.Course",
     "fields": {
-      "name": "Programmation par contraintes",
+      "name": "Constraint Programming",
       "master": 5,
       "ECTS": 3,
       "period": "S5",
       "time": "Fri/09:00/12:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5
+        "imi_ects_option2": 5,
+        "mpro_cours_electif": true
       }
     }
   },
   {
     "model": "parcours_imi.Course",
     "fields": {
-      "name": "Recherche operationnelle et donnees massives",
+      "name": "Recherche opérationnelle et données massives",
       "master": 5,
       "ECTS": 3,
       "period": "S5",
       "time": "Wed/09:00/12:30",
       "location": "ENSTA",
       "attributes": {
-        "imi_ects_option2": 5
+        "imi_ects_option2": 5,
+        "mpro_cours_electif": true
       }
     }
   },
   {
     "model": "parcours_imi.Course",
     "fields": {
-      "name": "Conferences industrielles",
+      "name": "Conférences industrielles",
       "master": 5,
       "ECTS": 2,
       "period": "S5",
       "time": null,
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5
+        "mpro_cours_obligatoire": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Free course",
+      "master": 5,
+      "ECTS": 3,
+      "period": "S5",
+      "time": "Tue/14:00/17:30",
+      "location": "Cnam",
+      "attributes": {
+        "mpro_cours_electif": true
       }
     }
   }

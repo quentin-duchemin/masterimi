@@ -53,5 +53,38 @@
       "min_value": 2,
       "max_value": null
     }
+  },
+  {
+    "model": "parcours_imi.AttributeConstraint",
+    "pk": 6,
+    "fields": {
+      "name": "MPRO Cours obligatoires",
+      "description": "MPRO : valider les 8 cours obligatoires.",
+      "attribute": "mpro_cours_obligatoire",
+      "min_value": 8,
+      "max_value": 8
+    }
+  },
+  {
+    "model": "parcours_imi.AttributeConstraint",
+    "pk": 7,
+    "fields": {
+      "name": "MPRO Cours électifs",
+      "description": "MPRO : valider 6 cours électifs.",
+      "attribute": "mpro_cours_electif",
+      "min_value": 6,
+      "max_value": 6
+    }
+  },
+  {
+    "model": "parcours_imi.AttributeConstraint",
+    "pk": 8,
+    "fields": {
+      "name": "MPRO Cours application",
+      "description": "MPRO : valider au moins une application.",
+      "attribute": "mpro_cours_application",
+      "min_value": 1,
+      "max_value": null
+    }
   }
 ]
