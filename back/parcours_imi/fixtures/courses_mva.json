@@ -340,5 +340,383 @@
         "mva_cours_apprentissage": false
       }
     }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Algorithms for speech and natural language processing",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Mon/09:00/12:00",
+      "location": "ENS Ulm",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Analyse de données longitudinales : approches géométriques et statistiques",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Tue/14:00/17:00",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Audio signal Analysis, Indexing and Transformations",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Tue/08:30/11:45",
+      "location": "Telecom",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Audio Signal Processing",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Thu/09:15/11:50",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Deep Learning",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Fri/13:45/17:00",
+      "location": "CentraleSupelec",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Deformable Models and Geodesic methods for Image Analysis",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Thu/14:00/17:00",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Géométrie et espace de formes",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Wed/16:00/18:30",
+      "location": "ENS Ulm",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "High Dimensional Statistics and Learning",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Mon/09:00/12:00",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Imagerie fonctionnelle cérébrale et interface cerveau machine",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Fri/14:00/17:00",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Kernel Methods for machine Learning",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Wed/13:30/16:00",
+      "location": "ENS Ulm",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "L'apprentissage face à la malédiction de la grande dimension",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Thu/18:00/21:00",
+      "location": "Collège de France",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Large Scale Distributed Optimization & Computing",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Mon/13:45/16:45",
+      "location": "CentraleSupelec",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Méthodes stochastiques pour l'analyse d'images",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Tue/09:30/11:00",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Modélisation en neuroscience et ailleurs",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Thu/09:00/11:00",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Nuages de points et modélisation 3D",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Mon/14:00/18:00",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Parcimonie et analyse de données massives en astrophysique",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Tue/13:00/16:00",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Problèmes inverses en imagerie",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Fri/09:00/12:00",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Remote Sensing: from sensor to large scale geospatial data exploitation",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Thu/09:00/12:00",
+      "location": "Telecom",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Statistical computing on manifolds and data assimilation: from medical images to anatomical and physiological models",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Thu/13:30/17:00",
+      "location": "CentraleSupelec",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Théorie des Matrices Aléatoires et Apprentissage",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Mon/08:30/11:30",
+      "location": "CentraleSupelec",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "fields": {
+      "name": "Prediction for individual sequences",
+      "master": 1,
+      "ECTS": 5,
+      "period": "T2",
+      "time": "Fri/09:30/12:30",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
   }
 ]
