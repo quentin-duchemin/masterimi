@@ -23,6 +23,7 @@ services:
     build:
       context: back
     environment:
+      CAS_ROOT_PROXIED_AS: http://my3a-dev.enpc.org:4200
       DEBUG: 1
       DJANGO_MANAGEPY_COLLECTSTATIC: 0
     command: "/venv/bin/python manage.py runserver 0.0.0.0:8000"

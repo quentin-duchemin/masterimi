@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://my3a-dev.enpc.fr:4200/api',
-  casUrl: 'http://my3a-dev.enpc.fr:4200/cas/login',
+  baseUrl: 'http://my3a-dev.enpc.org:4200/api',
+  casUrl: 'http://my3a-dev.enpc.org:4200/cas/login',
 };
 
 /*

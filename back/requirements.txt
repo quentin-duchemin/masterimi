@@ -1,12 +1,11 @@
 amqp==2.3.2
 billiard==3.5.0.4
 celery==4.2.1
-certifi==2018.4.16
+certifi==2018.8.24
 chardet==3.0.4
 coreapi==2.3.3
 coreschema==0.0.4
-Django==2.1
-django-cas-ng==3.5.9
+Django==2.1.1
 django-cors-headers==2.4.0
 django-environ==0.4.5
 django-filter==2.0.0
@@ -32,3 +31,4 @@ uritemplate==3.0.0
 urllib3==1.23
 uWSGI==2.0.17.1
 vine==1.1.4
+-e git+https://github.com/LouisTrezzini/django-cas-ng.git@b9c94580ae782c3530d7d1f29561ddf4a45faf4e#egg=django-cas-ng

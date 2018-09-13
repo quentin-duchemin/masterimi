@@ -12,6 +12,7 @@ RUN set -ex \
     && apk add --no-cache postgresql-client \
     && apk add --no-cache --virtual .build-deps \
             gcc \
+            git \
             make \
             libc-dev \
             musl-dev \
