@@ -64,7 +64,7 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
         parcours.option = option
         parcours.save()
 
-        send_option_confirmation_email.delay(parcours.user.id)
+        send_option_confirmation_email.delay(parcours.id)
 
         serializer = UserParcoursSerializer(instance=parcours)
 
@@ -98,7 +98,7 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
             parcours.save()
 
         if is_submitted:
-            send_courses_validation_email.delay(parcours.user.id, parcours_validation_data)
+            send_courses_validation_email.delay(parcours.id, parcours_validation_data)
 
         return Response(serializer.data)
 
