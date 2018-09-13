@@ -22,6 +22,7 @@ import { CourseService } from './services/course.service';
 import { ParcoursIntroComponent } from './components/parcours-intro/parcours-intro.component';
 import { DialogService } from './services/dialog/dialog.service';
 import { ConfirmDialogComponent } from './services/dialog/confirm/confirm-dialog.component';
+import { CourseTimePipe } from './pipes/course-time.pipe';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ConfirmDialogComponent } from './services/dialog/confirm/confirm-dialog
     LoginComponent,
     ParcoursIntroComponent,
     ConfirmDialogComponent,
+    CourseTimePipe,
   ],
   entryComponents: [
     CourseSelectionDialogComponent,

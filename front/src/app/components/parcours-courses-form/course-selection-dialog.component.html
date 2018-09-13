@@ -11,13 +11,15 @@
 
   <div class="list-wrapper">
     <mat-selection-list #courses>
-      <h3 mat-subheader>Cours MVA</h3>
       <mat-list-option *ngFor="let course of dataSource.filteredData" [value]="course">
         <h3 matLine>
           {{ course.name }}
         </h3>
         <p matLine>
-          {{ course.ECTS }} ECTS / Lieu : {{ course.location }}
+          {{ course.ECTS }} ECTS / Type : {{ course.master ? course.master.shortName : 'Cours IMI' }}
+        </p>
+        <p matLine>
+          Lieu : {{ course.location }} / Horaires : {{ course.time | courseTime }}
         </p>
       </mat-list-option>
     </mat-selection-list>
