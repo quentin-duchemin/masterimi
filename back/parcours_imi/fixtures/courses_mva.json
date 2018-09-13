@@ -1,9 +1,10 @@
 [
   {
     "model": "parcours_imi.Course",
+    "pk": "3656645b-45b4-4c98-81fd-6b9da35b3b7f",
     "fields": {
       "name": "Graphs in Machine Learning",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T1",
       "time": "Mon/10:30/12:30",
@@ -19,9 +20,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "2d11e04e-c10a-49da-ac9c-fbeb69785347",
     "fields": {
       "name": "Convex optimization and applications in machine learning",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T1",
       "time": "Mon/13:30/16:30",
@@ -37,9 +39,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "8475ad02-72b3-42ec-894f-3dc1f9849852",
     "fields": {
       "name": "Sparsity and compressed sensing",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T1",
       "time": "Mon/10:00/12:30",
@@ -55,9 +58,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "b328bcf3-a1df-4636-91e2-6eb70d13fb59",
     "fields": {
       "name": "Discrete Inference and Learning",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T1",
       "time": "Mon/13:45/16:45",
@@ -73,9 +77,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "336edfc1-5f10-4ff0-8fd6-0323e4a7093a",
     "fields": {
       "name": "Topological data analysis for imaging and machine learning",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T1",
       "time": "Tue/11:00/13:00",
@@ -91,9 +96,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "0d9edc51-7eb0-4400-becd-f110095a0b83",
     "fields": {
       "name": "Advanced Learning for Text and Graph Data (ALTeGraD)",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T1",
       "time": "Tue/11:00/15:00",
@@ -109,9 +115,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "04e329ae-1375-4834-adff-9dfe63d20f99",
     "fields": {
       "name": "Reinforcement Learning",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T1",
       "time": "Tue/11:00/13:00",
@@ -127,9 +134,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "22bb4da0-141c-4465-bb00-3947ac82bfc6",
     "fields": {
       "name": "Introduction to Statistical Learning",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T1",
       "time": "Tue/08:45/10:45",
@@ -145,9 +153,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "ff7d4c0e-6bb6-4ded-b1a6-4f7562c42f1e",
     "fields": {
       "name": "3D Computer Vision",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T1",
       "time": "Tue/12:45/15:45",
@@ -163,9 +172,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "ac84a15f-2cac-45c4-bf26-e6b147a43fa7",
     "fields": {
       "name": "Object Recognition and Computer Vision",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T1",
       "time": "Tue/16:15/19:15",
@@ -181,9 +191,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "fd944563-343f-4de6-b116-b6b41ab38ce4",
     "fields": {
       "name": "Probabilistic Graphical Models",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T1",
       "time": "Wed/09:00/12:00",
@@ -199,9 +210,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "a90e60cc-bc13-401e-a44a-426036dd0834",
     "fields": {
       "name": "Optimization and features of optimal solutions. Applications to imaging",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T1",
       "time": "Wed/13:30/16:30",
@@ -217,9 +229,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "0e411d29-488d-4513-9621-9dc2cd023204",
     "fields": {
       "name": "Computational Statistics",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T1",
       "time": "Fri/09:00/13:00",
@@ -235,9 +248,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "5028cd91-5fc2-433a-9c01-eb6a3a026b5b",
     "fields": {
       "name": "Introduction to Medical Image analysis",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T1",
       "time": "Wed/13:30/17:00",
@@ -253,9 +267,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "da0f5d9a-8221-4145-952a-d50b9fcf7809",
     "fields": {
       "name": "Introduction à l'imagerie numérique",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T1",
       "time": "Thu/09:00/12:15",
@@ -271,9 +286,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "a30a77fc-a3fb-4f69-88ab-1b56720c92a7",
     "fields": {
       "name": "Sub-pixel Image Processing",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T1",
       "time": "Thu/13:30/18:15",
@@ -289,9 +305,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "d51e22c8-1da0-40ee-9679-e4101a4a9cb8",
     "fields": {
       "name": "Méthodes mathématiques pour les neurosciences",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T1",
       "time": "Thu/13:30/18:45",
@@ -307,9 +324,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "d44078af-098e-4829-b7f0-765257d03174",
     "fields": {
       "name": "Unsupervised learning: From big data to low-dimensional representations",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T1",
       "time": "Fri/09:00/12:00",
@@ -325,9 +343,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "6d38a624-fc27-4aeb-becd-75abed5d2c82",
     "fields": {
       "name": "The partial differential equations of image processing",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T1",
       "time": "Fri/14:00/17:00",
@@ -343,9 +362,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "5b00a17e-a480-4e46-b174-3103aca8671c",
     "fields": {
       "name": "Algorithms for speech and natural language processing",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Mon/09:00/12:00",
@@ -361,9 +381,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "f0e45f11-82f9-40f6-af5f-39a1eeed74f6",
     "fields": {
       "name": "Analyse de données longitudinales : approches géométriques et statistiques",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Tue/14:00/17:00",
@@ -379,9 +400,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "c5e703a8-1d71-41c2-b346-60d498b5a4b4",
     "fields": {
       "name": "Audio signal Analysis, Indexing and Transformations",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Tue/08:30/11:45",
@@ -397,9 +419,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "4571904f-cc11-477b-b8a8-a69efcc95b6e",
     "fields": {
       "name": "Audio Signal Processing",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Thu/09:15/11:50",
@@ -415,9 +438,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "b4a948bd-78c8-44fd-94b3-fb69cea75ba6",
     "fields": {
       "name": "Deep Learning",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Fri/13:45/17:00",
@@ -433,9 +457,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "57c1342d-1543-4b29-bb8c-fe858ed50e5c",
     "fields": {
       "name": "Deformable Models and Geodesic methods for Image Analysis",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Thu/14:00/17:00",
@@ -451,9 +476,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "e897420a-14c3-43bf-ba66-fd1949bcc224",
     "fields": {
       "name": "Géométrie et espace de formes",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Wed/16:00/18:30",
@@ -469,9 +495,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "1a2692ba-93da-4800-841b-cc78f0639dca",
     "fields": {
       "name": "High Dimensional Statistics and Learning",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Mon/09:00/12:00",
@@ -487,9 +514,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "09e416f2-18b1-402c-9dde-c1a73c03c4ce",
     "fields": {
       "name": "Imagerie fonctionnelle cérébrale et interface cerveau machine",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Fri/14:00/17:00",
@@ -505,9 +533,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "d38f3ee9-4d38-4f77-998a-6dd12f90d48a",
     "fields": {
       "name": "Kernel Methods for machine Learning",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Wed/13:30/16:00",
@@ -523,9 +552,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "64fb27a5-180f-43d9-9dec-b9888818ae91",
     "fields": {
       "name": "L'apprentissage face à la malédiction de la grande dimension",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Thu/18:00/21:00",
@@ -541,9 +571,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "2852e79c-8ca3-43d7-ac84-7fc8387357a5",
     "fields": {
       "name": "Large Scale Distributed Optimization & Computing",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Mon/13:45/16:45",
@@ -559,9 +590,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "9dc995ce-96f7-4340-80a2-91f9804d0398",
     "fields": {
       "name": "Méthodes stochastiques pour l'analyse d'images",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Tue/09:30/11:00",
@@ -577,9 +609,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "e71563d1-fc90-4ab8-9b09-e3d892f391a9",
     "fields": {
       "name": "Modélisation en neuroscience et ailleurs",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Thu/09:00/11:00",
@@ -595,9 +628,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "3618dae8-c1a3-4fde-94e0-7a57143f925b",
     "fields": {
       "name": "Nuages de points et modélisation 3D",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Mon/14:00/18:00",
@@ -613,9 +647,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "0c8e02ef-93c7-403c-9461-3a7f85454ed6",
     "fields": {
       "name": "Parcimonie et analyse de données massives en astrophysique",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Tue/13:00/16:00",
@@ -631,9 +666,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "e23bf1f3-8d2f-4435-be75-0d7f5eb70e7b",
     "fields": {
       "name": "Problèmes inverses en imagerie",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Fri/09:00/12:00",
@@ -649,9 +685,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "e275cdac-d5cb-4301-aeee-20f7d585efdd",
     "fields": {
       "name": "Remote Sensing: from sensor to large scale geospatial data exploitation",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Thu/09:00/12:00",
@@ -667,9 +704,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "75931b01-d90b-4f4c-8de1-a31b35ce7e3e",
     "fields": {
       "name": "Statistical computing on manifolds and data assimilation: from medical images to anatomical and physiological models",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Thu/13:30/17:00",
@@ -685,9 +723,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "a8826622-0980-4b93-a0cc-1f11a572cb16",
     "fields": {
       "name": "Théorie des Matrices Aléatoires et Apprentissage",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Mon/08:30/11:30",
@@ -703,9 +742,10 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "38440cd9-e9fd-43e6-9196-df536d19b685",
     "fields": {
       "name": "Prediction for individual sequences",
-      "master": 1,
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
       "ECTS": 5,
       "period": "T2",
       "time": "Fri/09:30/12:30",

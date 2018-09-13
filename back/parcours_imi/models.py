@@ -1,3 +1,5 @@
+import uuid
+
 from django.contrib.auth.models import User
 from django.contrib.postgres.fields import JSONField
 from django.db import models
@@ -6,6 +8,8 @@ from django.dispatch import receiver
 
 
 class AttributeConstraint(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, verbose_name='ID')
+
     name = models.CharField(max_length=120, verbose_name='Nom')
     description = models.TextField(blank=True, verbose_name='Description')
     attribute = models.CharField(max_length=120, verbose_name='Attribut')
@@ -20,6 +24,8 @@ class AttributeConstraint(models.Model):
         return self.name
 
 class Master(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, verbose_name='ID')
+
     name = models.CharField(max_length=120, verbose_name='Nom')
     short_name = models.CharField(max_length=6, verbose_name='Nom court')
     website = models.URLField(blank=True, null=True)
@@ -31,6 +37,8 @@ class Master(models.Model):
 
 
 class Course(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, verbose_name='ID')
+
     name = models.CharField(max_length=120, verbose_name='Nom')
     master = models.ForeignKey(Master, on_delete=models.CASCADE, null=True)
     ECTS = models.FloatField(verbose_name='ECTS')

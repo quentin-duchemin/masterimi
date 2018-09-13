@@ -1,7 +1,7 @@
 [
   {
     "model": "parcours_imi.AttributeConstraint",
-    "pk": 1,
+    "pk": "3caaee61-1d60-4b2b-a65d-189806921c4b",
     "fields": {
       "name": "MVA Cours",
       "description": "MVA : valider en tout 8 modules (minimum), les 8 meilleures notes seront conservées si vous en validez au-delà de 8",
@@ -12,7 +12,7 @@
   },
   {
     "model": "parcours_imi.AttributeConstraint",
-    "pk": 2,
+    "pk": "6c2a692e-fe63-4f03-a261-35e1df531780",
     "fields": {
       "name": "MVA Cours du premier trimestre",
       "description": "MVA : valider 4 modules au premier trimestre au minimum",
@@ -23,7 +23,7 @@
   },
   {
     "model": "parcours_imi.AttributeConstraint",
-    "pk": 3,
+    "pk": "0995b582-a846-4f3d-bb5b-eb9ba284b6e8",
     "fields": {
       "name": "MVA Cours du second semetres",
       "description": "MVA : valider 3 modules au deuxième trimestre au minimum",
@@ -34,7 +34,7 @@
   },
   {
     "model": "parcours_imi.AttributeConstraint",
-    "pk": 4,
+    "pk": "0cfc6640-4d81-4fbe-89db-3adfc3eccd10",
     "fields": {
       "name": "MVA Cours data",
       "description": "MVA : valider 2 cours dans le chapeau Données/Modélisation au minimum sur l'année",
@@ -45,7 +45,7 @@
   },
   {
     "model": "parcours_imi.AttributeConstraint",
-    "pk": 5,
+    "pk": "dd842f72-b7a7-4ed9-84ad-281a265fd7c4",
     "fields": {
       "name": "MVA Cours apprentissage",
       "description": "MVA : valider 2 cours dans le chapeau Apprentissage au minimum sur l'année.",
@@ -56,7 +56,7 @@
   },
   {
     "model": "parcours_imi.AttributeConstraint",
-    "pk": 6,
+    "pk": "b9f55e48-b444-4f47-98a2-5b5f01ceaab8",
     "fields": {
       "name": "MPRO Cours obligatoires",
       "description": "MPRO : valider les 8 cours obligatoires.",
@@ -67,7 +67,7 @@
   },
   {
     "model": "parcours_imi.AttributeConstraint",
-    "pk": 7,
+    "pk": "5ab7a298-d733-4b16-b281-66df94b674d1",
     "fields": {
       "name": "MPRO Cours électifs",
       "description": "MPRO : valider 6 cours électifs.",
@@ -78,7 +78,7 @@
   },
   {
     "model": "parcours_imi.AttributeConstraint",
-    "pk": 8,
+    "pk": "8e662dbd-786c-41c3-8649-6167b0a32fb3",
     "fields": {
       "name": "MPRO Cours application",
       "description": "MPRO : valider au moins une application.",

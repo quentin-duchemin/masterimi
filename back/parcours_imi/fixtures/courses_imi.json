@@ -1,6 +1,7 @@
 [
   {
     "model": "parcours_imi.Course",
+    "pk": "c806175a-3b87-468a-9a3d-36259e82f313",
     "fields": {
       "name": "Math4Business",
       "master": null,
@@ -15,6 +16,7 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "b0dc42e2-eaea-4e07-b1c9-d7ac6aa2c999",
     "fields": {
       "name": "Data Driven Optimization",
       "master": null,
@@ -29,6 +31,7 @@
   },
   {
     "model": "parcours_imi.Course",
+    "pk": "3c91333d-eafa-41ad-9295-4edbee0d73b8",
     "fields": {
       "name": "Algo de Monte-Carlo par chaînes de Markov et méthodes particulaires",
       "master": null,
