@@ -1,7 +1,33 @@
 from collections import defaultdict
+from enum import Enum
 from typing import Iterable
 
+from intervaltree import IntervalTree
+
 from parcours_imi.models import AttributeConstraint
+
+
+class ConstraintType(Enum):
+    VALID = 'valid'
+    WARNING = 'warning'
+    ERROR = 'error'
+
+
+def build_validation_entry(validation_message: str, constraint_type: ConstraintType):
+        if constraint_type == ConstraintType.VALID:
+            tag = 'OK'
+        elif constraint_type == ConstraintType.WARNING:
+            tag = 'ATTENTION'
+        elif constraint_type == ConstraintType.ERROR:
+            tag = 'ERREUR'
+        else:
+            raise NotImplementedError()
+
+        return dict(
+            message=validation_message,
+            type=constraint_type.value,
+            full_message=f"[{tag}] {validation_message}",
+        )
 
 
 class AttributeConstraintsValidator:
@@ -16,20 +42,17 @@ class AttributeConstraintsValidator:
         validation_data = []
         for constraint in self.constraints:
             constraint_value = constraints_values[constraint.attribute]
-            is_valid = True
+            constraint_type = ConstraintType.VALID
 
             validation_message = f'{constraint.description} (valeur actuelle: {constraint_value})'
 
             if constraint.min_value is not None and constraint_value < constraint.min_value:
-                is_valid = False
+                constraint_type = ConstraintType.ERROR
 
             if constraint.max_value is not None and constraint_value > constraint.max_value:
-                is_valid = False
+                constraint_type = ConstraintType.ERROR
 
-            validation_data.append(dict(
-                message=validation_message,
-                is_valid=is_valid,
-            ))
+            validation_data.append(build_validation_entry(validation_message, constraint_type))
 
         return validation_data
 
@@ -43,3 +66,44 @@ class AttributeConstraintsValidator:
                 constraints_values[attribute] += float(value)
 
         return constraints_values
+
+
+class TimeCollisionValidator:
+
+    def validate(self, items):
+        day_trees = defaultdict(IntervalTree)
+
+        for item in items:
+            time = item.time
+
+            if not time:
+                continue
+
+            day, start, end = time.split('/')
+            start = self.time_to_seconds(start)
+            end = self.time_to_seconds(end)
+
+            day_trees[f'{item.period}-{day}'][start:end] = item
+
+        collisions = []
+        for tree in day_trees.values():
+            for boundary in tree.boundary_table:
+                intervals = tree[boundary]
+
+                if len(intervals) > 1:
+                    collisions.append([
+                        f'{interval.data.name} ({interval.data.period}-{interval.data.time})'
+                        for interval in intervals
+                    ])
+
+        validation_data = []
+        for collision in collisions:
+            collided_courses = ' / '.join(collision)
+            validation_message = f'Deux cours sur le même créneau : {collided_courses}'
+            validation_data.append(build_validation_entry(validation_message, ConstraintType.WARNING))
+
+        return validation_data
+
+    def time_to_seconds(self, time: str):
+        hours, minutes = time.split(':')
+        return int(hours) * 60 + int(minutes)

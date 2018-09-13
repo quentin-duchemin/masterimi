@@ -10,7 +10,7 @@
     <form [formGroup]="form">
       <section>
         <h3>
-          Choix des cours pour la validation de la 3A
+          Choix des cours pour la validation du {{ parcours.master.shortName }}
         </h3>
 
         <app-course-selection-input
@@ -39,8 +39,8 @@
           Règles de validation
         </h3>
 
-        <p *ngFor="let rule of checkParcoursRules" [ngClass]="{'invalid-rule': !rule.isValid}">
-          <mat-icon>{{ rule.isValid ? 'check' : 'close' }}</mat-icon> {{ rule.message }}
+        <p *ngFor="let rule of checkParcoursRules" [ngClass]="{'warning-rule': rule.type == 'warning', 'invalid-rule': rule.type == 'invalid'}">
+          <mat-icon>{{ ruleTypeToIcon(rule.type) }}</mat-icon> {{ rule.message }}
         </p>
       </section>
 

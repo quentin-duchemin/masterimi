@@ -567,7 +567,7 @@
         <ul>
             {% for rule in parcours_validation_data %}
               <li>
-                {{ 'OK' if rule.is_valid else 'ERREUR' }} {{ rule.message }}
+                {{ rule.full_message }}
               </li>
             {% endfor %}
           </ul>

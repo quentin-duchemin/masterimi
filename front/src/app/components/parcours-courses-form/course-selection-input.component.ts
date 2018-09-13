@@ -38,7 +38,7 @@ export class CourseSelectionInputComponent implements OnInit, ControlValueAccess
   }
 
   get displayedColumns() {
-    const baseColumns = ['name', 'master', 'location', 'ECTS'];
+    const baseColumns = ['name', 'master', 'period', 'time', 'location', 'ECTS'];
 
     if (this.isDisabled) {
       return baseColumns;
@@ -100,7 +100,7 @@ export class CourseSelectionInputComponent implements OnInit, ControlValueAccess
   formatECTSSum(): string {
     switch (this.mode) {
       case '3A':
-        return `Total d'ECTS pour la 3A : ${this.computeECTSSum()}`;
+        return `Total d'ECTS pour le master : ${this.computeECTSSum()}`;
       case 'option2':
         return `Total d'ECTS pour l'option 2 : ${this.computeECTSSum()} / 15`;
       default:

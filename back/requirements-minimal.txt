@@ -13,3 +13,4 @@ djangorestframework-camel-case
 html2text
 django-templated-email
 -e git+https://github.com/LouisTrezzini/django-cas-ng.git@b9c94580ae782c3530d7d1f29561ddf4a45faf4e#egg=django-cas-ng
+intervaltree

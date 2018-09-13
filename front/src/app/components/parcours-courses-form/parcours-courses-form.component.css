@@ -37,3 +37,7 @@ td.mat-cell {
 .invalid-rule {
   color: red;
 }
+
+.warning-rule {
+  color: orange;
+}

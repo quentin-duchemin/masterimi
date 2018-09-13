@@ -92,6 +92,22 @@ export class ParcoursCoursesFormComponent implements OnInit {
     return this.courses.filter((course) => coursesId.includes(course.id));
   }
 
+  ruleTypeToIcon(ruleType: string) {
+    if (ruleType == 'invalid') {
+      return 'close';
+    }
+
+    if (ruleType == 'warning') {
+      return 'warning';
+    }
+
+    if (ruleType == 'valid') {
+      return 'check';
+    }
+
+    return '';
+  }
+
   private markAsTouched() {
     Object.values(this.form.controls).forEach(control => control.markAsTouched());
   }

@@ -13,6 +13,14 @@ mat-header-cell {
   width: 4em;
 }
 
+.col-period {
+  text-align: center;
+}
+
+.col-time {
+  text-align: center;
+}
+
 .col-master, .col-location {
   text-align: center;
   width: 100px;

@@ -12,7 +12,7 @@ from parcours_imi.serializers import (
     CourseSerializer, MasterSerializer,
     UserCourseChoiceSerializer, UserParcoursSerializer, UserSerializer,
 )
-from parcours_imi.validators import AttributeConstraintsValidator
+from parcours_imi.validators import AttributeConstraintsValidator, TimeCollisionValidator
 from parcours_imi.tasks import send_option_confirmation_email, send_courses_validation_email
 
 
@@ -87,7 +87,7 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
             errors = [
                 item['message']
                 for item in parcours_validation_data
-                if not item['is_valid']
+                if item['type'] == 'error'
             ]
             if errors:
                 raise ValidationError(errors)
@@ -128,11 +128,14 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
         return serializer
 
     def _get_parcours_courses_rules_validation_data(self, parcours, serializer):
+        courses = serializer.validated_data['main_courses'] + serializer.validated_data['option_courses']
+
         attribute_constraints_validator = AttributeConstraintsValidator(
             constraints=parcours.master.attribute_constraints.all(),
             attributes_getter=lambda course: course.attributes,
         )
-        courses = serializer.validated_data['main_courses'] + serializer.validated_data['option_courses']
         attribute_constraints_validation_data = attribute_constraints_validator.validate(courses)
 
-        return attribute_constraints_validation_data
+        time_collision_validation_data = TimeCollisionValidator().validate(courses)
+
+        return attribute_constraints_validation_data + time_collision_validation_data
