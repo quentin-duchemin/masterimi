@@ -41,7 +41,7 @@
           Règles de validation
         </h3>
 
-        <p *ngFor="let rule of checkParcoursRules" [ngClass]="{'warning-rule': rule.type == 'warning', 'invalid-rule': rule.type == 'invalid'}">
+        <p *ngFor="let rule of checkParcoursRules" [ngClass]="{'warning-rule': rule.type == 'warning', 'error-rule': rule.type == 'error'}">
           <mat-icon>{{ ruleTypeToIcon(rule.type) }}</mat-icon> {{ rule.message }}
         </p>
       </section>

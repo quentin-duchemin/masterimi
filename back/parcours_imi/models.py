@@ -67,6 +67,24 @@ class UserCourseChoice(models.Model):
 
     submitted = models.BooleanField(verbose_name='Validé par l\'étudiant', default=False)
 
+    class Meta:
+        verbose_name = 'Choix de cours'
+        verbose_name_plural = 'Choix de cours'
+
+    def __str__(self):
+        tag = '[Verrouillé]' if self.submitted else ''
+        main_courses = self.main_courses.all()
+        option_courses = self.option_courses.all()
+        main_courses_names = '\n'.join([
+            course.name
+            for course in main_courses
+        ])
+        option_courses_names = '\n'.join([
+            course.name
+            for course in option_courses
+        ])
+        return f'{tag} {len(main_courses)} cours (master) + {len(option_courses)} cours (option)\n\n{main_courses_names}\n\n{option_courses_names}'.strip()
+
 
 OPTIONS = [
     ('3A-ecole', '3A École'),

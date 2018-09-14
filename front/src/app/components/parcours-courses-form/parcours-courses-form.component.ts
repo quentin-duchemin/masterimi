@@ -99,7 +99,7 @@ export class ParcoursCoursesFormComponent implements OnInit {
   }
 
   ruleTypeToIcon(ruleType: string) {
-    if (ruleType == 'invalid') {
+    if (ruleType == 'error') {
       return 'close';
     }
 

@@ -10,7 +10,7 @@ import { IUser } from '../../interfaces/user.interface';
 export class LayoutComponent implements OnInit {
   currentUser: IUser;
 
-  sideNavOpened = true;
+  sideNavOpened = false;
 
   constructor(
     private readonly authService: AuthService,

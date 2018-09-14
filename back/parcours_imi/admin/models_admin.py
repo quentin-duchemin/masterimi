@@ -20,10 +20,10 @@ class MasterAdmin(admin.ModelAdmin):
 
 @admin.register(UserParcours)
 class UserParcoursAdmin(admin.ModelAdmin):
-    readonly_fields = ["user"]
-    exclude = ["course_choice"]
+    readonly_fields = ['user', 'course_choice']
 
-    change_list_template = "admin/user_parcours_change_list.html"
+    change_list_template = 'admin/user_parcours_change_list.html'
+    change_form_template = 'admin/user_parcours_change_form.html'
 
     def has_add_permission(self, request):
         return False
