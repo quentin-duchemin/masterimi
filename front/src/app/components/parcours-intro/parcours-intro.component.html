@@ -11,13 +11,13 @@
     <!-- Step 1 -->
 
     <mat-step label="Étape 1 : Choix du master" completed>
-        <h3>
-          Tu as choisi ton master
-        </h3>
+      <h3>
+        Tu as choisi ton master
+      </h3>
 
-        <p>
-          Ton master est : {{ parcours.master.name }}
-        </p>
+      <p>
+        Ton master est : {{ parcours.master.name }}
+      </p>
     </mat-step>
 
     <!-- Step 2 -->
@@ -28,71 +28,7 @@
           Tu n'as pas encore choisi ton option
         </h3>
 
-        <article class="option-description">
-          <h4>
-            3A École
-          </h4>
-
-          <p>
-            Pas de double diplôme. L'élève doit valider 60 ECTS sur l'année :
-          </p>
-
-          <ul>
-            <li>
-              25.5 ECTS scientifique (parmi les cours d'un master recherches + les cours tels que Maths for Business, Data Driven Optimisation et Algorithme de Monte Carlo par chaine de Markov)
-            </li>
-            <li>
-              4.5 ECTS de langue (i.e. finir ses obligations de langue pour l'ENPC -> les masters en France n'impactent pas les obligations de langue)
-            </li>
-            <li>
-              30 ECTS de PFE
-            </li>
-          </ul>
-        </article>
-
-        <article class="option-description">
-          <h4>
-            3A M2 Imbriqués - Option 1
-          </h4>
-
-          <p>
-            Double diplôme, avec PFE en plus.
-          </p>
-
-          <ul>
-            <li>
-              L'élève doit valider les obligations de son master recherche normalement (par exemple 8 cours du MVA) (dont le stage de recherche à la fin)
-            </li>
-            <li>
-              4.5 ECTS de langue (i.e. finir ses obligations de langue pour l'ENPC -> les masters en France n'impactent pas les obligations de langue)
-            </li>
-            <li>
-              30 ECTS de PFE (ou début de thèse)
-            </li>
-          </ul>
-        </article>
-
-        <article class="option-description">
-          <h4>
-            3A M2 Imbriqués - Option 2
-          </h4>
-
-          <p>
-            Double diplôme, sans PFE, mais avec des ECTS en plus.
-          </p>
-
-          <ul>
-            <li>
-              L'élève doit valider les obligations de son master recherche normalement (par exemple 8 cours du MVA) (dont le stage de recherche à la fin)
-            </li>
-            <li>
-              4.5 ECTS de langue (i.e. finir ses obligations de langue pour l'ENPC -> les masters en France n'impactent pas les obligations de langue)
-            </li>
-            <li>
-                15 ECTS scientifique (parmi les cours d'un master recherches + les cours tels que Maths for Business, Data Driven Optimisation et Algorithme de Monte Carlo par chaine de Markov)
-            </li>
-          </ul>
-        </article>
+        <app-option-description></app-option-description>
 
         <form>
           <mat-form-field>
@@ -115,6 +51,8 @@
           Tu as choisi ton option
         </h3>
 
+        <app-option-description></app-option-description>
+
         <p>
           Ton option est : {{ displayOption }}
         </p>
@@ -124,33 +62,20 @@
     <!-- Step 3 -->
 
     <mat-step label="Étape 3 : Choix des cours" [completed]="hasSubmittedCourses">
-      <div *ngIf="hasNoCourses">
-        <h3>
+      <div *ngIf="hasNoCourses || hasPendingCourses">
+        <h3 *ngIf="hasNoCourses">
           Tu n'as pas encore renseigné tes choix de cours de 3A
         </h3>
 
-        <p>
-          Paragraphe d'explications
-        </p>
+        <h3 *ngIf="hasPendingCourses">
+          Tu n'as pas encore envoyé tes choix de cours de 3A
+        </h3>
+
+        <app-courses-description></app-courses-description>
 
         <button mat-raised-button color="primary" routerLink="/parcours/edit">
           <mat-icon>save</mat-icon>
           Renseigner mes choix de cours
-        </button>
-      </div>
-
-      <div *ngIf="hasPendingCourses">
-        <h3>
-          Tu n'as pas encore envoyé tes choix de cours de 3A
-        </h3>
-
-        <p>
-          Paragraphe d'explications
-        </p>
-
-        <button mat-raised-button color="primary" routerLink="/parcours/edit">
-          <mat-icon>send</mat-icon>
-          Envoyer mes choix de cours
         </button>
       </div>
 
@@ -159,9 +84,7 @@
           Tu as bien envoyé tes choix de cours de 3A
         </h3>
 
-        <p>
-          Paragraphe d'explications
-        </p>
+        <app-courses-description></app-courses-description>
 
         <button mat-raised-button color="primary" routerLink="/parcours/show">
           <mat-icon>remove_red_eye</mat-icon>

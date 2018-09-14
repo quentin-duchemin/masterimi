@@ -43,5 +43,20 @@
         "imi_ects_option2": 6
       }
     }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "746a6cfe-097e-4966-8300-0adcb975c97c",
+    "fields": {
+      "name": "Projet de recherche",
+      "master": null,
+      "ECTS": 5,
+      "period": null,
+      "time": null,
+      "location": null,
+      "attributes": {
+        "imi_ects_option2": 5
+      }
+    }
   }
 ]

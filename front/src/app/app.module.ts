@@ -23,6 +23,8 @@ import { ParcoursIntroComponent } from './components/parcours-intro/parcours-int
 import { DialogService } from './services/dialog/dialog.service';
 import { ConfirmDialogComponent } from './services/dialog/confirm/confirm-dialog.component';
 import { CourseTimePipe } from './pipes/course-time.pipe';
+import { OptionDescriptionComponent } from './components/option-description/option-description.component';
+import { CoursesDescriptionComponent } from './components/courses-description/courses-description.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { CourseTimePipe } from './pipes/course-time.pipe';
     ParcoursIntroComponent,
     ConfirmDialogComponent,
     CourseTimePipe,
+    OptionDescriptionComponent,
+    CoursesDescriptionComponent,
   ],
   entryComponents: [
     CourseSelectionDialogComponent,
