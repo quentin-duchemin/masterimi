@@ -3,18 +3,17 @@
     <mat-icon>menu</mat-icon>
   </button>
   <span>
-    Mon parcours 3A
+    Ma 3A
   </span>
 
-  <!-- This fills the remaining space of the current row -->
   <span class="fill-remaining-space"></span>
 
   <span class="username">
     Connecté en tant que {{ currentUser.username }}
   </span>
-  <button mat-raised-button (click)="logout()">
+  <!-- <button mat-raised-button (click)="logout()">
     Se déconnecter
-  </button>
+  </button> -->
 </mat-toolbar>
 
 
@@ -23,13 +22,13 @@
 <mat-sidenav-container>
   <mat-sidenav mode="side" [opened]="sideNavOpened">
     <mat-nav-list>
-      <a mat-list-item routerLink="/" routerLinkActive>
+      <!-- <a mat-list-item routerLink="/" routerLinkActive>
         <mat-icon>home</mat-icon>
         Accueil
-      </a>
-      <a mat-list-item routerLink="/parcours">
+      </a> -->
+      <a mat-list-item routerLink="/parcours" routerLinkActive>
         <mat-icon>assignment</mat-icon>
-        Ma 3A
+        Mon parcours 3A
       </a>
     </mat-nav-list>
   </mat-sidenav>

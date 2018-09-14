@@ -25,9 +25,14 @@ const routes = [
       AuthGuard,
     ],
     children: [
+      // {
+      //   path: '',
+      //   component: HomeComponent,
+      // },
       {
         path: '',
-        component: HomeComponent,
+        redirectTo: 'parcours',
+        pathMatch: 'full',
       },
       {
         path: 'parcours',
