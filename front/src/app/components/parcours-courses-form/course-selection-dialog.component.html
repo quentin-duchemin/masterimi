@@ -16,10 +16,10 @@
           {{ course.name }}
         </h3>
         <p matLine>
-          {{ course.ECTS }} ECTS / Type : {{ course.master ? course.master.shortName : 'Cours IMI' }}
+          {{ course.ECTS }} ECTS / Type : {{ course.master ? course.master.shortName : 'Cours IMI' }} / Lieu : {{ course.location }}
         </p>
         <p matLine>
-          Lieu : {{ course.location }} / Horaires : {{ course.time | courseTime }}
+          Période : {{ course.period }} / Horaires : {{ course.time | courseTime }}
         </p>
       </mat-list-option>
     </mat-selection-list>
