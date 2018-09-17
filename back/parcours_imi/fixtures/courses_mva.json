@@ -108,8 +108,8 @@
         "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
-        "mva_cours_data": false,
-        "mva_cours_apprentissage": true
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
       }
     }
   },
@@ -127,8 +127,8 @@
         "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
-        "mva_cours_data": false,
-        "mva_cours_apprentissage": true
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
       }
     }
   },
@@ -203,8 +203,8 @@
         "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
-        "mva_cours_data": false,
-        "mva_cours_apprentissage": true
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
       }
     }
   },
@@ -241,8 +241,8 @@
         "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
-        "mva_cours_data": false,
-        "mva_cours_apprentissage": true
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
       }
     }
   },
@@ -260,8 +260,8 @@
         "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
-        "mva_cours_data": true,
-        "mva_cours_apprentissage": false
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
       }
     }
   },
@@ -279,8 +279,8 @@
         "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
-        "mva_cours_data": true,
-        "mva_cours_apprentissage": false
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
       }
     }
   },
@@ -298,8 +298,8 @@
         "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
-        "mva_cours_data": true,
-        "mva_cours_apprentissage": false
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
       }
     }
   }
