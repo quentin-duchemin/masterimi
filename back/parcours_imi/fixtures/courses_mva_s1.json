@@ -1,0 +1,325 @@
+[
+  {
+    "model": "parcours_imi.Course",
+    "pk": "3656645b-45b4-4c98-81fd-6b9da35b3b7f",
+    "fields": {
+      "name": "Graphs in Machine Learning",
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "ECTS": 5,
+      "period": "S1",
+      "time": "Mon/10:30/12:30",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "2d11e04e-c10a-49da-ac9c-fbeb69785347",
+    "fields": {
+      "name": "Convex optimization and applications in machine learning",
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "ECTS": 5,
+      "period": "S1",
+      "time": "Mon/13:30/16:30",
+      "location": "ENS Ulm",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "336edfc1-5f10-4ff0-8fd6-0323e4a7093a",
+    "fields": {
+      "name": "Topological data analysis for imaging and machine learning",
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "ECTS": 5,
+      "period": "S1",
+      "time": "Tue/11:00/13:00",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "0d9edc51-7eb0-4400-becd-f110095a0b83",
+    "fields": {
+      "name": "Advanced Learning for Text and Graph Data (ALTeGraD)",
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "ECTS": 5,
+      "period": "S1",
+      "time": "Tue/11:00/15:00",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "04e329ae-1375-4834-adff-9dfe63d20f99",
+    "fields": {
+      "name": "Reinforcement Learning",
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "ECTS": 5,
+      "period": "S1",
+      "time": "Tue/08:30/10:30",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "22bb4da0-141c-4465-bb00-3947ac82bfc6",
+    "fields": {
+      "name": "Introduction to Statistical Learning",
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "ECTS": 5,
+      "period": "S1",
+      "time": "Tue/11:00/13:00",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "ff7d4c0e-6bb6-4ded-b1a6-4f7562c42f1e",
+    "fields": {
+      "name": "3D Computer Vision",
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "ECTS": 5,
+      "period": "S1",
+      "time": "Tue/12:30/15:45",
+      "location": "Télécom",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "ac84a15f-2cac-45c4-bf26-e6b147a43fa7",
+    "fields": {
+      "name": "Object Recognition and Computer Vision",
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "ECTS": 5,
+      "period": "S1",
+      "time": "Tue/16:15/19:15",
+      "location": "ENS Ulm",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "fd944563-343f-4de6-b116-b6b41ab38ce4",
+    "fields": {
+      "name": "Probabilistic Graphical Models",
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "ECTS": 5,
+      "period": "S1",
+      "time": "Wed/09:00/12:00",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "0e411d29-488d-4513-9621-9dc2cd023204",
+    "fields": {
+      "name": "Computational Statistics",
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "ECTS": 5,
+      "period": "S1",
+      "time": "Fri/09:00/13:00",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "5028cd91-5fc2-433a-9c01-eb6a3a026b5b",
+    "fields": {
+      "name": "Introduction to Medical Image Analysis",
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "ECTS": 5,
+      "period": "S1",
+      "time": "Wed/13:30/17:00",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "da0f5d9a-8221-4145-952a-d50b9fcf7809",
+    "fields": {
+      "name": "Introduction à l'imagerie numérique",
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "ECTS": 5,
+      "period": "S1",
+      "time": "Thu/09:00/12:15",
+      "location": "Télécom",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "a30a77fc-a3fb-4f69-88ab-1b56720c92a7",
+    "fields": {
+      "name": "Sub-pixel Image Processing",
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "ECTS": 5,
+      "period": "S1",
+      "time": "Thu/13:30/18:15",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "d51e22c8-1da0-40ee-9679-e4101a4a9cb8",
+    "fields": {
+      "name": "Méthodes mathématiques pour les neurosciences",
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "ECTS": 5,
+      "period": "S1",
+      "time": "Thu/13:30/18:45",
+      "location": "Jussieu",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "e080cd74-2eed-4934-a230-4eca5d41da9f",
+    "fields": {
+      "name": "Mathematical foundations of data sciences",
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "ECTS": 5,
+      "period": "S1",
+      "time": "Mon/10:00/12:30",
+      "location": "ENS Ulm",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "934d77da-8498-4a34-9d6b-fde125f41eb5",
+    "fields": {
+      "name": "Learning, mechanism design and algorithmic game theory",
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "ECTS": 5,
+      "period": "T1",
+      "time": "Fri/14:00/17:00",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "0a1c2b69-11fd-4d8e-976f-cafb74fb126c",
+    "fields": {
+      "name": "Image denoising : the human machine competition",
+      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "ECTS": 5,
+      "period": "T1",
+      "time": "Fri/14:00/17:00",
+      "location": "ENS Cachan",
+      "attributes": {
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  }
+]
