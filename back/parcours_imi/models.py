@@ -56,7 +56,7 @@ class Course(models.Model):
         if not self.master:
             return self.name
 
-        return f"({self.master.short_name}) {self.name}"
+        return f"({self.master.short_name} - {self.period}) {self.name}"
 
 
 class UserCourseChoice(models.Model):
