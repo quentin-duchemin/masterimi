@@ -7,7 +7,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from master_imi.permissions import IsOwner
-from parcours_imi.models import Course, Master, OPTIONS_KEYS
+from parcours_imi.models import AttributeConstraint, Course, Master, OPTIONS_KEYS
 from parcours_imi.serializers import (
     CourseSerializer, MasterSerializer,
     UserCourseChoiceSerializer, UserParcoursSerializer, UserSerializer,
@@ -137,5 +137,18 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
         attribute_constraints_validation_data = attribute_constraints_validator.validate(courses)
 
         time_collision_validation_data = TimeCollisionValidator().validate(courses)
+
+        if parcours.option == '3A-M2-ECTS':
+            option_validator = AttributeConstraintsValidator(
+                constraints=[
+                    AttributeConstraint.objects.get(pk='8ce0b5ea-7e1d-4d7a-b5e6-77c83ed0d4d9')
+                ],
+                attributes_getter=lambda course: course.attributes,
+            )
+            option_validation_data = option_validator.validate(
+                serializer.validated_data['option_courses']
+            )
+
+            return attribute_constraints_validation_data + option_validation_data + time_collision_validation_data
 
         return attribute_constraints_validation_data + time_collision_validation_data

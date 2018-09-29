@@ -6,7 +6,7 @@
       "name": "Metaheuristiques",
       "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
       "ECTS": 2,
-      "period": "S5",
+      "period": "S1",
       "time": "Thu/09:00/12:30",
       "location": "Cnam",
       "attributes": {
@@ -21,7 +21,7 @@
       "name": "Mathematical programming",
       "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
       "ECTS": 4,
-      "period": "S5",
+      "period": "S1",
       "time": "Thu/14:00/17:30",
       "location": "Cnam",
       "attributes": {
@@ -36,7 +36,7 @@
       "name": "Optimisation dans les graphes",
       "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
       "ECTS": 4,
-      "period": "S5",
+      "period": "S1",
       "time": "Wed/09:00/12:30",
       "location": "Cnam",
       "attributes": {
@@ -51,7 +51,7 @@
       "name": "Theorie de la complexite",
       "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
       "ECTS": 2,
-      "period": "S5",
+      "period": "S1",
       "time": "Tue/09:00/12:30",
       "location": "Cnam",
       "attributes": {
@@ -66,7 +66,7 @@
       "name": "Optimisation stochastique",
       "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
       "ECTS": 2,
-      "period": "S5",
+      "period": "S1",
       "time": "Mon/14:00/17:30",
       "location": "Cnam",
       "attributes": {
@@ -81,7 +81,7 @@
       "name": "Bases de l'ordonnancement",
       "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
       "ECTS": 3,
-      "period": "S5",
+      "period": "S1",
       "time": "Mon/09:00/12:30",
       "location": "Cnam",
       "attributes": {
@@ -97,7 +97,7 @@
       "name": "Queueing theory",
       "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
       "ECTS": 3,
-      "period": "S5",
+      "period": "S1",
       "time": "Mon/14:00/17:30",
       "location": "Cnam",
       "attributes": {
@@ -113,7 +113,7 @@
       "name": "Complexité : Algorithmes approchés",
       "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
       "ECTS": 3,
-      "period": "S5",
+      "period": "S1",
       "time": "Fri/14:00/17:30",
       "location": "Cnam",
       "attributes": {
@@ -129,7 +129,7 @@
       "name": "Case studies and OR management",
       "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
       "ECTS": 4,
-      "period": "S5",
+      "period": "S1",
       "time": null,
       "location": "Cnam",
       "attributes": {
@@ -144,7 +144,7 @@
       "name": "Initiation a la recherche",
       "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
       "ECTS": 4,
-      "period": "S5",
+      "period": "S1",
       "time": null,
       "location": "Cnam",
       "attributes": {
@@ -159,7 +159,7 @@
       "name": "Operations Research and Sustainable Development",
       "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
       "ECTS": 3,
-      "period": "S5",
+      "period": "S1",
       "time": "Wed/14:00/17:30",
       "location": "Cnam",
       "attributes": {
@@ -176,7 +176,7 @@
       "name": "RO pour les Réseaux et le Transport",
       "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
       "ECTS": 3,
-      "period": "S5",
+      "period": "S1",
       "time": "Tue/14:00/17:30",
       "location": "Cnam",
       "attributes": {
@@ -193,7 +193,7 @@
       "name": "Advanced Mathematical Programming",
       "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
       "ECTS": 3,
-      "period": "S5",
+      "period": "S1",
       "time": "Thu/09:00/12:30",
       "location": "Cnam",
       "attributes": {
@@ -209,7 +209,7 @@
       "name": "Location Models and Applications",
       "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
       "ECTS": 3,
-      "period": "S5",
+      "period": "S1",
       "time": "Thu/14:00/17:30",
       "location": "Cnam",
       "attributes": {
@@ -225,7 +225,7 @@
       "name": "Graphs",
       "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
       "ECTS": 3,
-      "period": "S5",
+      "period": "S1",
       "time": "Mon/14:00/17:30",
       "location": "Cnam",
       "attributes": {
@@ -241,7 +241,7 @@
       "name": "Constraint Programming",
       "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
       "ECTS": 3,
-      "period": "S5",
+      "period": "S1",
       "time": "Fri/09:00/12:30",
       "location": "Cnam",
       "attributes": {
@@ -257,7 +257,7 @@
       "name": "Recherche opérationnelle et données massives",
       "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
       "ECTS": 3,
-      "period": "S5",
+      "period": "S1",
       "time": "Wed/09:00/12:30",
       "location": "ENSTA",
       "attributes": {
@@ -273,7 +273,7 @@
       "name": "Conférences industrielles",
       "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
       "ECTS": 2,
-      "period": "S5",
+      "period": "S1",
       "time": null,
       "location": "Cnam",
       "attributes": {
@@ -288,7 +288,7 @@
       "name": "Free course",
       "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
       "ECTS": 3,
-      "period": "S5",
+      "period": "S1",
       "time": "Tue/14:00/17:30",
       "location": "Cnam",
       "attributes": {

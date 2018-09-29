@@ -1,5 +1,5 @@
-import { Component, forwardRef, Input, OnInit } from '@angular/core';
-import { MatDialog, MatTableDataSource } from '@angular/material';
+import { Component, forwardRef, Input, OnInit, ViewChild } from '@angular/core';
+import { MatDialog, MatTableDataSource, MatSort } from '@angular/material';
 import { CourseSelectionDialogComponent } from './course-selection-dialog.component';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { ICourse } from '../../interfaces/course.interface';
@@ -29,12 +29,15 @@ export class CourseSelectionInputComponent implements OnInit, ControlValueAccess
   @Input()
   mode: string;
 
+  @ViewChild(MatSort) sort: MatSort;
+
   constructor(
     private dialog: MatDialog,
   ) {}
 
   ngOnInit() {
     this.dataSource = new MatTableDataSource([]);
+    this.dataSource.sort = this.sort;
   }
 
   get displayedColumns() {

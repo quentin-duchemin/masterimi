@@ -18,6 +18,7 @@ import {
   MatToolbarModule,
   MatTooltipModule,
   MatStepperModule,
+  MatSortModule,
 } from '@angular/material';
 import { NgModule } from '@angular/core';
 
@@ -42,6 +43,7 @@ const elementModules = [
   MatAutocompleteModule,
   MatStepperModule,
   MatProgressSpinnerModule,
+  MatSortModule,
 ];
 
 @NgModule({

@@ -6,7 +6,7 @@
       "name": "Math4Business",
       "master": null,
       "ECTS": 9,
-      "period": "S5",
+      "period": "S1",
       "time": null,
       "location": "Paris 14e, 9 rue Dareau",
       "attributes": {
@@ -21,7 +21,7 @@
       "name": "Data Driven Optimization",
       "master": null,
       "ECTS": 5,
-      "period": "S5",
+      "period": "S1",
       "time": null,
       "location": "ENPC",
       "attributes": {
@@ -36,7 +36,7 @@
       "name": "Algo de Monte-Carlo par chaînes de Markov et méthodes particulaires",
       "master": null,
       "ECTS": 6,
-      "period": "S5",
+      "period": "S1",
       "time": null,
       "location": "Jussieu",
       "attributes": {
@@ -51,7 +51,7 @@
       "name": "Projet de recherche",
       "master": null,
       "ECTS": 5,
-      "period": null,
+      "period": "S1/S2",
       "time": null,
       "location": null,
       "attributes": {

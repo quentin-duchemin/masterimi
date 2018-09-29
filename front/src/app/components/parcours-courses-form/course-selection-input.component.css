@@ -8,24 +8,6 @@ mat-header-cell {
   font-weight: bold;
 }
 
-.col-ECTS {
-  text-align: center;
-  width: 4em;
-}
-
-.col-period {
-  text-align: center;
-}
-
-.col-time {
-  text-align: center;
-}
-
-.col-master, .col-location {
-  text-align: center;
-  width: 100px;
-}
-
 .col-actions {
   width: 50px;
 }
