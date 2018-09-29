@@ -27,7 +27,7 @@ class Master(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, verbose_name='ID')
 
     name = models.CharField(max_length=120, verbose_name='Nom')
-    short_name = models.CharField(max_length=6, verbose_name='Nom court')
+    short_name = models.CharField(max_length=10, verbose_name='Nom court')
     website = models.URLField(blank=True, null=True)
 
     attribute_constraints = models.ManyToManyField(AttributeConstraint, related_name='attribute_constraints', blank=True)
@@ -40,7 +40,7 @@ class Course(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, verbose_name='ID')
 
     name = models.CharField(max_length=120, verbose_name='Nom')
-    master = models.ForeignKey(Master, on_delete=models.CASCADE, null=True)
+    masters = models.ManyToManyField(Master, related_name='masters')
     ECTS = models.FloatField(verbose_name='ECTS')
     period = models.CharField(max_length=20, verbose_name='Période')
     location = models.CharField(max_length=120, blank=True, null=True)
@@ -57,6 +57,13 @@ class Course(models.Model):
             return self.name
 
         return f"({self.master.short_name} - {self.period}) {self.name}"
+
+    @property
+    def master(self):
+        if not self.masters:
+            return None
+
+        return self.masters.first()
 
 
 class UserCourseChoice(models.Model):

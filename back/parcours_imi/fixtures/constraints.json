@@ -97,5 +97,16 @@
       "min_value": 15,
       "max_value": null
     }
+  },
+  {
+    "model": "parcours_imi.AttributeConstraint",
+    "pk": "51c68a55-d3c4-4b5f-afb0-28c903496eb3",
+    "fields": {
+      "name": "MPRO+MVA Cours hors MPRO",
+      "description": "MPRO+MVA : valider au plus 3 cours hors MPRO.",
+      "attribute": "mpro_cours_electif_hors_mpro",
+      "min_value": 0,
+      "max_value": 3
+    }
   }
 ]

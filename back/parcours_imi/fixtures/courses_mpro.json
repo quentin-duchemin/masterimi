@@ -4,7 +4,10 @@
     "pk": "a21b1ef7-d6bb-4a4b-9a6b-278f406354e9",
     "fields": {
       "name": "Metaheuristiques",
-      "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
+      "masters": [
+        "113ba000-65e3-4ed6-977e-77c6c072778b",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 2,
       "period": "S1",
       "time": "Thu/09:00/12:30",
@@ -19,7 +22,10 @@
     "pk": "5637fe5b-6b02-4cc8-9f81-1147303c532d",
     "fields": {
       "name": "Mathematical programming",
-      "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
+      "masters": [
+        "113ba000-65e3-4ed6-977e-77c6c072778b",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 4,
       "period": "S1",
       "time": "Thu/14:00/17:30",
@@ -34,7 +40,10 @@
     "pk": "7197516e-bc6d-4b2a-9fb8-2353967969ad",
     "fields": {
       "name": "Optimisation dans les graphes",
-      "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
+      "masters": [
+        "113ba000-65e3-4ed6-977e-77c6c072778b",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 4,
       "period": "S1",
       "time": "Wed/09:00/12:30",
@@ -49,7 +58,10 @@
     "pk": "c4ce76bd-1696-4069-b657-bd8253d20e70",
     "fields": {
       "name": "Theorie de la complexite",
-      "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
+      "masters": [
+        "113ba000-65e3-4ed6-977e-77c6c072778b",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 2,
       "period": "S1",
       "time": "Tue/09:00/12:30",
@@ -64,7 +76,10 @@
     "pk": "1579fb33-fa49-48c7-93c5-14da4191a8e6",
     "fields": {
       "name": "Optimisation stochastique",
-      "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
+      "masters": [
+        "113ba000-65e3-4ed6-977e-77c6c072778b",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 2,
       "period": "S1",
       "time": "Mon/14:00/17:30",
@@ -79,7 +94,10 @@
     "pk": "6ddc0c95-ac8f-41ff-a70b-f1d31401b07b",
     "fields": {
       "name": "Bases de l'ordonnancement",
-      "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
+      "masters": [
+        "113ba000-65e3-4ed6-977e-77c6c072778b",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 3,
       "period": "S1",
       "time": "Mon/09:00/12:30",
@@ -95,7 +113,10 @@
     "pk": "6e6fec1b-9f56-4ce1-a71e-a812e404b45d",
     "fields": {
       "name": "Queueing theory",
-      "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
+      "masters": [
+        "113ba000-65e3-4ed6-977e-77c6c072778b",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 3,
       "period": "S1",
       "time": "Mon/14:00/17:30",
@@ -111,7 +132,10 @@
     "pk": "5e95f62c-4c50-433b-93a6-4eb585046105",
     "fields": {
       "name": "Complexité : Algorithmes approchés",
-      "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
+      "masters": [
+        "113ba000-65e3-4ed6-977e-77c6c072778b",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 3,
       "period": "S1",
       "time": "Fri/14:00/17:30",
@@ -127,7 +151,10 @@
     "pk": "46ab1a9c-25bb-495f-9893-093539f66437",
     "fields": {
       "name": "Case studies and OR management",
-      "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
+      "masters": [
+        "113ba000-65e3-4ed6-977e-77c6c072778b",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 4,
       "period": "S1",
       "time": null,
@@ -142,7 +169,10 @@
     "pk": "a595f0b0-e09f-46c1-aa89-ce8c26adb631",
     "fields": {
       "name": "Initiation a la recherche",
-      "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
+      "masters": [
+        "113ba000-65e3-4ed6-977e-77c6c072778b",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 4,
       "period": "S1",
       "time": null,
@@ -157,7 +187,10 @@
     "pk": "893fce4e-8371-4aed-9c61-bd61e9b123f7",
     "fields": {
       "name": "Operations Research and Sustainable Development",
-      "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
+      "masters": [
+        "113ba000-65e3-4ed6-977e-77c6c072778b",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 3,
       "period": "S1",
       "time": "Wed/14:00/17:30",
@@ -174,7 +207,10 @@
     "pk": "29212a83-a07f-4c5d-824d-b97df1a1e9a7",
     "fields": {
       "name": "RO pour les Réseaux et le Transport",
-      "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
+      "masters": [
+        "113ba000-65e3-4ed6-977e-77c6c072778b",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 3,
       "period": "S1",
       "time": "Tue/14:00/17:30",
@@ -191,7 +227,10 @@
     "pk": "b664dc99-99d5-4eb3-8bee-6d28abaef140",
     "fields": {
       "name": "Advanced Mathematical Programming",
-      "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
+      "masters": [
+        "113ba000-65e3-4ed6-977e-77c6c072778b",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 3,
       "period": "S1",
       "time": "Thu/09:00/12:30",
@@ -207,7 +246,10 @@
     "pk": "d0d09a1a-aabd-4181-ad0e-51aab90b6253",
     "fields": {
       "name": "Location Models and Applications",
-      "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
+      "masters": [
+        "113ba000-65e3-4ed6-977e-77c6c072778b",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 3,
       "period": "S1",
       "time": "Thu/14:00/17:30",
@@ -223,7 +265,10 @@
     "pk": "cd81e5a8-707b-4ad4-8507-ccd908aa40e0",
     "fields": {
       "name": "Graphs",
-      "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
+      "masters": [
+        "113ba000-65e3-4ed6-977e-77c6c072778b",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 3,
       "period": "S1",
       "time": "Mon/14:00/17:30",
@@ -239,7 +284,10 @@
     "pk": "03186005-6616-4c0d-85f3-9b082dcb3990",
     "fields": {
       "name": "Constraint Programming",
-      "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
+      "masters": [
+        "113ba000-65e3-4ed6-977e-77c6c072778b",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 3,
       "period": "S1",
       "time": "Fri/09:00/12:30",
@@ -255,7 +303,10 @@
     "pk": "7f1bc891-34ea-4a23-b497-d16937c40445",
     "fields": {
       "name": "Recherche opérationnelle et données massives",
-      "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
+      "masters": [
+        "113ba000-65e3-4ed6-977e-77c6c072778b",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 3,
       "period": "S1",
       "time": "Wed/09:00/12:30",
@@ -271,7 +322,10 @@
     "pk": "d6790579-7972-4021-93ef-4a0b089fca6d",
     "fields": {
       "name": "Conférences industrielles",
-      "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
+      "masters": [
+        "113ba000-65e3-4ed6-977e-77c6c072778b",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 2,
       "period": "S1",
       "time": null,
@@ -286,7 +340,9 @@
     "pk": "9e4e8d5e-cacb-4a59-a2a8-ecec83e268db",
     "fields": {
       "name": "Free course",
-      "master": "113ba000-65e3-4ed6-977e-77c6c072778b",
+      "masters": [
+        "113ba000-65e3-4ed6-977e-77c6c072778b"
+      ],
       "ECTS": 3,
       "period": "S1",
       "time": "Tue/14:00/17:30",

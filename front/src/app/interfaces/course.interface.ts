@@ -8,4 +8,5 @@ export interface ICourse {
   location: string;
   time: string;
   master: IMaster;
+  masters: string[];
 }

@@ -4,12 +4,17 @@
     "pk": "5b00a17e-a480-4e46-b174-3103aca8671c",
     "fields": {
       "name": "Algorithms for speech and natural language processing",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Mon/09:00/12:00",
       "location": "ENS Ulm",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,
@@ -23,12 +28,17 @@
     "pk": "f0e45f11-82f9-40f6-af5f-39a1eeed74f6",
     "fields": {
       "name": "Analyse de données longitudinales : approches géométriques et statistiques",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Tue/14:00/17:00",
       "location": "ENS Cachan",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,
@@ -42,12 +52,17 @@
     "pk": "c5e703a8-1d71-41c2-b346-60d498b5a4b4",
     "fields": {
       "name": "Audio signal Analysis, Indexing and Transformations",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Tue/08:30/11:45",
       "location": "Telecom",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,
@@ -61,12 +76,17 @@
     "pk": "4571904f-cc11-477b-b8a8-a69efcc95b6e",
     "fields": {
       "name": "Audio Signal Processing",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Thu/09:15/11:50",
       "location": "ENS Cachan",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,
@@ -80,12 +100,17 @@
     "pk": "b4a948bd-78c8-44fd-94b3-fb69cea75ba6",
     "fields": {
       "name": "Deep Learning",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Fri/13:45/17:00",
       "location": "CentraleSupelec",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,
@@ -99,12 +124,17 @@
     "pk": "57c1342d-1543-4b29-bb8c-fe858ed50e5c",
     "fields": {
       "name": "Deformable Models and Geodesic methods for Image Analysis",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Thu/14:00/17:00",
       "location": "ENS Cachan",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,
@@ -118,12 +148,17 @@
     "pk": "e897420a-14c3-43bf-ba66-fd1949bcc224",
     "fields": {
       "name": "Géométrie et espace de formes",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Wed/16:00/18:30",
       "location": "ENS Ulm",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,
@@ -137,12 +172,17 @@
     "pk": "1a2692ba-93da-4800-841b-cc78f0639dca",
     "fields": {
       "name": "High Dimensional Statistics and Learning",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Mon/09:00/12:00",
       "location": "ENS Cachan",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,
@@ -156,12 +196,17 @@
     "pk": "09e416f2-18b1-402c-9dde-c1a73c03c4ce",
     "fields": {
       "name": "Imagerie fonctionnelle cérébrale et interface cerveau machine",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Fri/14:00/17:00",
       "location": "ENS Cachan",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,
@@ -175,12 +220,17 @@
     "pk": "d38f3ee9-4d38-4f77-998a-6dd12f90d48a",
     "fields": {
       "name": "Kernel Methods for machine Learning",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Wed/13:30/16:00",
       "location": "ENS Ulm",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,
@@ -194,12 +244,17 @@
     "pk": "64fb27a5-180f-43d9-9dec-b9888818ae91",
     "fields": {
       "name": "L'apprentissage face à la malédiction de la grande dimension",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Thu/18:00/21:00",
       "location": "Collège de France",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,
@@ -213,12 +268,17 @@
     "pk": "2852e79c-8ca3-43d7-ac84-7fc8387357a5",
     "fields": {
       "name": "Large Scale Distributed Optimization & Computing",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Mon/13:45/16:45",
       "location": "CentraleSupelec",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,
@@ -232,12 +292,17 @@
     "pk": "9dc995ce-96f7-4340-80a2-91f9804d0398",
     "fields": {
       "name": "Méthodes stochastiques pour l'analyse d'images",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Tue/09:30/11:00",
       "location": "ENS Cachan",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,
@@ -251,12 +316,17 @@
     "pk": "e71563d1-fc90-4ab8-9b09-e3d892f391a9",
     "fields": {
       "name": "Modélisation en neuroscience et ailleurs",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Thu/09:00/11:00",
       "location": "ENS Cachan",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,
@@ -270,12 +340,17 @@
     "pk": "3618dae8-c1a3-4fde-94e0-7a57143f925b",
     "fields": {
       "name": "Nuages de points et modélisation 3D",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Mon/14:00/18:00",
       "location": "ENS Cachan",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,
@@ -289,12 +364,17 @@
     "pk": "0c8e02ef-93c7-403c-9461-3a7f85454ed6",
     "fields": {
       "name": "Parcimonie et analyse de données massives en astrophysique",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Tue/13:00/16:00",
       "location": "ENS Cachan",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,
@@ -308,12 +388,17 @@
     "pk": "e23bf1f3-8d2f-4435-be75-0d7f5eb70e7b",
     "fields": {
       "name": "Problèmes inverses en imagerie",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Fri/09:00/12:00",
       "location": "ENS Cachan",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,
@@ -327,12 +412,17 @@
     "pk": "e275cdac-d5cb-4301-aeee-20f7d585efdd",
     "fields": {
       "name": "Remote Sensing: from sensor to large scale geospatial data exploitation",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Thu/09:00/12:00",
       "location": "Telecom",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,
@@ -346,12 +436,17 @@
     "pk": "75931b01-d90b-4f4c-8de1-a31b35ce7e3e",
     "fields": {
       "name": "Statistical computing on manifolds and data assimilation: from medical images to anatomical and physiological models",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Thu/13:30/17:00",
       "location": "CentraleSupelec",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,
@@ -365,12 +460,17 @@
     "pk": "a8826622-0980-4b93-a0cc-1f11a572cb16",
     "fields": {
       "name": "Théorie des Matrices Aléatoires et Apprentissage",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Mon/08:30/11:30",
       "location": "CentraleSupelec",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,
@@ -384,12 +484,17 @@
     "pk": "38440cd9-e9fd-43e6-9196-df536d19b685",
     "fields": {
       "name": "Prediction for individual sequences",
-      "master": "069fd888-3035-4028-ac6d-cc0aacf63843",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S2",
       "time": "Fri/09:30/12:30",
       "location": "ENS Cachan",
       "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
         "imi_ects_option2": 5,
         "mva_trimestre_2": true,
         "mva_cours": true,

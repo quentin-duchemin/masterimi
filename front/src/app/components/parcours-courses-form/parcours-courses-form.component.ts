@@ -70,9 +70,7 @@ export class ParcoursCoursesFormComponent implements OnInit {
   }
 
   get availableMasterCourses() {
-    return this.availableCourses
-      .filter((course) => course.master ? course.master.id === this.parcours.master.id : false)
-    ;
+    return this.availableCourses.filter((course) => course.masters.includes(this.parcours.master.id));
   }
 
   save() {

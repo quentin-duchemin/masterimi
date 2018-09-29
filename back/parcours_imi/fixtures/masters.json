@@ -26,5 +26,19 @@
         "8e662dbd-786c-41c3-8649-6167b0a32fb3"
       ]
     }
+  },
+  {
+    "model": "parcours_imi.Master",
+    "pk": "6b5115bb-4536-43ad-b072-2837e4a1e89d",
+    "fields": {
+      "name": "Master Parisien de Recherche Opérationnelle (MPRO) avec électifs au MVA",
+      "short_name": "MPRO+MVA",
+      "attribute_constraints": [
+        "b9f55e48-b444-4f47-98a2-5b5f01ceaab8",
+        "5ab7a298-d733-4b16-b281-66df94b674d1",
+        "8e662dbd-786c-41c3-8649-6167b0a32fb3",
+        "51c68a55-d3c4-4b5f-afb0-28c903496eb3"
+      ]
+    }
   }
 ]

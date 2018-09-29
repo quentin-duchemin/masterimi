@@ -128,15 +128,17 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
         return serializer
 
     def _get_parcours_courses_rules_validation_data(self, parcours, serializer):
-        courses = serializer.validated_data['main_courses'] + serializer.validated_data['option_courses']
-
         attribute_constraints_validator = AttributeConstraintsValidator(
             constraints=parcours.master.attribute_constraints.all(),
             attributes_getter=lambda course: course.attributes,
         )
-        attribute_constraints_validation_data = attribute_constraints_validator.validate(courses)
+        attribute_constraints_validation_data = attribute_constraints_validator.validate(
+            serializer.validated_data['main_courses']
+        )
 
-        time_collision_validation_data = TimeCollisionValidator().validate(courses)
+        time_collision_validation_data = TimeCollisionValidator().validate(
+            serializer.validated_data['main_courses'] + serializer.validated_data['option_courses']
+        )
 
         if parcours.option == '3A-M2-ECTS':
             option_validator = AttributeConstraintsValidator(

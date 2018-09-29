@@ -4,7 +4,7 @@
     "pk": "c806175a-3b87-468a-9a3d-36259e82f313",
     "fields": {
       "name": "Math4Business",
-      "master": null,
+      "masters": [],
       "ECTS": 9,
       "period": "S1",
       "time": null,
@@ -19,13 +19,17 @@
     "pk": "b0dc42e2-eaea-4e07-b1c9-d7ac6aa2c999",
     "fields": {
       "name": "Data Driven Optimization",
-      "master": null,
+      "masters": [
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
       "ECTS": 5,
       "period": "S1",
       "time": null,
       "location": "ENPC",
       "attributes": {
-        "imi_ects_option2": 5
+        "imi_ects_option2": 5,
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true
       }
     }
   },
@@ -34,7 +38,7 @@
     "pk": "3c91333d-eafa-41ad-9295-4edbee0d73b8",
     "fields": {
       "name": "Algo de Monte-Carlo par chaînes de Markov et méthodes particulaires",
-      "master": null,
+      "masters": [],
       "ECTS": 6,
       "period": "S1",
       "time": null,
@@ -49,7 +53,7 @@
     "pk": "746a6cfe-097e-4966-8300-0adcb975c97c",
     "fields": {
       "name": "Projet de recherche",
-      "master": null,
+      "masters": [],
       "ECTS": 5,
       "period": "S1/S2",
       "time": null,
