@@ -33,8 +33,6 @@ services:
     build:
       context: back
     restart: always
-    volumes:
-      - back-uploads:/app/uploads
     environment:
       DATABASE_URL: postgres://my3A:my3A@db/my3A
       CELERY_BROKER_URL: amqp://celery_broker
@@ -56,4 +54,3 @@ services:
 volumes:
   db-data:
   celery_broker-data:
-  back-uploads:
