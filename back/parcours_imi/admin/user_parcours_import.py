@@ -78,6 +78,9 @@ def user_parcours_import(students_to_import: Iterable[UserParcoursImportEntry]):
 
     logger.info(f'Importing {len(students_to_import)} students')
     for student in students_to_import:
+        if student.master not in masters_map:
+            continue
+
         user, created = User.objects.get_or_create(username=student.username)
         action_str = 'Creating' if created else 'Updating'
         logger.info(f'{action_str} student {student.username}')
