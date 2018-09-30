@@ -4,8 +4,10 @@ RUN addgroup -S python && adduser -S -G python python
 
 RUN mkdir /app && chown python:python /app && chmod 700 /app
 
+COPY mime.types /etc/mime.types
+
 # Copy in your requirements file
-ADD requirements.txt /requirements.txt
+COPY requirements.txt /requirements.txt
 
 # Install build deps, then run `pip install`, then remove unneeded build deps all in a single step. Correct the path to your production requirements file, if needed.
 RUN set -ex \
