@@ -4,12 +4,7 @@ API REST Django consistuant le Back de l'outil demandé par le département IMI 
 ## Production
 ```bash
 docker-compose up -d
-docker-compose exec back /venv/bin/python manage.py loaddata /app/parcours_imi/fixtures/constraints.json
-docker-compose exec back /venv/bin/python manage.py loaddata /app/parcours_imi/fixtures/masters.json
-docker-compose exec back /venv/bin/python manage.py loaddata /app/parcours_imi/fixtures/courses_imi.json
-docker-compose exec back /venv/bin/python manage.py loaddata /app/parcours_imi/fixtures/courses_mva_s1.json
-docker-compose exec back /venv/bin/python manage.py loaddata /app/parcours_imi/fixtures/courses_mva_s2.json
-docker-compose exec back /venv/bin/python manage.py loaddata /app/parcours_imi/fixtures/courses_mpro.json
+./tools/load_fixtures.sh
 docker-compose exec back /venv/bin/python manage.py createsuperuser
 ```
 
