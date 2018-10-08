@@ -47,7 +47,7 @@ services:
     image: quay.io/louistrezzini/my3a-front:${TAG:-latest}
     restart: always
     ports:
-      - "9572:80"
+      - "127.0.0.1:9572:80"
     depends_on:
       - back
 
