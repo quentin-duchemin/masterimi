@@ -133,7 +133,7 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
             attributes_getter=lambda course: course.attributes,
         )
         attribute_constraints_validation_data = attribute_constraints_validator.validate(
-            serializer.validated_data['main_courses']
+            serializer.validated_data['main_courses'] + serializer.validated_data['option_courses']
         )
 
         time_collision_validation_data = TimeCollisionValidator().validate(
