@@ -36,8 +36,12 @@ services:
     build:
       context: front
       dockerfile: Dockerfile-dev
+    networks: []
     ports:
       - "4200:4200"
     volumes:
       - ./front:/app/
+
+networks:
+  edge: {}
 
