@@ -46,18 +46,11 @@ services:
   front:
     image: quay.io/louistrezzini/my3a-front:${TAG:-latest}
     restart: always
-    networks:
-      - edge
     ports:
-      - 80
+      - "9572:80"
     depends_on:
       - back
-    container_name: my3a
 
 volumes:
   db-data:
   celery_broker-data:
-
-networks:
-  edge:
-    external: true
