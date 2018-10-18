@@ -4,7 +4,7 @@
     "pk": "3caaee61-1d60-4b2b-a65d-189806921c4b",
     "fields": {
       "name": "MVA Cours",
-      "description": "MVA : valider en tout 8 modules (minimum), les 8 meilleures notes seront conservées si vous en validez au-delà de 8",
+      "description": "MVA : valider en tout 8 modules (minimum), les 8 meilleures notes seront conservées si vous en validez au-delà de 8.",
       "attribute": "mva_cours",
       "min_value": 8,
       "max_value": null
@@ -15,7 +15,7 @@
     "pk": "6c2a692e-fe63-4f03-a261-35e1df531780",
     "fields": {
       "name": "MVA Cours du premier trimestre",
-      "description": "MVA : valider 4 modules au premier trimestre au minimum",
+      "description": "MVA : valider 4 modules au premier trimestre au minimum.",
       "attribute": "mva_trimestre_1",
       "min_value": 4,
       "max_value": null
@@ -26,7 +26,7 @@
     "pk": "0995b582-a846-4f3d-bb5b-eb9ba284b6e8",
     "fields": {
       "name": "MVA Cours du second semetres",
-      "description": "MVA : valider 3 modules au deuxième trimestre au minimum",
+      "description": "MVA : valider 3 modules au deuxième trimestre au minimum.",
       "attribute": "mva_trimestre_2",
       "min_value": 3,
       "max_value": null
@@ -37,7 +37,7 @@
     "pk": "0cfc6640-4d81-4fbe-89db-3adfc3eccd10",
     "fields": {
       "name": "MVA Cours data",
-      "description": "MVA : valider 2 cours dans le chapeau Données/Modélisation au minimum sur l'année",
+      "description": "MVA : valider 2 cours dans le chapeau Données/Modélisation au minimum sur l'année.",
       "attribute": "mva_cours_data",
       "min_value": 2,
       "max_value": null
@@ -92,7 +92,7 @@
     "pk": "8ce0b5ea-7e1d-4d7a-b5e6-77c83ed0d4d9",
     "fields": {
       "name": "IMI Option 2 15 ECTS",
-      "description": "IMI : 3A Option 2, valider 15 ects supplémentaires",
+      "description": "IMI : 3A Option 2, valider 15 ects supplémentaires (ne pas oublier le REX3A).",
       "attribute": "imi_ects_option2",
       "min_value": 15,
       "max_value": null

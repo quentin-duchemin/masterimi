@@ -62,5 +62,20 @@
         "imi_ects_option2": 5
       }
     }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "a9a07dca-d2a1-4475-8b3b-aae8d22d7a36",
+    "fields": {
+      "name": "REX-3A",
+      "masters": [],
+      "ECTS": 1,
+      "period": "S0",
+      "time": null,
+      "location": null,
+      "attributes": {
+        "imi_ects_option2": 1
+      }
+    }
   }
 ]
