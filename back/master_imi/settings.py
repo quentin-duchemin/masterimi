@@ -225,11 +225,9 @@ LOGGING = {
 
 # Email
 
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = 'smtp.mailtrap.io'
-EMAIL_HOST_USER = '589cfa9e74991c'
-EMAIL_HOST_PASSWORD = '441cc35b9c2091'
-EMAIL_PORT = '2525'
+EMAIL_BACKEND = 'sendgrid_backend.SendgridBackend'
+SENDGRID_API_KEY = env('SENDGRID_API_KEY', default=None)
+SENDGRID_SANDBOX_MODE_IN_DEBUG = env('EMAIL_DEBUG', default=True)
 
 # CAS
 
