@@ -85,17 +85,17 @@ class UserCourseChoice(models.Model):
 
         main_courses = self.main_courses.all()
         main_courses_names = '\n'.join([
-            str(course)
+            ' --> ' + str(course)
             for course in main_courses
         ])
 
         option_courses = self.option_courses.all()
         option_courses_names = '\n'.join([
-            str(course)
+            ' --> ' + str(course)
             for course in option_courses
         ])
 
-        comment = self.comment + '\n' if self.comment else ''
+        comment = '\n --> ' + self.comment if self.comment else ' N/A'
 
         parcours_validation_data = get_parcours_courses_rules_validation_data(
             self.parcours,
@@ -103,14 +103,14 @@ class UserCourseChoice(models.Model):
             list(self.option_courses.all()),
         )
         validation_rules = '\n'.join([
-            rule['full_message']
+            ' --> ' + rule['full_message']
             for rule in parcours_validation_data
         ])
 
         return f'{tag} {len(main_courses)} cours (master) + {len(option_courses)} cours (option)\n\n' \
-            + f'{main_courses_names}\n\n' \
-            + f'{option_courses_names}\n\n' \
-            + f'Commentaire :\n{comment}\n' \
+            + f'Cours principaux :\n{main_courses_names}\n\n' \
+            + f'Cours pour la validation des 15 ECTS supplémentaires :\n{option_courses_names}\n\n' \
+            + f'Commentaire :{comment}\n\n' \
             + f'Règles de validation :\n{validation_rules}'
 
 
