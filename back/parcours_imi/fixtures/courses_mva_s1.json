@@ -10,7 +10,7 @@
       ],
       "ECTS": 5,
       "period": "S1",
-      "time": "Mon/10:30/12:30",
+      "time": "Wed/14:00/16:00",
       "location": "ENS Cachan",
       "attributes": {
         "mpro_cours_electif": true,
@@ -82,8 +82,8 @@
       ],
       "ECTS": 5,
       "period": "S1",
-      "time": "Tue/11:00/15:00",
-      "location": "ENS Cachan",
+      "time": "Fri/14:00/17:00",
+      "location": "Polytechnique",
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
@@ -154,7 +154,7 @@
       ],
       "ECTS": 5,
       "period": "S1",
-      "time": "Tue/12:30/15:45",
+      "time": "Tue/12:45/15:45",
       "location": "Télécom",
       "attributes": {
         "mpro_cours_electif": true,
@@ -250,7 +250,7 @@
       ],
       "ECTS": 5,
       "period": "S1",
-      "time": "Wed/13:30/17:00",
+      "time": "Wed/13:00/16:30",
       "location": "ENS Cachan",
       "attributes": {
         "mpro_cours_electif": true,
@@ -370,7 +370,7 @@
       ],
       "ECTS": 5,
       "period": "S1",
-      "time": "Fri/14:00/17:00",
+      "time": "Fri/14:00/18:00",
       "location": "ENS Cachan",
       "attributes": {
         "mpro_cours_electif": true,
@@ -404,6 +404,30 @@
         "mva_cours": true,
         "mva_cours_data": true,
         "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "b4a948bd-78c8-44fd-94b3-fb69cea75ba6",
+    "fields": {
+      "name": "Deep Learning",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
+      "ECTS": 5,
+      "period": "S1",
+      "time": "Thu/13:45/16:45",
+      "location": "CentraleSupelec",
+      "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
+        "imi_ects_option2": 5,
+        "mva_trimestre_1": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
       }
     }
   }

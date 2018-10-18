@@ -97,30 +97,6 @@
   },
   {
     "model": "parcours_imi.Course",
-    "pk": "b4a948bd-78c8-44fd-94b3-fb69cea75ba6",
-    "fields": {
-      "name": "Deep Learning",
-      "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
-      ],
-      "ECTS": 5,
-      "period": "S2",
-      "time": "Fri/13:45/17:00",
-      "location": "CentraleSupelec",
-      "attributes": {
-        "mpro_cours_electif": true,
-        "mpro_cours_electif_hors_mpro": true,
-        "imi_ects_option2": 5,
-        "mva_trimestre_2": true,
-        "mva_cours": true,
-        "mva_cours_data": false,
-        "mva_cours_apprentissage": true
-      }
-    }
-  },
-  {
-    "model": "parcours_imi.Course",
     "pk": "57c1342d-1543-4b29-bb8c-fe858ed50e5c",
     "fields": {
       "name": "Deformable Models and Geodesic methods for Image Analysis",
