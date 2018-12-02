@@ -12,7 +12,7 @@ from parcours_imi.serializers import (
     CourseSerializer, MasterSerializer,
     UserCourseChoiceSerializer, UserParcoursSerializer, UserSerializer,
 )
-from parcours_imi.validators import AttributeConstraintsValidator, TimeCollisionValidator
+from parcours_imi.validators import get_parcours_courses_rules_validation_data
 from parcours_imi.tasks import send_option_confirmation_email, send_courses_validation_email
 
 
@@ -82,7 +82,11 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
         is_submitted = serializer.validated_data['submitted']
 
         if is_submitted:
-            parcours_validation_data = self._get_parcours_courses_rules_validation_data(parcours, serializer)
+            parcours_validation_data = get_parcours_courses_rules_validation_data(
+                parcours,
+                serializer.validated_data['main_courses'],
+                serializer.validated_data['option_courses'],
+            )
 
             errors = [
                 item['message']
@@ -107,7 +111,11 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
         parcours = self._get_user_parcours()
 
         serializer = self._get_parcours_courses_serializer(parcours, request.data)
-        parcours_validation_data = self._get_parcours_courses_rules_validation_data(parcours, serializer)
+        parcours_validation_data = get_parcours_courses_rules_validation_data(
+            parcours,
+            serializer.validated_data['main_courses'],
+            serializer.validated_data['option_courses'],
+        )
 
         return Response(parcours_validation_data)
 
@@ -126,31 +134,3 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
         serializer.is_valid(raise_exception=True)
 
         return serializer
-
-    def _get_parcours_courses_rules_validation_data(self, parcours, serializer):
-        attribute_constraints_validator = AttributeConstraintsValidator(
-            constraints=parcours.master.attribute_constraints.all(),
-            attributes_getter=lambda course: course.attributes,
-        )
-        attribute_constraints_validation_data = attribute_constraints_validator.validate(
-            serializer.validated_data['main_courses'] + serializer.validated_data['option_courses']
-        )
-
-        time_collision_validation_data = TimeCollisionValidator().validate(
-            serializer.validated_data['main_courses'] + serializer.validated_data['option_courses']
-        )
-
-        if parcours.option == '3A-M2-ECTS':
-            option_validator = AttributeConstraintsValidator(
-                constraints=[
-                    AttributeConstraint.objects.get(pk='8ce0b5ea-7e1d-4d7a-b5e6-77c83ed0d4d9')
-                ],
-                attributes_getter=lambda course: course.attributes,
-            )
-            option_validation_data = option_validator.validate(
-                serializer.validated_data['option_courses']
-            )
-
-            return attribute_constraints_validation_data + option_validation_data + time_collision_validation_data
-
-        return attribute_constraints_validation_data + time_collision_validation_data

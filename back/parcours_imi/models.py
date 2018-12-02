@@ -6,6 +6,8 @@ from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
+from parcours_imi.validators import get_parcours_courses_rules_validation_data
+
 
 class AttributeConstraint(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, verbose_name='ID')
@@ -80,17 +82,36 @@ class UserCourseChoice(models.Model):
 
     def __str__(self):
         tag = '[Verrouillé]' if self.submitted else ''
+
         main_courses = self.main_courses.all()
-        option_courses = self.option_courses.all()
         main_courses_names = '\n'.join([
-            course.name
+            ' - ' + str(course)
             for course in main_courses
         ])
+
+        option_courses = self.option_courses.all()
         option_courses_names = '\n'.join([
-            course.name
+            ' - ' + str(course)
             for course in option_courses
         ])
-        return f'{tag} {len(main_courses)} cours (master) + {len(option_courses)} cours (option)\n\n{main_courses_names}\n\n{option_courses_names}'.strip()
+
+        comment = '\n - ' + self.comment if self.comment else ' N/A'
+
+        parcours_validation_data = get_parcours_courses_rules_validation_data(
+            self.parcours,
+            list(self.main_courses.all()),
+            list(self.option_courses.all()),
+        )
+        validation_rules = '\n'.join([
+            ' - ' + rule['full_message']
+            for rule in parcours_validation_data
+        ])
+
+        return f'{tag} {len(main_courses)} cours (master) + {len(option_courses)} cours (option)\n\n' \
+            + f'Cours principaux :\n{main_courses_names}\n\n' \
+            + f'Cours pour la validation des 15 ECTS supplémentaires :\n{option_courses_names}\n\n' \
+            + f'Commentaire :{comment}\n\n' \
+            + f'Règles de validation :\n{validation_rules}'
 
 
 OPTIONS = [
