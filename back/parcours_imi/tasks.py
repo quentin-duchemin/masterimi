@@ -12,8 +12,8 @@ from parcours_imi.models import UserParcours
 
 logger = logging.getLogger(__name__)
 
-DEFAULT_FROM_EMAIL = '3a@enpc.fr'
-DEFAULT_ADMIN_EMAIL_ADDRESS = 'till034+3A@gmail.com'
+DEFAULT_FROM_EMAIL = 'my3a@enpc.org'
+DEFAULT_ADMIN_EMAIL_ADDRESS = 'my3a@enpc.org'
 
 
 @shared_task
