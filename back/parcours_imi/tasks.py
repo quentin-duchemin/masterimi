@@ -16,7 +16,7 @@ DEFAULT_FROM_EMAIL = 'my3a@enpc.org'
 DEFAULT_ADMIN_EMAIL_ADDRESS = 'my3a@enpc.org'
 
 
-@shared_task
+@shared_task(autoretry_for=(Exception,), retry_backoff=True)
 def send_option_confirmation_email(user_parcours_id: int):
     user_parcours = UserParcours.objects.get(pk=user_parcours_id)
     user = user_parcours.user
@@ -33,7 +33,7 @@ def send_option_confirmation_email(user_parcours_id: int):
         ),
     )
 
-@shared_task
+@shared_task(autoretry_for=(Exception,), retry_backoff=True)
 def send_courses_validation_email(user_parcours_id: int, parcours_validation_data):
     user_parcours = UserParcours.objects.get(pk=user_parcours_id)
     user = user_parcours.user
