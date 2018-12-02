@@ -24,6 +24,7 @@ services:
     environment:
       DATABASE_URL: postgres://my3A:my3A@db/my3A
       CELERY_BROKER_URL: amqp://celery_broker
+      SENDGRID_API_KEY: ${SENDGRID_API_KEY:-}
     depends_on:
       - celery_broker
       - db
@@ -39,6 +40,7 @@ services:
       CAS_ROOT_PROXIED_AS: https://my3a.enpc.org
       DJANGO_MANAGEPY_MIGRATE: 1
       DJANGO_MANAGEPY_COLLECTSTATIC: 1
+      SENDGRID_API_KEY: ${SENDGRID_API_KEY:-}
     depends_on:
       - db
       - celery_broker

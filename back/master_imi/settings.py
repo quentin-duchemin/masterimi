@@ -227,7 +227,6 @@ LOGGING = {
 
 EMAIL_BACKEND = 'sendgrid_backend.SendgridBackend'
 SENDGRID_API_KEY = env('SENDGRID_API_KEY', default=None)
-SENDGRID_SANDBOX_MODE_IN_DEBUG = env('EMAIL_DEBUG', default=True)
 
 # CAS
 
