@@ -103,7 +103,7 @@ class UserCourseChoice(models.Model):
             list(self.option_courses.all()),
         )
         validation_rules = '\n'.join([
-            ' --> ' + rule['full_message']
+            ' - ' + rule['full_message']
             for rule in parcours_validation_data
         ])
 
