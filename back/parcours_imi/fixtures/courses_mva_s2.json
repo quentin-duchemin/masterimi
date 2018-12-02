@@ -481,7 +481,7 @@
   },
   {
     "model": "parcours_imi.Course",
-    "pk": "c217df6a-5f29-4386-a41f-442efb725544",
+    "pk": "07d0377b-2ad8-4a68-969b-fce9a88a9d84",
     "fields": {
       "name": "Fondements Théoriques du deep learning",
       "masters": [
