@@ -10,7 +10,7 @@
       ],
       "ECTS": 5,
       "period": "S2",
-      "time": "Mon/09:00/12:00",
+      "time": "Sun/00:00/00:00",
       "location": "ENS Ulm",
       "attributes": {
         "mpro_cours_electif": true,
@@ -27,7 +27,7 @@
     "model": "parcours_imi.Course",
     "pk": "f0e45f11-82f9-40f6-af5f-39a1eeed74f6",
     "fields": {
-      "name": "Analyse de données longitudinales : approches géométriques et statistiques",
+      "name": "Approches géométriques en apprentissage statistique: l’exemple des données longitudinales",
       "masters": [
         "069fd888-3035-4028-ac6d-cc0aacf63843",
         "6b5115bb-4536-43ad-b072-2837e4a1e89d"
@@ -82,7 +82,7 @@
       ],
       "ECTS": 5,
       "period": "S2",
-      "time": "Thu/09:15/11:50",
+      "time": "Thu/09:00/12:00",
       "location": "ENS Cachan",
       "attributes": {
         "mpro_cours_electif": true,
@@ -130,7 +130,7 @@
       ],
       "ECTS": 5,
       "period": "S2",
-      "time": "Wed/16:00/18:30",
+      "time": "Sun/00:00/00:00",
       "location": "ENS Ulm",
       "attributes": {
         "mpro_cours_electif": true,
@@ -140,30 +140,6 @@
         "mva_cours": true,
         "mva_cours_data": true,
         "mva_cours_apprentissage": false
-      }
-    }
-  },
-  {
-    "model": "parcours_imi.Course",
-    "pk": "1a2692ba-93da-4800-841b-cc78f0639dca",
-    "fields": {
-      "name": "High Dimensional Statistics and Learning",
-      "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
-      ],
-      "ECTS": 5,
-      "period": "S2",
-      "time": "Mon/09:00/12:00",
-      "location": "ENS Cachan",
-      "attributes": {
-        "mpro_cours_electif": true,
-        "mpro_cours_electif_hors_mpro": true,
-        "imi_ects_option2": 5,
-        "mva_trimestre_2": true,
-        "mva_cours": true,
-        "mva_cours_data": false,
-        "mva_cours_apprentissage": true
       }
     }
   },
@@ -203,7 +179,7 @@
       "ECTS": 5,
       "period": "S2",
       "time": "Wed/13:30/16:00",
-      "location": "ENS Ulm",
+      "location": "ENS Ulm - Campus Jourdan",
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
@@ -219,14 +195,14 @@
     "model": "parcours_imi.Course",
     "pk": "64fb27a5-180f-43d9-9dec-b9888818ae91",
     "fields": {
-      "name": "L'apprentissage face à la malédiction de la grande dimension",
+      "name": "L'apprentissage par réseaux de neurones profonds",
       "masters": [
         "069fd888-3035-4028-ac6d-cc0aacf63843",
         "6b5115bb-4536-43ad-b072-2837e4a1e89d"
       ],
       "ECTS": 5,
       "period": "S2",
-      "time": "Thu/18:00/21:00",
+      "time": "Wed/09:30/12:00",
       "location": "Collège de France",
       "attributes": {
         "mpro_cours_electif": true,
@@ -250,7 +226,7 @@
       ],
       "ECTS": 5,
       "period": "S2",
-      "time": "Mon/13:45/16:45",
+      "time": "Fri/13:45/17:00",
       "location": "CentraleSupelec",
       "attributes": {
         "mpro_cours_electif": true,
@@ -267,15 +243,15 @@
     "model": "parcours_imi.Course",
     "pk": "9dc995ce-96f7-4340-80a2-91f9804d0398",
     "fields": {
-      "name": "Méthodes stochastiques pour l'analyse d'images",
+      "name": "Méthodes mathématiques pour l'analyse d'images",
       "masters": [
         "069fd888-3035-4028-ac6d-cc0aacf63843",
         "6b5115bb-4536-43ad-b072-2837e4a1e89d"
       ],
       "ECTS": 5,
       "period": "S2",
-      "time": "Tue/09:30/11:00",
-      "location": "ENS Cachan",
+      "time": "Mon/09:00/12:30",
+      "location": "IHP",
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
@@ -298,7 +274,7 @@
       ],
       "ECTS": 5,
       "period": "S2",
-      "time": "Thu/09:00/11:00",
+      "time": "Thu/09:00/12:30",
       "location": "ENS Cachan",
       "attributes": {
         "mpro_cours_electif": true,
@@ -346,7 +322,7 @@
       ],
       "ECTS": 5,
       "period": "S2",
-      "time": "Tue/13:00/16:00",
+      "time": "Wed/13:30/16:30",
       "location": "ENS Cachan",
       "attributes": {
         "mpro_cours_electif": true,
@@ -394,7 +370,7 @@
       ],
       "ECTS": 5,
       "period": "S2",
-      "time": "Thu/09:00/12:00",
+      "time": "Thu/09:00/12:30",
       "location": "Telecom",
       "attributes": {
         "mpro_cours_electif": true,
@@ -418,7 +394,7 @@
       ],
       "ECTS": 5,
       "period": "S2",
-      "time": "Thu/13:30/17:00",
+      "time": "Sun/00:00/00:00",
       "location": "CentraleSupelec",
       "attributes": {
         "mpro_cours_electif": true,
@@ -468,6 +444,54 @@
       "period": "S2",
       "time": "Fri/09:30/12:30",
       "location": "ENS Cachan",
+      "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "c217df6a-5f29-4386-a41f-442efb725544",
+    "fields": {
+      "name": "Biostatistics",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
+      "ECTS": 5,
+      "period": "S2",
+      "time": "Tue/10:00/13:00",
+      "location": "ENS Cachan",
+      "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
+        "imi_ects_option2": 5,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": true,
+        "mva_cours_apprentissage": false
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "c217df6a-5f29-4386-a41f-442efb725544",
+    "fields": {
+      "name": "Fondements Théoriques du deep learning",
+      "masters": [
+        "069fd888-3035-4028-ac6d-cc0aacf63843",
+        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+      ],
+      "ECTS": 5,
+      "period": "S2",
+      "time": "Mon/14:00/17:00",
+      "location": "IHP",
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
