@@ -95,7 +95,7 @@ class UserCourseChoice(models.Model):
             for course in option_courses
         ])
 
-        comment = '\n --> ' + self.comment if self.comment else ' N/A'
+        comment = '\n - ' + self.comment if self.comment else ' N/A'
 
         parcours_validation_data = get_parcours_courses_rules_validation_data(
             self.parcours,
