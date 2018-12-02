@@ -10,7 +10,7 @@
       ],
       "ECTS": 5,
       "period": "S2",
-      "time": "Sun/00:00/00:00",
+      "time": "Sun/00:00/01:00",
       "location": "ENS Ulm",
       "attributes": {
         "mpro_cours_electif": true,
@@ -130,7 +130,7 @@
       ],
       "ECTS": 5,
       "period": "S2",
-      "time": "Sun/00:00/00:00",
+      "time": "Sun/00:00/01:00",
       "location": "ENS Ulm",
       "attributes": {
         "mpro_cours_electif": true,
@@ -394,7 +394,7 @@
       ],
       "ECTS": 5,
       "period": "S2",
-      "time": "Sun/00:00/00:00",
+      "time": "Sun/00:00/01:00",
       "location": "CentraleSupelec",
       "attributes": {
         "mpro_cours_electif": true,
