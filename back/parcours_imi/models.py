@@ -91,7 +91,7 @@ class UserCourseChoice(models.Model):
 
         option_courses = self.option_courses.all()
         option_courses_names = '\n'.join([
-            ' --> ' + str(course)
+            ' - ' + str(course)
             for course in option_courses
         ])
 
