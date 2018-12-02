@@ -43,8 +43,8 @@ class Course(models.Model):
     masters = models.ManyToManyField(Master, related_name='masters')
     ECTS = models.FloatField(verbose_name='ECTS')
     period = models.CharField(max_length=20, verbose_name='Période')
-    location = models.CharField(max_length=120, blank=True, null=True)
-    time = models.CharField(max_length=120, blank=True, null=True)
+    location = models.CharField(max_length=120, blank=True, null=True, verbose_name='Lieu')
+    time = models.CharField(max_length=120, blank=True, null=True, verbose_name='Horaires')
 
     attributes = JSONField(default=dict)
 
