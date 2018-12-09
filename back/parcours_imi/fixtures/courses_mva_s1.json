@@ -15,7 +15,6 @@
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
-        "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
         "mva_cours_data": false,
@@ -39,7 +38,6 @@
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
-        "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
         "mva_cours_data": false,
@@ -63,7 +61,6 @@
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
-        "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
         "mva_cours_data": true,
@@ -87,7 +84,6 @@
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
-        "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
         "mva_cours_data": false,
@@ -111,7 +107,6 @@
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
-        "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
         "mva_cours_data": false,
@@ -135,7 +130,6 @@
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
-        "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
         "mva_cours_data": false,
@@ -159,7 +153,6 @@
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
-        "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
         "mva_cours_data": true,
@@ -183,7 +176,6 @@
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
-        "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
         "mva_cours_data": true,
@@ -207,7 +199,6 @@
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
-        "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
         "mva_cours_data": false,
@@ -231,7 +222,6 @@
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
-        "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
         "mva_cours_data": false,
@@ -255,7 +245,6 @@
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
-        "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
         "mva_cours_data": true,
@@ -279,7 +268,6 @@
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
-        "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
         "mva_cours_data": true,
@@ -303,7 +291,6 @@
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
-        "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
         "mva_cours_data": true,
@@ -327,7 +314,6 @@
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
-        "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
         "mva_cours_data": true,
@@ -351,7 +337,6 @@
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
-        "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
         "mva_cours_data": false,
@@ -375,7 +360,6 @@
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
-        "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
         "mva_cours_data": false,
@@ -399,7 +383,6 @@
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
-        "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
         "mva_cours_data": true,
@@ -423,7 +406,6 @@
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
-        "imi_ects_option2": 5,
         "mva_trimestre_1": true,
         "mva_cours": true,
         "mva_cours_data": false,

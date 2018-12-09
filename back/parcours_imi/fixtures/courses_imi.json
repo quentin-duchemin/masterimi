@@ -8,10 +8,7 @@
       "ECTS": 9,
       "period": "S1",
       "time": null,
-      "location": "Paris 14e, 9 rue Dareau",
-      "attributes": {
-        "imi_ects_option2": 9
-      }
+      "location": "Paris 14e, 9 rue Dareau"
     }
   },
   {
@@ -27,7 +24,6 @@
       "time": null,
       "location": "ENPC",
       "attributes": {
-        "imi_ects_option2": 5,
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true
       }
@@ -42,10 +38,7 @@
       "ECTS": 6,
       "period": "S1",
       "time": null,
-      "location": "Jussieu",
-      "attributes": {
-        "imi_ects_option2": 6
-      }
+      "location": "Jussieu"
     }
   },
   {
@@ -57,10 +50,7 @@
       "ECTS": 5,
       "period": "S1/S2",
       "time": null,
-      "location": null,
-      "attributes": {
-        "imi_ects_option2": 5
-      }
+      "location": null
     }
   },
   {
@@ -72,10 +62,7 @@
       "ECTS": 1,
       "period": "S0",
       "time": null,
-      "location": null,
-      "attributes": {
-        "imi_ects_option2": 1
-      }
+      "location": null
     }
   }
 ]

@@ -113,7 +113,7 @@ def get_parcours_courses_rules_validation_data(parcours, main_courses, option_co
         attributes_getter=lambda course: course.attributes,
     )
     attribute_constraints_validation_data = attribute_constraints_validator.validate(
-        main_courses + option_courses
+        main_courses
     )
 
     time_collision_validation_data = TimeCollisionValidator().validate(
@@ -126,7 +126,7 @@ def get_parcours_courses_rules_validation_data(parcours, main_courses, option_co
             constraints=[
                 AttributeConstraint.objects.get(pk='8ce0b5ea-7e1d-4d7a-b5e6-77c83ed0d4d9')
             ],
-            attributes_getter=lambda course: course.attributes,
+            attributes_getter=lambda course: dict(imi_ects_option2=course.ECTS),
         )
         option_validation_data = option_validator.validate(option_courses)
 

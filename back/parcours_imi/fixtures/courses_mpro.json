@@ -3,7 +3,7 @@
     "model": "parcours_imi.Course",
     "pk": "a21b1ef7-d6bb-4a4b-9a6b-278f406354e9",
     "fields": {
-      "name": "Metaheuristiques",
+      "name": "Metaheuristiques (obligatoire)",
       "masters": [
         "113ba000-65e3-4ed6-977e-77c6c072778b",
         "6b5115bb-4536-43ad-b072-2837e4a1e89d"
@@ -21,7 +21,7 @@
     "model": "parcours_imi.Course",
     "pk": "5637fe5b-6b02-4cc8-9f81-1147303c532d",
     "fields": {
-      "name": "Mathematical programming",
+      "name": "Mathematical programming (obligatoire)",
       "masters": [
         "113ba000-65e3-4ed6-977e-77c6c072778b",
         "6b5115bb-4536-43ad-b072-2837e4a1e89d"
@@ -39,7 +39,7 @@
     "model": "parcours_imi.Course",
     "pk": "7197516e-bc6d-4b2a-9fb8-2353967969ad",
     "fields": {
-      "name": "Optimisation dans les graphes",
+      "name": "Optimisation dans les graphes (obligatoire)",
       "masters": [
         "113ba000-65e3-4ed6-977e-77c6c072778b",
         "6b5115bb-4536-43ad-b072-2837e4a1e89d"
@@ -57,7 +57,7 @@
     "model": "parcours_imi.Course",
     "pk": "c4ce76bd-1696-4069-b657-bd8253d20e70",
     "fields": {
-      "name": "Theorie de la complexite",
+      "name": "Theorie de la complexite (obligatoire)",
       "masters": [
         "113ba000-65e3-4ed6-977e-77c6c072778b",
         "6b5115bb-4536-43ad-b072-2837e4a1e89d"
@@ -75,7 +75,7 @@
     "model": "parcours_imi.Course",
     "pk": "1579fb33-fa49-48c7-93c5-14da4191a8e6",
     "fields": {
-      "name": "Optimisation stochastique",
+      "name": "Optimisation stochastique (obligatoire)",
       "masters": [
         "113ba000-65e3-4ed6-977e-77c6c072778b",
         "6b5115bb-4536-43ad-b072-2837e4a1e89d"
@@ -103,7 +103,6 @@
       "time": "Mon/09:00/12:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5,
         "mpro_cours_electif": true
       }
     }
@@ -122,7 +121,6 @@
       "time": "Mon/14:00/17:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5,
         "mpro_cours_electif": true
       }
     }
@@ -141,7 +139,6 @@
       "time": "Fri/14:00/17:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5,
         "mpro_cours_electif": true
       }
     }
@@ -150,7 +147,7 @@
     "model": "parcours_imi.Course",
     "pk": "46ab1a9c-25bb-495f-9893-093539f66437",
     "fields": {
-      "name": "Case studies and OR management",
+      "name": "Case studies and OR management (obligatoire)",
       "masters": [
         "113ba000-65e3-4ed6-977e-77c6c072778b",
         "6b5115bb-4536-43ad-b072-2837e4a1e89d"
@@ -168,7 +165,7 @@
     "model": "parcours_imi.Course",
     "pk": "a595f0b0-e09f-46c1-aa89-ce8c26adb631",
     "fields": {
-      "name": "Initiation a la recherche",
+      "name": "Initiation a la recherche (obligatoire)",
       "masters": [
         "113ba000-65e3-4ed6-977e-77c6c072778b",
         "6b5115bb-4536-43ad-b072-2837e4a1e89d"
@@ -186,7 +183,7 @@
     "model": "parcours_imi.Course",
     "pk": "893fce4e-8371-4aed-9c61-bd61e9b123f7",
     "fields": {
-      "name": "Operations Research and Sustainable Development",
+      "name": "Operations Research and Sustainable Development (application)",
       "masters": [
         "113ba000-65e3-4ed6-977e-77c6c072778b",
         "6b5115bb-4536-43ad-b072-2837e4a1e89d"
@@ -196,7 +193,6 @@
       "time": "Wed/14:00/17:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5,
         "mpro_cours_electif": true,
         "mpro_cours_application": true
       }
@@ -206,7 +202,7 @@
     "model": "parcours_imi.Course",
     "pk": "29212a83-a07f-4c5d-824d-b97df1a1e9a7",
     "fields": {
-      "name": "RO pour les Réseaux et le Transport",
+      "name": "RO pour les Réseaux et le Transport (application)",
       "masters": [
         "113ba000-65e3-4ed6-977e-77c6c072778b",
         "6b5115bb-4536-43ad-b072-2837e4a1e89d"
@@ -216,7 +212,6 @@
       "time": "Tue/14:00/17:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5,
         "mpro_cours_electif": true,
         "mpro_cours_application": true
       }
@@ -236,7 +231,6 @@
       "time": "Thu/09:00/12:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5,
         "mpro_cours_electif": true
       }
     }
@@ -255,7 +249,6 @@
       "time": "Thu/14:00/17:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5,
         "mpro_cours_electif": true
       }
     }
@@ -274,7 +267,6 @@
       "time": "Mon/14:00/17:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5,
         "mpro_cours_electif": true
       }
     }
@@ -293,7 +285,6 @@
       "time": "Fri/09:00/12:30",
       "location": "Cnam",
       "attributes": {
-        "imi_ects_option2": 5,
         "mpro_cours_electif": true
       }
     }
@@ -312,7 +303,6 @@
       "time": "Wed/09:00/12:30",
       "location": "ENSTA",
       "attributes": {
-        "imi_ects_option2": 5,
         "mpro_cours_electif": true
       }
     }
@@ -321,7 +311,7 @@
     "model": "parcours_imi.Course",
     "pk": "d6790579-7972-4021-93ef-4a0b089fca6d",
     "fields": {
-      "name": "Conférences industrielles",
+      "name": "Conférences industrielles (obligatoire)",
       "masters": [
         "113ba000-65e3-4ed6-977e-77c6c072778b",
         "6b5115bb-4536-43ad-b072-2837e4a1e89d"

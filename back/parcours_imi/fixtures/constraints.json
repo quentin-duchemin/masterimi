@@ -78,6 +78,17 @@
   },
   {
     "model": "parcours_imi.AttributeConstraint",
+    "pk": "51c68a55-d3c4-4b5f-afb0-28c903496eb3",
+    "fields": {
+      "name": "MPRO+MVA Cours électifs hors MPRO",
+      "description": "MPRO+MVA : valider au plus 3 cours électifs hors MPRO.",
+      "attribute": "mpro_cours_electif_hors_mpro",
+      "min_value": null,
+      "max_value": 3
+    }
+  },
+  {
+    "model": "parcours_imi.AttributeConstraint",
     "pk": "8e662dbd-786c-41c3-8649-6167b0a32fb3",
     "fields": {
       "name": "MPRO Cours application",
@@ -96,17 +107,6 @@
       "attribute": "imi_ects_option2",
       "min_value": 15,
       "max_value": null
-    }
-  },
-  {
-    "model": "parcours_imi.AttributeConstraint",
-    "pk": "51c68a55-d3c4-4b5f-afb0-28c903496eb3",
-    "fields": {
-      "name": "MPRO+MVA Cours hors MPRO",
-      "description": "MPRO+MVA : valider au plus 3 cours hors MPRO.",
-      "attribute": "mpro_cours_electif_hors_mpro",
-      "min_value": 0,
-      "max_value": 3
     }
   }
 ]
