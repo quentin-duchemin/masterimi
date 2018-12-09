@@ -3,18 +3,27 @@
 {% block html %}
 <!doctype html>
 <html>
-<body style="font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
-
-  {{ user.first_name}} {{ user.last_name }},
+<body style="font-family: sans-serif;-webkit-font-smoothing: antialiased;line-height: 1.4;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
 
   <p>
-    <strong>Master choisi :</strong> {{ user_parcours.master.name }}
+    Bonjour {{ user.first_name}} {{ user.last_name }},
   </p>
 
   <p>
-    <strong>Option choisie :</strong> {{ user_parcours.get_option_display }}
+    Tu as bien rempli ton option pour ta 3A au master <strong>{{ user_parcours.master.name }}</strong> :
   </p>
 
+  <div style="border: 1px solid black;margin: 25px;background-color: #d9d9d9;padding: 10px;text-align: center;">
+    {{ user_parcours.get_option_display }}
+  </div>
+
+  <p>
+    Si tu souhaites changer ton option, tu dois justifier ta décision auprès du département qui pourra alors débloquer ton choix.
+  </p>
+
+  <p>
+    Tu peux d'ors et déjà commencer à remplir tes choix de cours pour vérifier que ton cursus respecte les règles de validation. Tu devras valider ce choix en Janvier~Février prochain.
+  </p>
 </body>
 </html>
 {% endblock %}

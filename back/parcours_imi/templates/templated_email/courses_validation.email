@@ -3,47 +3,53 @@
 {% block html %}
 <!doctype html>
 <html>
-<body style="font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
-
-  {{ user.first_name}} {{ user.last_name }},
+<body style="font-family: sans-serif;-webkit-font-smoothing: antialiased;line-height: 1.4;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
 
   <p>
-    <strong>Master choisi :</strong> {{ user_parcours.master.name }}
+    Bonjour {{ user.first_name}} {{ user.last_name }},
   </p>
 
   <p>
-    <strong>Option choisie :</strong> {{ user_parcours.get_option_display }}
+    Tu as bien rempli tes choix de cours pour ta 3A au master <strong>{{ user_parcours.master.name }}</strong>, option <strong>{{ user_parcours.get_option_display }}</strong> :
   </p>
 
-
-  <h2>
-    Cours choisis
-  </h2>
-
-  <table>
-    <tr>
-      <th>Nom du cours</th>
-      <th>ECTS</th>
-      <th>Période</th>
-    </tr>
+  <table style="border: 1px solid black;margin: 25px;padding: 15px;width: calc(100% - 50px);border-collapse: collapse;">
+    <thead style="text-align: center;background-color: #d9d9d9;">
+      <tr>
+        <th>Cours du Master</th>
+        <th>ECTS</th>
+        <th>Période</th>
+      </tr>
+    </thead>
+    <tbody>
     {% for course in user_parcours.course_choice.main_courses.all %}
       <tr>
         <td>{{ course.name }}</td>
-        <td>{{ course.ECTS }}</td>
-        <td>{{ course.period }}</td>
+        <td style="text-align: center;">{{ course.ECTS }}</td>
+        <td style="text-align: center;">{{ course.period }}</td>
       </tr>
     {% endfor %}
+    </tbody>
+    <thead style="text-align: center;background-color: #d9d9d9;">
+      <tr>
+        <th>Cours supplémentaires</th>
+        <th>ECTS</th>
+        <th>Période</th>
+      </tr>
+    </thead>
+    <tbody>
     {% for course in user_parcours.course_choice.option_courses.all %}
       <tr>
         <td>{{ course.name }}</td>
-        <td>{{ course.ECTS }}</td>
-        <td>{{ course.period }}</td>
+        <td style="text-align: center;">{{ course.ECTS }}</td>
+        <td style="text-align: center;">{{ course.period }}</td>
       </tr>
     {% endfor %}
+    </tbody>
   </table>
 
   <p>
-    <strong>Règles de validation</strong>
+    <strong>Vérification des règles de validation :</strong>
     <ul>
       {% for rule in parcours_validation_data %}
         <li>
@@ -56,6 +62,20 @@
   <p>
     <strong>Commentaire :</strong> {{ user_parcours.course_choice.comment | default:'N/A' }}
   </p>
+
+  <p>
+    Si tu souhaites changer ton option ou changer ton choix de cours, tu dois justifier ta décision auprès du département qui pourra alors débloquer ton choix.
+  </p>
+
+  <p>
+    Tu t'engages auprès d'IMI à suivre ces cours et à valider ton master suivant les modalités précisées ci-dessus.
+  </p>
+
+  {% if user_parcours.option == '3A-M2-ECTS' %}
+  <p>
+    <strong>Attention :</strong> Les cours qui valident ton master et ceux qui valident tes 15 ECTS supplémentaires auprès des Ponts peuvent être amenés à être échangés sur le relevé de note. Cela n'a pas d'impact sur ton cursus.
+  </p>
+  {% endif %}
 
 </body>
 </html>
