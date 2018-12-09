@@ -116,8 +116,8 @@ class UserCourseChoice(models.Model):
 
 OPTIONS = [
     ('3A-ecole', '3A École'),
-    ('3A-M2-PFE', '3A M2 Imbriqués - Option 1'),
-    ('3A-M2-ECTS', '3A M2 Imbriqués - Option 2'),
+    ('3A-M2-PFE', '3A M2 Imbriqués - Avec prolongation de scolarité'),
+    ('3A-M2-ECTS', '3A M2 Imbriqués - Avec ECTS supplémentaires'),
 ]
 
 OPTIONS_KEYS = [
