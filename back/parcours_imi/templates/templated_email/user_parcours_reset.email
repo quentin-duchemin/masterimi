@@ -1,0 +1,25 @@
+{% block subject %}[3A] Réinitilisation du parcours ({{user.first_name}} {{user.last_name}}){% endblock %}
+
+{% block html %}
+<!doctype html>
+<html>
+<body style="font-family: sans-serif;-webkit-font-smoothing: antialiased;line-height: 1.4;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+  <p>
+    Bonjour {{ user.first_name}} {{ user.last_name }},
+  </p>
+
+  <p>
+    Ton choix d'option pour ta 3A au master <strong>{{ user_parcours.master.name }}</strong> a été <strong>RÉINITIALISÉ</strong>.
+  </p>
+
+  <p>
+    Tu peux désormais choisir une nouvelle option sur le site.
+  </p>
+
+  <p>
+    <strong>Attention :</strong> si tu avais déjà choisi tes cours, tu dois les remplir à nouveau.
+  </p>
+</body>
+</html>
+{% endblock %}

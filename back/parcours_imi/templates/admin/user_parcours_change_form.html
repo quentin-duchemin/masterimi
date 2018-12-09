@@ -2,8 +2,8 @@
 
 {% block object-tools-items %}
   <li>
-    <a href="{% url 'user_parcours_unlock_courses' object_id=original.pk %}">
-      Déverouiller les choix de cours
+    <a href="{% url 'user_parcours_reset' object_id=original.pk %}">
+      Réinitialiser le parcours
     </a>
   </li>
   {{ block.super }}

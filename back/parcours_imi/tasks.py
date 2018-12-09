@@ -28,7 +28,7 @@ def send_option_confirmation_email(user_parcours_id: int):
         from_email=DEFAULT_FROM_EMAIL,
         recipient_list=[user.email, ADMIN_EMAIL],
         context=dict(
-            user=user_parcours.user,
+            user=user,
             user_parcours=user_parcours,
         ),
     )
@@ -45,8 +45,25 @@ def send_courses_validation_email(user_parcours_id: int, parcours_validation_dat
         from_email=DEFAULT_FROM_EMAIL,
         recipient_list=[user.email, ADMIN_EMAIL],
         context=dict(
-            user=user_parcours.user,
+            user=user,
             user_parcours=user_parcours,
             parcours_validation_data=parcours_validation_data,
+        ),
+    )
+
+@shared_task(autoretry_for=(Exception,), retry_backoff=True)
+def send_user_parcours_reset_email(user_parcours_id: int):
+    user_parcours = UserParcours.objects.get(pk=user_parcours_id)
+    user = user_parcours.user
+
+    logger.info(f'Sending parcours reset email for {user_parcours}')
+
+    send_templated_mail(
+        template_name='user_parcours_reset',
+        from_email=DEFAULT_FROM_EMAIL,
+        recipient_list=[user.email, ADMIN_EMAIL],
+        context=dict(
+            user=user,
+            user_parcours=user_parcours,
         ),
     )
