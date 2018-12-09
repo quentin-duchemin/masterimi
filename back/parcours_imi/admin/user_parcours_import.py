@@ -57,7 +57,7 @@ def user_parcours_import_view(request):
             user_parcours_import(students_to_import)
 
             messages.success(request, 'Étudiants importés avec succès.')
-            return redirect('admin:index')
+            return redirect('admin:parcours_imi_userparcours_changelist')
     else:
         form = UserParcoursImportForm()
 

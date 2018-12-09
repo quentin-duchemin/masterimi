@@ -22,10 +22,10 @@ def user_parcours_unlock_courses_view(request, object_id):
         course_choice = user_parcours.course_choice
     except UserParcours.course_choice.RelatedObjectDoesNotExist:
         messages.warning(request, 'L\'étudiant n\'a pas encore choisi ses cours.')
-        return redirect('admin:index')
+        return redirect('admin:parcours_imi_userparcours_change', object_id=object_id)
 
     course_choice.submitted = False
     course_choice.save()
 
     messages.success(request, 'Cours dévérouillés avec succès.')
-    return redirect('admin:index')
+    return redirect('admin:parcours_imi_userparcours_change', object_id=object_id)
