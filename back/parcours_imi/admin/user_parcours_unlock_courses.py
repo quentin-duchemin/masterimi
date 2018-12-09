@@ -15,6 +15,9 @@ def user_parcours_unlock_courses_view(request, object_id):
     except UserParcours.DoesNotExist:
         raise Exception
 
+    user_parcours.option = None
+    user_parcours.save()
+
     try:
         course_choice = user_parcours.course_choice
     except UserParcours.course_choice.RelatedObjectDoesNotExist:

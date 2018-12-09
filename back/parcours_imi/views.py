@@ -93,8 +93,9 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
                 for item in parcours_validation_data
                 if item['type'] == 'error'
             ]
-            if errors:
-                raise ValidationError(errors)
+            # We let students send their answers even if their parcours is invalid
+            # if errors:
+            #     raise ValidationError(errors)
 
         with transaction.atomic():
             course_choice = serializer.save()

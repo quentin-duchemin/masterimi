@@ -5,8 +5,9 @@ from django.contrib.postgres.fields import JSONField
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.utils.html import format_html
 
-from parcours_imi.validators import get_parcours_courses_rules_validation_data
+from parcours_imi.validators import ConstraintType, get_parcours_courses_rules_validation_data
 
 
 class AttributeConstraint(models.Model):
@@ -80,38 +81,45 @@ class UserCourseChoice(models.Model):
         verbose_name = 'Choix de cours'
         verbose_name_plural = 'Choix de cours'
 
-    def __str__(self):
+    def as_html(self):
         tag = '[Verrouillé]' if self.submitted else ''
 
         main_courses = self.main_courses.all()
-        main_courses_names = '\n'.join([
-            ' - ' + str(course)
+        main_courses_names = ''.join([
+            '<li>' + str(course) + '</li>'
             for course in main_courses
         ])
 
         option_courses = self.option_courses.all()
-        option_courses_names = '\n'.join([
-            ' - ' + str(course)
+        option_courses_names = ''.join([
+            '<li>' + str(course) + '</li>'
             for course in option_courses
         ])
 
-        comment = '\n - ' + self.comment if self.comment else ' N/A'
+        comment = '<br/> - ' + self.comment if self.comment else ' N/A'
 
         parcours_validation_data = get_parcours_courses_rules_validation_data(
             self.parcours,
             list(self.main_courses.all()),
             list(self.option_courses.all()),
         )
-        validation_rules = '\n'.join([
-            ' - ' + rule['full_message']
+        validation_colors = {
+            ConstraintType.VALID.value: 'green',
+            ConstraintType.ERROR.value: 'red',
+            ConstraintType.WARNING.value: 'orange',
+        }
+        validation_rules = ''.join([
+            '<li style="color:{};">'.format(validation_colors[rule['type']]) + rule['full_message'] + '</li>'
             for rule in parcours_validation_data
         ])
 
-        return f'{tag} {len(main_courses)} cours (master) + {len(option_courses)} cours (option)\n\n' \
-            + f'Cours principaux :\n{main_courses_names}\n\n' \
-            + f'Cours pour la validation des 15 ECTS supplémentaires :\n{option_courses_names}\n\n' \
-            + f'Commentaire :{comment}\n\n' \
-            + f'Règles de validation :\n{validation_rules}'
+        html_template = f'{tag} {len(main_courses)} cours (master) + {len(option_courses)} cours (option)<br/><br/>' \
+            + f'Cours principaux :<br/><ul>{main_courses_names}</ul><br/><br/>' \
+            + f'Cours pour la validation des 15 ECTS supplémentaires :<br/><ul>{option_courses_names}</ul><br/><br/>' \
+            + f'Commentaire :{comment}<br/><br/>' \
+            + f'Règles de validation :<br/><ul>{validation_rules}</ul>'
+
+        return format_html(html_template)
 
 
 OPTIONS = [

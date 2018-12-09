@@ -18,11 +18,11 @@ export class OptionsResolver implements Resolve<IOption[]> {
       },
       {
         id: '3A-M2-PFE',
-        name: '3A M2 Imbriqués - Option 1',
+        name: '3A M2 Imbriqués - Avec prolongation de scolarité',
       },
       {
         id: '3A-M2-ECTS',
-        name: '3A M2 Imbriqués - Option 2',
+        name: '3A M2 Imbriqués - Avec ECTS supplémentaires',
       },
     ]);
   }
