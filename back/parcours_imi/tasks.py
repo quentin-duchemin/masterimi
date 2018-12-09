@@ -8,12 +8,12 @@ from celery import shared_task
 from templated_email import send_templated_mail
 
 from parcours_imi.models import UserParcours
+from master_imi.settings import ADMIN_EMAIL
 
 
 logger = logging.getLogger(__name__)
 
 DEFAULT_FROM_EMAIL = 'my3a@enpc.org'
-DEFAULT_ADMIN_EMAIL_ADDRESS = 'my3a@enpc.org'
 
 
 @shared_task(autoretry_for=(Exception,), retry_backoff=True)
@@ -26,7 +26,7 @@ def send_option_confirmation_email(user_parcours_id: int):
     send_templated_mail(
         template_name='option_confirmation',
         from_email=DEFAULT_FROM_EMAIL,
-        recipient_list=[user.email, DEFAULT_ADMIN_EMAIL_ADDRESS],
+        recipient_list=[user.email, ADMIN_EMAIL],
         context=dict(
             user=user_parcours.user,
             user_parcours=user_parcours,
@@ -43,7 +43,7 @@ def send_courses_validation_email(user_parcours_id: int, parcours_validation_dat
     send_templated_mail(
         template_name='courses_validation',
         from_email=DEFAULT_FROM_EMAIL,
-        recipient_list=[user.email, DEFAULT_ADMIN_EMAIL_ADDRESS],
+        recipient_list=[user.email, ADMIN_EMAIL],
         context=dict(
             user=user_parcours.user,
             user_parcours=user_parcours,
