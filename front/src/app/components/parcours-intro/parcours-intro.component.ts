@@ -14,7 +14,7 @@ import { DialogService } from '../../services/dialog/dialog.service';
   styleUrls: ['./parcours-intro.component.css']
 })
 export class ParcoursIntroComponent implements OnInit {
-  options: IOption[];
+  availableOptions: IOption[];
 
   parcours: IParcours;
   selectedOption: IOption;
@@ -31,7 +31,7 @@ export class ParcoursIntroComponent implements OnInit {
     this.authService.getCurrentUser().subscribe((currentUser) => {
       this.parcours = currentUser.parcours;
       if (this.parcours && this.parcours.master) {
-        this.options = this.parcours.master.availableOptions;
+        this.availableOptions = this.parcours.master.availableOptions;
       }
     });
   }

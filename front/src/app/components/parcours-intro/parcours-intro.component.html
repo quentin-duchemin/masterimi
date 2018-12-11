@@ -33,12 +33,12 @@
           Tu n'as pas encore choisi ton option
         </h3>
 
-        <app-option-description></app-option-description>
+        <app-option-description [options]="availableOptions"></app-option-description>
 
         <form>
           <mat-form-field>
             <mat-select placeholder="Formule 3A" required name="selectedOption" [(ngModel)]="selectedOption">
-              <mat-option *ngFor="let option of options" [value]="option">
+              <mat-option *ngFor="let option of availableOptions" [value]="option">
                 {{ option.name }}
               </mat-option>
             </mat-select>
@@ -56,10 +56,12 @@
           Tu as choisi ton option
         </h3>
 
-        <app-option-description></app-option-description>
+        <app-option-description [options]="availableOptions"></app-option-description>
+
+        <br/>
 
         <p>
-          Ton option est : {{ displayOption }}
+          Ton option est : <strong>{{ displayOption }}</strong>
         </p>
       </div>
     </mat-step>

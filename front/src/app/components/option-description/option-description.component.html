@@ -1,4 +1,4 @@
-<article class="option-description">
+<article class="option-description" *ngIf="inOptions('3A-ecole')">
   <h4>
     3A École
   </h4>
@@ -22,7 +22,7 @@
   </ul>
 </article>
 
-<article class="option-description">
+<article class="option-description" *ngIf="inOptions('3A-M2-PFE')">
   <h4>
     3A M2 Imbriqués - Avec prolongation de scolarité
   </h4>
@@ -46,7 +46,7 @@
   </ul>
 </article>
 
-<article class="option-description">
+<article class="option-description" *ngIf="inOptions('3A-M2-ECTS')">
   <h4>
     3A M2 Imbriqués - Avec ECTS supplémentaires
   </h4>
