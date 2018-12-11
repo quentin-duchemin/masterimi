@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MatDialog } from '@angular/material';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ICourse } from '../../interfaces/course.interface';
-import { IParcours, ICourseChoice } from '../../interfaces/parcours.interface';
-import { ParcoursService } from '../../services/parcours.service';
-import { AuthService } from '../../services/auth.service';
-import { IValidationData } from '../../interfaces/validation-data.interface';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { ICourse } from 'app/interfaces/course.interface';
+import { IParcours, ICourseChoice } from 'app/interfaces/parcours.interface';
+import { ParcoursService } from 'app/services/parcours.service';
+import { AuthService } from 'app/services/auth.service';
+import { IValidationData } from 'app/interfaces/validation-data.interface';
+import { DialogService } from 'app/services/dialog/dialog.service';
 
 
 @Component({
@@ -26,9 +26,9 @@ export class ParcoursCoursesFormComponent implements OnInit {
   constructor(
     private readonly route: ActivatedRoute,
     private readonly router: Router,
-    private readonly dialog: MatDialog,
     private readonly fb: FormBuilder,
     private readonly authService: AuthService,
+    private readonly dialogService: DialogService,
     private readonly parcoursService: ParcoursService,
   ) {
   }
@@ -70,6 +70,10 @@ export class ParcoursCoursesFormComponent implements OnInit {
   }
 
   get availableMasterCourses() {
+    if (this.parcours.option.id == '3A-ecole') {
+      return this.availableCourses;
+    }
+
     return this.availableCourses.filter((course) => course.masters.includes(this.parcours.master.id));
   }
 
@@ -78,7 +82,16 @@ export class ParcoursCoursesFormComponent implements OnInit {
   }
 
   submit() {
-    this.performUpdate(true);
+    this.dialogService.confirm(
+      'Confirmation',
+      'Es-tu certain de vouloir envoyer tes choix de cours de 3A ?',
+    ).subscribe((confirmed) => {
+      if (!confirmed) {
+        return;
+      }
+
+      this.performUpdate(true);
+    });
   }
 
   private performUpdate(isSubmitted) {

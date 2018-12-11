@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { IParcours } from '../../interfaces/parcours.interface';
 import { AuthService } from '../../services/auth.service';
-import { ActivatedRoute } from '@angular/router';
 import { IOption } from '../../interfaces/option.interface';
 import { ParcoursService } from '../../services/parcours.service';
 import { DialogService } from '../../services/dialog/dialog.service';
@@ -20,7 +19,6 @@ export class ParcoursIntroComponent implements OnInit {
   selectedOption: IOption;
 
   constructor(
-    private readonly route: ActivatedRoute,
     private readonly authService: AuthService,
     private readonly dialogService: DialogService,
     private readonly parcoursService: ParcoursService,

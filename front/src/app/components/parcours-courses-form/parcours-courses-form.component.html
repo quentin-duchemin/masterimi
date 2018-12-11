@@ -12,7 +12,7 @@
     <form [formGroup]="form">
       <section>
         <h3>
-          Choix des cours pour la validation du {{ parcours.master.shortName }}
+          Choix des cours pour la validation du {{ parcours.master.name }}
         </h3>
 
         <app-course-selection-input
@@ -23,9 +23,9 @@
         </app-course-selection-input>
       </section>
 
-      <section *ngIf="parcours.option === '3A-M2-ECTS'">
+      <section *ngIf="parcours.option.id === '3A-M2-ECTS'">
         <h3>
-          Choix des cours supplémentaires pour la validation de la 3A M2 Imbriqués - Option 2
+          Choix des cours supplémentaires pour la validation de la {{ parcours.option.name }}
         </h3>
 
         <app-course-selection-input
@@ -63,7 +63,7 @@
     </button>
     <button mat-raised-button color="accent" fxFlex (click)="submit()">
       <mat-icon>send</mat-icon>
-      Envoyer
+      Envoyer définitivement
     </button>
   </mat-card-actions>
 </mat-card>

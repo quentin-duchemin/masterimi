@@ -1,6 +1,20 @@
 [
   {
     "model": "parcours_imi.Master",
+    "pk": "3a_ecole",
+    "fields": {
+      "name": "3A École",
+      "short_name": "ENPC",
+      "available_options": [
+        "3A-ecole"
+      ],
+      "attribute_constraints": [
+        "46c124a9-dba1-43a3-a6b9-600042d43b65"
+      ]
+    }
+  },
+  {
+    "model": "parcours_imi.Master",
     "pk": "master_mva",
     "fields": {
       "name": "Mathématiques Vision Apprentissage (MVA)",

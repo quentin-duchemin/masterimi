@@ -102,10 +102,21 @@
     "model": "parcours_imi.AttributeConstraint",
     "pk": "8ce0b5ea-7e1d-4d7a-b5e6-77c83ed0d4d9",
     "fields": {
-      "name": "IMI Option 2 15 ECTS",
-      "description": "IMI : 3A Option 2, valider 15 ects supplémentaires (ne pas oublier le REX3A).",
-      "attribute": "imi_ects_option2",
+      "name": "IMI 3A M2 Imbriqués - Avec ECTS supplémentaires",
+      "description": "IMI : 3A M2 Imbriqués - Avec ECTS supplémentaires, valider 15 ECTS supplémentaires (ne pas oublier le REX3A).",
+      "attribute": "ects",
       "min_value": 15,
+      "max_value": null
+    }
+  },
+  {
+    "model": "parcours_imi.AttributeConstraint",
+    "pk": "46c124a9-dba1-43a3-a6b9-600042d43b65",
+    "fields": {
+      "name": "3A École 25.5 ECTS scientifiques",
+      "description": "3A École : Valider 25.5 ECTS scientifiques (ne pas oublier le REX3A).",
+      "attribute": "ects",
+      "min_value": 25.5,
       "max_value": null
     }
   }
