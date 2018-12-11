@@ -6,7 +6,8 @@ my3a.enpc.org
 docker-compose pull
 docker-compose up -d
 ./tools/load_fixtures.sh
-docker-compose exec back /venv/bin/python manage.py createsuperuser
+docker-compose exec back /venv/bin/python manage.py createsuperuser --username louis.trezzini --email louis.trezzini@eleves.enpc.fr --noinput
+docker-compose exec back /venv/bin/python manage.py createsuperuser --username sandrine.guillerm --email sandrine.guillerm@enpc.fr --noinput
 ```
 
 ## Development

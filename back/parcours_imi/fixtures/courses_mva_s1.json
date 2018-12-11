@@ -5,8 +5,8 @@
     "fields": {
       "name": "Graphs in Machine Learning",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S1",
@@ -28,8 +28,8 @@
     "fields": {
       "name": "Convex optimization and applications in machine learning",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S1",
@@ -51,8 +51,8 @@
     "fields": {
       "name": "Topological data analysis for imaging and machine learning",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S1",
@@ -74,8 +74,8 @@
     "fields": {
       "name": "Advanced Learning for Text and Graph Data (ALTeGraD)",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S1",
@@ -97,8 +97,8 @@
     "fields": {
       "name": "Reinforcement Learning",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S1",
@@ -120,8 +120,8 @@
     "fields": {
       "name": "Introduction to Statistical Learning",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S1",
@@ -143,8 +143,8 @@
     "fields": {
       "name": "3D Computer Vision",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S1",
@@ -166,8 +166,8 @@
     "fields": {
       "name": "Object Recognition and Computer Vision",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S1",
@@ -189,8 +189,8 @@
     "fields": {
       "name": "Probabilistic Graphical Models",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S1",
@@ -212,8 +212,8 @@
     "fields": {
       "name": "Computational Statistics",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S1",
@@ -235,8 +235,8 @@
     "fields": {
       "name": "Introduction to Medical Image Analysis",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S1",
@@ -258,8 +258,8 @@
     "fields": {
       "name": "Introduction à l'imagerie numérique",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S1",
@@ -281,8 +281,8 @@
     "fields": {
       "name": "Sub-pixel Image Processing",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S1",
@@ -304,8 +304,8 @@
     "fields": {
       "name": "Méthodes mathématiques pour les neurosciences",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S1",
@@ -327,8 +327,8 @@
     "fields": {
       "name": "Mathematical foundations of data sciences",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S1",
@@ -350,8 +350,8 @@
     "fields": {
       "name": "Learning, mechanism design and algorithmic game theory",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S1",
@@ -373,8 +373,8 @@
     "fields": {
       "name": "Image denoising : the human machine competition",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S1",
@@ -396,8 +396,8 @@
     "fields": {
       "name": "Deep Learning",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S1",

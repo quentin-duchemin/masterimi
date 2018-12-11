@@ -1,0 +1,23 @@
+[
+  {
+    "model": "parcours_imi.Option",
+    "pk": "3A-ecole",
+    "fields": {
+      "name": "3A École"
+    }
+  },
+  {
+    "model": "parcours_imi.Option",
+    "pk": "3A-M2-PFE",
+    "fields": {
+      "name": "3A M2 Imbriqués - Avec prolongation de scolarité"
+    }
+  },
+  {
+    "model": "parcours_imi.Option",
+    "pk": "3A-M2-ECTS",
+    "fields": {
+      "name": "3A M2 Imbriqués - Avec ECTS supplémentaires"
+    }
+  }
+]

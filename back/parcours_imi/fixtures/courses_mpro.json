@@ -5,8 +5,8 @@
     "fields": {
       "name": "Metaheuristiques (obligatoire)",
       "masters": [
-        "113ba000-65e3-4ed6-977e-77c6c072778b",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mpro",
+        "master_mva_mpro"
       ],
       "ECTS": 2,
       "period": "S1",
@@ -23,8 +23,8 @@
     "fields": {
       "name": "Mathematical programming (obligatoire)",
       "masters": [
-        "113ba000-65e3-4ed6-977e-77c6c072778b",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mpro",
+        "master_mva_mpro"
       ],
       "ECTS": 4,
       "period": "S1",
@@ -41,8 +41,8 @@
     "fields": {
       "name": "Optimisation dans les graphes (obligatoire)",
       "masters": [
-        "113ba000-65e3-4ed6-977e-77c6c072778b",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mpro",
+        "master_mva_mpro"
       ],
       "ECTS": 4,
       "period": "S1",
@@ -59,8 +59,8 @@
     "fields": {
       "name": "Theorie de la complexite (obligatoire)",
       "masters": [
-        "113ba000-65e3-4ed6-977e-77c6c072778b",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mpro",
+        "master_mva_mpro"
       ],
       "ECTS": 2,
       "period": "S1",
@@ -77,8 +77,8 @@
     "fields": {
       "name": "Optimisation stochastique (obligatoire)",
       "masters": [
-        "113ba000-65e3-4ed6-977e-77c6c072778b",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mpro",
+        "master_mva_mpro"
       ],
       "ECTS": 2,
       "period": "S1",
@@ -95,8 +95,8 @@
     "fields": {
       "name": "Bases de l'ordonnancement",
       "masters": [
-        "113ba000-65e3-4ed6-977e-77c6c072778b",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mpro",
+        "master_mva_mpro"
       ],
       "ECTS": 3,
       "period": "S1",
@@ -113,8 +113,8 @@
     "fields": {
       "name": "Queueing theory",
       "masters": [
-        "113ba000-65e3-4ed6-977e-77c6c072778b",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mpro",
+        "master_mva_mpro"
       ],
       "ECTS": 3,
       "period": "S1",
@@ -131,8 +131,8 @@
     "fields": {
       "name": "Complexité : Algorithmes approchés",
       "masters": [
-        "113ba000-65e3-4ed6-977e-77c6c072778b",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mpro",
+        "master_mva_mpro"
       ],
       "ECTS": 3,
       "period": "S1",
@@ -149,8 +149,8 @@
     "fields": {
       "name": "Case studies and OR management (obligatoire)",
       "masters": [
-        "113ba000-65e3-4ed6-977e-77c6c072778b",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mpro",
+        "master_mva_mpro"
       ],
       "ECTS": 4,
       "period": "S1",
@@ -167,8 +167,8 @@
     "fields": {
       "name": "Initiation a la recherche (obligatoire)",
       "masters": [
-        "113ba000-65e3-4ed6-977e-77c6c072778b",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mpro",
+        "master_mva_mpro"
       ],
       "ECTS": 4,
       "period": "S1",
@@ -185,8 +185,8 @@
     "fields": {
       "name": "Operations Research and Sustainable Development (application)",
       "masters": [
-        "113ba000-65e3-4ed6-977e-77c6c072778b",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mpro",
+        "master_mva_mpro"
       ],
       "ECTS": 3,
       "period": "S1",
@@ -204,8 +204,8 @@
     "fields": {
       "name": "RO pour les Réseaux et le Transport (application)",
       "masters": [
-        "113ba000-65e3-4ed6-977e-77c6c072778b",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mpro",
+        "master_mva_mpro"
       ],
       "ECTS": 3,
       "period": "S1",
@@ -223,8 +223,8 @@
     "fields": {
       "name": "Advanced Mathematical Programming",
       "masters": [
-        "113ba000-65e3-4ed6-977e-77c6c072778b",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mpro",
+        "master_mva_mpro"
       ],
       "ECTS": 3,
       "period": "S1",
@@ -241,8 +241,8 @@
     "fields": {
       "name": "Location Models and Applications",
       "masters": [
-        "113ba000-65e3-4ed6-977e-77c6c072778b",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mpro",
+        "master_mva_mpro"
       ],
       "ECTS": 3,
       "period": "S1",
@@ -259,8 +259,8 @@
     "fields": {
       "name": "Graphs",
       "masters": [
-        "113ba000-65e3-4ed6-977e-77c6c072778b",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mpro",
+        "master_mva_mpro"
       ],
       "ECTS": 3,
       "period": "S1",
@@ -277,8 +277,8 @@
     "fields": {
       "name": "Constraint Programming",
       "masters": [
-        "113ba000-65e3-4ed6-977e-77c6c072778b",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mpro",
+        "master_mva_mpro"
       ],
       "ECTS": 3,
       "period": "S1",
@@ -295,8 +295,8 @@
     "fields": {
       "name": "Recherche opérationnelle et données massives",
       "masters": [
-        "113ba000-65e3-4ed6-977e-77c6c072778b",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mpro",
+        "master_mva_mpro"
       ],
       "ECTS": 3,
       "period": "S1",
@@ -313,8 +313,8 @@
     "fields": {
       "name": "Conférences industrielles (obligatoire)",
       "masters": [
-        "113ba000-65e3-4ed6-977e-77c6c072778b",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mpro",
+        "master_mva_mpro"
       ],
       "ECTS": 2,
       "period": "S1",
@@ -331,7 +331,7 @@
     "fields": {
       "name": "Free course",
       "masters": [
-        "113ba000-65e3-4ed6-977e-77c6c072778b"
+        "master_mpro"
       ],
       "ECTS": 3,
       "period": "S1",

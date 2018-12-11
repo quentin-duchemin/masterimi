@@ -10,7 +10,7 @@
   </p>
 
   <p>
-    Tu as bien rempli tes choix de cours pour ta 3A au master <strong>{{ user_parcours.master.name }}</strong>, option <strong>{{ user_parcours.get_option_display }}</strong> :
+    Tu as bien rempli tes choix de cours pour ta 3A au master <strong>{{ user_parcours.master.name }}</strong>, option <strong>{{ user_parcours.option.name }}</strong> :
   </p>
 
   <table style="border: 1px solid black;margin: 25px;padding: 15px;width: calc(100% - 50px);border-collapse: collapse;">

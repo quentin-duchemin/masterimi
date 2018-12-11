@@ -1,6 +1,11 @@
 from django.contrib import admin
 
-from parcours_imi.models import AttributeConstraint, Course, Master, UserParcours
+from parcours_imi.models import AttributeConstraint, Course, Master, Option, UserParcours
+
+
+@admin.register(Option)
+class OptionAdmin(admin.ModelAdmin):
+    pass
 
 
 @admin.register(AttributeConstraint)

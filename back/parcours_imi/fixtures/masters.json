@@ -1,10 +1,14 @@
 [
   {
     "model": "parcours_imi.Master",
-    "pk": "069fd888-3035-4028-ac6d-cc0aacf63843",
+    "pk": "master_mva",
     "fields": {
       "name": "Mathématiques Vision Apprentissage (MVA)",
       "short_name": "MVA",
+      "available_options": [
+        "3A-M2-ECTS",
+        "3A-M2-PFE"
+      ],
       "attribute_constraints": [
         "3caaee61-1d60-4b2b-a65d-189806921c4b",
         "6c2a692e-fe63-4f03-a261-35e1df531780",
@@ -16,10 +20,14 @@
   },
   {
     "model": "parcours_imi.Master",
-    "pk": "113ba000-65e3-4ed6-977e-77c6c072778b",
+    "pk": "master_mpro",
     "fields": {
       "name": "Master Parisien de Recherche Opérationnelle (MPRO)",
       "short_name": "MPRO",
+      "available_options": [
+        "3A-M2-ECTS",
+        "3A-M2-PFE"
+      ],
       "attribute_constraints": [
         "b9f55e48-b444-4f47-98a2-5b5f01ceaab8",
         "5ab7a298-d733-4b16-b281-66df94b674d1",
@@ -29,10 +37,14 @@
   },
   {
     "model": "parcours_imi.Master",
-    "pk": "6b5115bb-4536-43ad-b072-2837e4a1e89d",
+    "pk": "master_mva_mpro",
     "fields": {
       "name": "Master Parisien de Recherche Opérationnelle (MPRO) avec électifs au MVA",
       "short_name": "MPRO+MVA",
+      "available_options": [
+        "3A-M2-ECTS",
+        "3A-M2-PFE"
+      ],
       "attribute_constraints": [
         "b9f55e48-b444-4f47-98a2-5b5f01ceaab8",
         "5ab7a298-d733-4b16-b281-66df94b674d1",

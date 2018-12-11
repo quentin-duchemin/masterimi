@@ -28,10 +28,11 @@ export class ParcoursIntroComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.options = this.route.snapshot.data.options;
-
     this.authService.getCurrentUser().subscribe((currentUser) => {
       this.parcours = currentUser.parcours;
+      if (this.parcours && this.parcours.master) {
+        this.options = this.parcours.master.availableOptions;
+      }
     });
   }
 
@@ -40,13 +41,7 @@ export class ParcoursIntroComponent implements OnInit {
   }
 
   get displayOption() {
-    const option = this.options.find((option) => option.id === this.parcours.option);
-
-    if (!option) {
-      return this.parcours.option;
-    }
-
-    return option.name;
+    return this.parcours.option.name;
   }
 
   submitOption() {

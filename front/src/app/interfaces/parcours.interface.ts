@@ -1,10 +1,11 @@
 import { IMaster } from './master.interface';
 import { ICourse } from './course.interface';
+import { IOption } from './option.interface';
 
 export interface IParcours {
   id: number;
   master: IMaster;
-  option: string;
+  option: IOption;
   user?: number;
   courseChoice: ICourseChoice;
 }

@@ -5,8 +5,8 @@
     "fields": {
       "name": "Algorithms for speech and natural language processing",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",
@@ -28,8 +28,8 @@
     "fields": {
       "name": "Approches géométriques en apprentissage statistique: l’exemple des données longitudinales",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",
@@ -51,8 +51,8 @@
     "fields": {
       "name": "Audio signal Analysis, Indexing and Transformations",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",
@@ -74,8 +74,8 @@
     "fields": {
       "name": "Audio Signal Processing",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",
@@ -97,8 +97,8 @@
     "fields": {
       "name": "Deformable Models and Geodesic methods for Image Analysis",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",
@@ -120,8 +120,8 @@
     "fields": {
       "name": "Géométrie et espace de formes",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",
@@ -143,8 +143,8 @@
     "fields": {
       "name": "Imagerie fonctionnelle cérébrale et interface cerveau machine",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",
@@ -166,8 +166,8 @@
     "fields": {
       "name": "Kernel Methods for machine Learning",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",
@@ -189,8 +189,8 @@
     "fields": {
       "name": "L'apprentissage par réseaux de neurones profonds",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",
@@ -212,8 +212,8 @@
     "fields": {
       "name": "Large Scale Distributed Optimization & Computing",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",
@@ -235,8 +235,8 @@
     "fields": {
       "name": "Méthodes mathématiques pour l'analyse d'images",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",
@@ -258,8 +258,8 @@
     "fields": {
       "name": "Modélisation en neuroscience et ailleurs",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",
@@ -281,8 +281,8 @@
     "fields": {
       "name": "Nuages de points et modélisation 3D",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",
@@ -304,8 +304,8 @@
     "fields": {
       "name": "Parcimonie et analyse de données massives en astrophysique",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",
@@ -327,8 +327,8 @@
     "fields": {
       "name": "Problèmes inverses en imagerie",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",
@@ -350,8 +350,8 @@
     "fields": {
       "name": "Remote Sensing: from sensor to large scale geospatial data exploitation",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",
@@ -373,8 +373,8 @@
     "fields": {
       "name": "Statistical computing on manifolds and data assimilation: from medical images to anatomical and physiological models",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",
@@ -396,8 +396,8 @@
     "fields": {
       "name": "Théorie des Matrices Aléatoires et Apprentissage",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",
@@ -419,8 +419,8 @@
     "fields": {
       "name": "Prediction for individual sequences",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",
@@ -442,8 +442,8 @@
     "fields": {
       "name": "Biostatistics",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",
@@ -465,8 +465,8 @@
     "fields": {
       "name": "Fondements Théoriques du deep learning",
       "masters": [
-        "069fd888-3035-4028-ac6d-cc0aacf63843",
-        "6b5115bb-4536-43ad-b072-2837e4a1e89d"
+        "master_mva",
+        "master_mva_mpro"
       ],
       "ECTS": 5,
       "period": "S2",

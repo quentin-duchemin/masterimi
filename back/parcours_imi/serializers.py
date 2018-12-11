@@ -1,10 +1,18 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
 
-from parcours_imi.models import Course, Master, UserParcours, UserCourseChoice
+from parcours_imi.models import Course, Master, Option, UserParcours, UserCourseChoice
+
+
+class OptionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Option
+        fields = '__all__'
 
 
 class MasterSerializer(serializers.ModelSerializer):
+    available_options = OptionSerializer(many=True, read_only=True)
+
     class Meta:
         model = Master
         fields = '__all__'
@@ -28,6 +36,8 @@ class UserCourseChoiceSerializer(serializers.ModelSerializer):
 
 class UserParcoursSerializer(serializers.ModelSerializer):
     master = MasterSerializer(read_only=True)
+    option = OptionSerializer()
+
     course_choice = UserCourseChoiceSerializer()
 
     class Meta:

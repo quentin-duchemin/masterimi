@@ -26,12 +26,22 @@ class AttributeConstraint(models.Model):
     def __str__(self):
         return self.name
 
+class Option(models.Model):
+    id = models.CharField(max_length=20, primary_key=True, editable=False, verbose_name='ID')
+
+    name = models.CharField(max_length=120, verbose_name='Nom')
+
+    def __str__(self):
+        return self.name
+
+
 class Master(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, verbose_name='ID')
+    id = models.CharField(max_length=50, primary_key=True, editable=False, verbose_name='ID')
 
     name = models.CharField(max_length=120, verbose_name='Nom')
     short_name = models.CharField(max_length=10, verbose_name='Nom court')
-    website = models.URLField(blank=True, null=True)
+
+    available_options = models.ManyToManyField(Option, related_name='available_options', blank=False)
 
     attribute_constraints = models.ManyToManyField(AttributeConstraint, related_name='attribute_constraints', blank=True)
 
@@ -122,23 +132,11 @@ class UserCourseChoice(models.Model):
         return format_html(html_template)
 
 
-OPTIONS = [
-    ('3A-ecole', '3A École'),
-    ('3A-M2-PFE', '3A M2 Imbriqués - Avec prolongation de scolarité'),
-    ('3A-M2-ECTS', '3A M2 Imbriqués - Avec ECTS supplémentaires'),
-]
-
-OPTIONS_KEYS = [
-    key
-    for key, val in OPTIONS
-]
-
-
 class UserParcours(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='parcours')
 
     master = models.ForeignKey(Master, on_delete=models.PROTECT)
-    option = models.CharField(max_length=120, choices=OPTIONS, blank=True, null=True, default=None)
+    option = models.ForeignKey(Option, on_delete=models.PROTECT, blank=True, null=True, default=None)
 
     course_choice = models.OneToOneField(
         UserCourseChoice,

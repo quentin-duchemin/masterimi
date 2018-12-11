@@ -7,7 +7,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from master_imi.permissions import IsOwner
-from parcours_imi.models import AttributeConstraint, Course, Master, OPTIONS_KEYS
+from parcours_imi.models import AttributeConstraint, Course, Master, Option
 from parcours_imi.serializers import (
     CourseSerializer, MasterSerializer,
     UserCourseChoiceSerializer, UserParcoursSerializer, UserSerializer,
@@ -57,8 +57,10 @@ class UserViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
         if parcours.option:
             raise PermissionDenied()
 
-        option = request.data.get('option')
-        if option not in OPTIONS_KEYS:
+        option_id = request.data.get('option')
+        option = Option.objects.get(pk=option_id)
+
+        if option not in parcours.master.available_options.all():
             raise ValidationError('Invalid option')
 
         parcours.option = option

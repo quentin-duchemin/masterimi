@@ -120,7 +120,7 @@ def get_parcours_courses_rules_validation_data(parcours, main_courses, option_co
         main_courses + option_courses
     )
 
-    if parcours.option == '3A-M2-ECTS':
+    if parcours.option.id == '3A-M2-ECTS':
         from parcours_imi.models import AttributeConstraint
         option_validator = AttributeConstraintsValidator(
             constraints=[
