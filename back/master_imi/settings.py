@@ -224,7 +224,7 @@ LOGGING = {
 
 EMAIL_BACKEND = 'sendgrid_backend.SendgridBackend'
 SENDGRID_API_KEY = env('SENDGRID_API_KEY', default=None)
-ADMIN_EMAIL = env('ADMIN_EMAIL', default='my3a@enpc.org')
+ADMIN_EMAIL = env('ADMIN_EMAIL', default=None) or 'my3a@enpc.org'
 
 # CAS
 
