@@ -125,8 +125,8 @@
       ],
       "ECTS": 5,
       "period": "S2",
-      "time": "Sun/00:00/01:00",
-      "location": "ENS Ulm",
+      "time": "Wed/16:30/19:00",
+      "location": "ENS Cachan",
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
@@ -378,7 +378,7 @@
       ],
       "ECTS": 5,
       "period": "S2",
-      "time": "Sun/00:00/01:00",
+      "time": "Fri/13:45/17:00",
       "location": "CentraleSupelec",
       "attributes": {
         "mpro_cours_electif": true,
@@ -472,6 +472,76 @@
       "period": "S2",
       "time": "Mon/14:00/17:00",
       "location": "IHP",
+      "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "3e4de96a-8ba4-4420-b1cf-b202f69b0cef",
+    "fields": {
+      "name": "Reading Group",
+      "masters": [
+        "master_mva",
+        "master_mva_mpro"
+      ],
+      "ECTS": 5,
+      "period": "S2",
+      "time": "Fri/14:00/18:00",
+      "location": "ENS Cachan",
+      "attributes": {
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_trimestre_2": true,
+        "mpro_cours_electif": true,
+        "mva_cours_apprentissage": true,
+        "mpro_cours_electif_hors_mpro": true
+      }
+    }
+  },
+  {
+    "model": "parcours_imi.Course",
+    "pk": "307f0d5c-1bac-49da-9de8-a36bd082ed55",
+    "fields": {
+      "name": "Deep Learning in Practice",
+      "masters": [
+        "master_mva",
+        "master_mva_mpro"
+      ],
+      "ECTS": 5,
+      "period": "S2",
+      "time": "Mon/08:30/11:45",
+      "location": "Centrale Supelec",
+      "attributes": {
+        "mpro_cours_electif": true,
+        "mpro_cours_electif_hors_mpro": true,
+        "mva_trimestre_2": true,
+        "mva_cours": true,
+        "mva_cours_data": false,
+        "mva_cours_apprentissage": true
+      }
+    }
+  }
+  ,
+  {
+    "model": "parcours_imi.Course",
+    "pk": "73b75ccd-2eb6-408f-9f42-e49bfcaaa548",
+    "fields": {
+      "name": "Apprentissage Profond pour la Restauration et la Synthese d'Images",
+      "masters": [
+        "master_mva",
+        "master_mva_mpro"
+      ],
+      "ECTS": 5,
+      "period": "S2",
+      "time": "Thu/14:00/17:00",
+      "location": "Telecom ParisTech",
       "attributes": {
         "mpro_cours_electif": true,
         "mpro_cours_electif_hors_mpro": true,
