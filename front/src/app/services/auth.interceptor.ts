@@ -26,13 +26,10 @@ export class AuthInterceptor implements HttpInterceptor {
         url: baseUrl + req.url,
       });
 
-      const accessToken = this.authService.getAccessToken();
-      if (accessToken) {
-        const csrfToken = Cookies.get('csrftoken');
-        req = req.clone({
-          headers: req.headers.set('Authorization', `Token ${accessToken}`).set('X-CSRFToken', csrfToken)
-        });
-      }
+      const csrfToken = Cookies.get('csrftoken');
+      req = req.clone({
+        headers: req.headers.set('X-CSRFToken', csrfToken)
+      });
     }
 
     return next.handle(req).pipe(
