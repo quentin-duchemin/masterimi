@@ -54,15 +54,19 @@ def user_parcours_export():
 
     logger.info(f'Exporting {len(all_parcours)} students')
 
-    max_main_courses = max([
-        parcours.course_choice.main_courses.count() if parcours.course_choice else 0
-        for parcours in all_parcours
-    ])
+    if all_parcours:
+        max_main_courses = max([
+            parcours.course_choice.main_courses.count() if parcours.course_choice else 0
+            for parcours in all_parcours
+        ])
 
-    max_option_courses = max([
-        parcours.course_choice.option_courses.count() if parcours.course_choice else 0
-        for parcours in all_parcours
-    ])
+        max_option_courses = max([
+            parcours.course_choice.option_courses.count() if parcours.course_choice else 0
+            for parcours in all_parcours
+        ])
+    else:
+        max_main_courses = 0
+        max_option_courses = 0
 
     field_names = {
         'first_name': 'Prénom',

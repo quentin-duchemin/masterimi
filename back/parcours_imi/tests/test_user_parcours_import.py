@@ -8,15 +8,17 @@ from parcours_imi.admin.user_parcours_import import UserParcoursImportEntry, use
 
 class UserParcoursImportViewTestCase(TestCase):
     fixtures = [
+        'options.json',
         'masters.json',
+        'constraints.json',
     ]
 
     def test_user_parcours_import_view(self):
         # Given
         students_to_import_csv = StringIO(
-            'username,email,first_name,last_name,master\n'
-            'louis.trezzini,louis.trezzini@eleves.enpc.fr,Louis,Trezzini,MVA\n'
-            'clement.riu,clement.riu@eleves.enpc.fr,Clément,Riu,MVA\n'
+            'username;email;first_name;last_name;master\n'
+            'louis.trezzini;louis.trezzini@eleves.enpc.fr;Louis;Trezzini;MVA\n'
+            'clement.riu;clement.riu@eleves.enpc.fr;Clément;Riu;MVA\n'
         )
 
         # When

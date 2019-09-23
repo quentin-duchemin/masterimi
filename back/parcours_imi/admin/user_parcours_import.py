@@ -1,7 +1,7 @@
 import codecs
 import logging
 
-from csv import DictReader
+from csv import DictReader, excel
 from typing import Iterable, NamedTuple
 from django import forms
 from django.contrib import messages
@@ -14,6 +14,11 @@ from parcours_imi.models import Master, UserParcours
 
 
 logger = logging.getLogger(__name__)
+
+
+class excel_semicolon(excel):
+    """Describe the usual properties of Excel-generated semicolon-delimited files."""
+    delimiter = ';'
 
 
 class UserParcoursImportEntry(NamedTuple):
@@ -47,7 +52,7 @@ def user_parcours_import_view(request):
         form = UserParcoursImportForm(request.POST, request.FILES)
 
         if form.is_valid():
-            csv_reader = DictReader(codecs.iterdecode(request.FILES['file'], 'utf-8'), dialect='excel-tab')
+            csv_reader = DictReader(codecs.iterdecode(request.FILES['file'], 'utf-8'), dialect=excel_semicolon)
 
             students_to_import = [
                 UserParcoursImportEntry(**row)
