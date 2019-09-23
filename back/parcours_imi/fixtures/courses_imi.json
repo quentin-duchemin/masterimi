@@ -47,7 +47,7 @@
     "fields": {
       "name": "REX-3A",
       "masters": [],
-      "ECTS": 1,
+      "ECTS": 1.5,
       "period": "S0",
       "time": null,
       "location": null
