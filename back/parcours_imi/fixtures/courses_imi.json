@@ -1,18 +1,6 @@
 [
   {
     "model": "parcours_imi.Course",
-    "pk": "c806175a-3b87-468a-9a3d-36259e82f313",
-    "fields": {
-      "name": "Math4Business",
-      "masters": [],
-      "ECTS": 9,
-      "period": "S1",
-      "time": null,
-      "location": "Paris 14e, 9 rue Dareau"
-    }
-  },
-  {
-    "model": "parcours_imi.Course",
     "pk": "b0dc42e2-eaea-4e07-b1c9-d7ac6aa2c999",
     "fields": {
       "name": "Data Driven Optimization",
