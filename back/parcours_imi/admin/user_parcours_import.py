@@ -37,9 +37,9 @@ def user_parcours_import_view(request):
     if request.method == 'GET' and request.GET.get('download_example'):
         file_response = HttpResponse(
             content=(
-                'username\temail\tfirst_name\tlast_name\tmaster\n'
-                'louis.trezzini\tlouis.trezzini@eleves.enpc.fr\tLouis\tTrezzini\tMVA\n'
-                'clement.riu\tclement.riu@eleves.enpc.fr\tClément\tRiu\tMVA\n'
+                'username;email;first_name;last_name;master\n'
+                'louis.trezzini;louis.trezzini@eleves.enpc.fr;Louis;Trezzini;MVA\n'
+                'clement.riu;clement.riu@eleves.enpc.fr;Clément;Riu;MVA\n'
             ),
         )
 
