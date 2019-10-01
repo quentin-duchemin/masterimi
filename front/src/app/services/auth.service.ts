@@ -24,6 +24,7 @@ export class AuthService {
 
     this.userService.getCurrentUser().subscribe(
       (currentUser) => {
+        console.log(currentUser);
         this.currentUser.next(currentUser);
         this.router.navigateByUrl('/');
       },
@@ -51,6 +52,8 @@ export class AuthService {
   isLoggedIn(): boolean {
     // FIXME this is hacky but sessionid cookies are only avaible with HTTPS
     const cookie = Cookies.get(environment.production ? 'sessionid' : 'csrftoken');
+    console.log(cookie);
+    console.log(Cookies.get('csrftoken'));
     return cookie != null;
   }
 
