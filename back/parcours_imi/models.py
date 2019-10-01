@@ -153,3 +153,9 @@ class UserParcours(models.Model):
 
     def __str__(self):
         return self.user.username
+
+    def get_option_display(self) -> str:
+        if not self.option:
+            return ""
+
+        return self.option.name
