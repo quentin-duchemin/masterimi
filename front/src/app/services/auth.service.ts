@@ -9,7 +9,7 @@ import * as Cookies from 'js-cookie';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private currentUser = new BehaviorSubject<IUser>({} as IUser);
+  private currentUser = new BehaviorSubject<IUser>(null);
 
   constructor(
     private readonly router: Router,
@@ -18,13 +18,8 @@ export class AuthService {
   }
 
   casLogin() {
-    if (this.isLoggedIn()) {
-      return this.router.navigateByUrl('/');
-    }
-
     this.userService.getCurrentUser().subscribe(
       (currentUser) => {
-        console.log(currentUser);
         this.currentUser.next(currentUser);
         this.router.navigateByUrl('/');
       },
@@ -46,15 +41,11 @@ export class AuthService {
   }
 
   private cleanStorage(): void {
-    this.currentUser.next({} as IUser);
+    this.currentUser.next(null);
   }
 
   isLoggedIn(): boolean {
-    // FIXME this is hacky but sessionid cookies are only avaible with HTTPS
-    const cookie = Cookies.get(environment.production ? 'sessionid' : 'csrftoken');
-    console.log(cookie);
-    console.log(Cookies.get('csrftoken'));
-    return cookie != null;
+    return this.currentUser.value !== null;
   }
 
   getCurrentUser(): Observable<IUser> {
