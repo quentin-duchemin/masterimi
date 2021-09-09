@@ -19,6 +19,7 @@ npm install
 
 # Lancement via docker
 cd ../
+python -c 'import os; print("SECRET_KEY=" + os.urandom(16).hex())' >  .env
 sudo docker-compose -f docker-compose.yml -f dev.override.yml up --build
 
 # Ajouter à /etc/hosts
