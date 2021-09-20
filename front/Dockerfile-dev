@@ -1,4 +1,3 @@
-# Stage 0, "build-stage", based on Node.js, to build and compile Angular
-FROM node:10-alpine as build-stage
+FROM node:14-alpine
 WORKDIR /app
 CMD npm start -- --host 0.0.0.0 --disable-host-check
