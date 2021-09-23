@@ -27,3 +27,9 @@ sudo docker-compose -f docker-compose.yml -f dev.override.yml up --build
 ```
 
 Se rendre sur http://my3a-dev.enpc.org:4200/
+
+## Building images
+```bash
+docker-compose -f docker-compose.yml -f build.override.yml build
+docker-compose -f docker-compose.yml -f build.override.yml push
+```
